@@ -27,7 +27,7 @@ namespace UTN.Winform.Funeraria.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ProyectoFunerariaVirgenAngeles;User ID=sa;Password=" +
-            "rfb.2021")]
+            "123456")]
         public string FunerariaConnectionString {
             get {
                 return ((string)(this["FunerariaConnectionString"]));
@@ -48,7 +48,7 @@ namespace UTN.Winform.Funeraria.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("rfb.2021")]
+        [global::System.Configuration.DefaultSettingValueAttribute("123456")]
         public string Password {
             get {
                 return ((string)(this["Password"]));

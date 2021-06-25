@@ -149,6 +149,7 @@
     <Compile Include="Layers\Entities\DTO\ClienteDTO.cs" />
     <Compile Include="Layers\Entities\DTO\PaqueteDTO.cs" />
     <Compile Include="Layers\Entities\DTO\ProveedorDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\PruebaDTO.cs" />
     <Compile Include="Layers\Entities\DTO\UsuariosDTO.cs" />
     <Compile Include="Layers\Entities\EncFactura.cs" />
     <Compile Include="Layers\Entities\Funerarias.cs" />
