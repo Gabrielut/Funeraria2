@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D63F95E2-F09A-476E-9CB1-7E519127FE24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UTN.Winform.Funeraria</RootNamespace>
+    <AssemblyName>appFuneraria</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum\Acceso.cs" />
+    <Compile Include="Enum\MantenimientoEnum.cs" />
+    <Compile Include="Interfaces\IBLLActivo.cs" />
+    <Compile Include="Interfaces\IBLLBarrio.cs" />
+    <Compile Include="Interfaces\IBLLCanton.cs" />
+    <Compile Include="Interfaces\IBLLCliente.cs" />
+    <Compile Include="Interfaces\IBLLConvenio.cs" />
+    <Compile Include="Interfaces\IBLLCotizacion.cs" />
+    <Compile Include="Interfaces\IBLLDetFactura.cs" />
+    <Compile Include="Interfaces\IBLLDireccionCompleta.cs" />
+    <Compile Include="Interfaces\IBLLDistrito.cs" />
+    <Compile Include="Interfaces\IBLLEncFactura.cs" />
+    <Compile Include="Interfaces\IBLLFunerarias.cs" />
+    <Compile Include="Interfaces\IBLLLogin.cs" />
+    <Compile Include="Interfaces\IBLLPaquete.cs" />
+    <Compile Include="Interfaces\IBLLProveedores.cs" />
+    <Compile Include="Interfaces\IBLLProvincia.cs" />
+    <Compile Include="Interfaces\IBLLRol.cs" />
+    <Compile Include="Interfaces\IBLLSexo.cs" />
+    <Compile Include="Interfaces\IBLLTipoActivo.cs" />
+    <Compile Include="Interfaces\IBLLTipoPaquete.cs" />
+    <Compile Include="Interfaces\IBLLTipoServicio.cs" />
+    <Compile Include="Interfaces\IBLLUsuarios.cs" />
+    <Compile Include="Interfaces\IDALActivo.cs" />
+    <Compile Include="Interfaces\IDALBarrio.cs" />
+    <Compile Include="Interfaces\IDALCanton.cs" />
+    <Compile Include="Interfaces\IDALCliente.cs" />
+    <Compile Include="Interfaces\IDALConvenio.cs" />
+    <Compile Include="Interfaces\IDALCotizacion.cs" />
+    <Compile Include="Interfaces\IDALDetFactura.cs" />
+    <Compile Include="Interfaces\IDALDireccionCompleta.cs" />
+    <Compile Include="Interfaces\IDALDistrito.cs" />
+    <Compile Include="Interfaces\IDALEncFactura.cs" />
+    <Compile Include="Interfaces\IDALFunerarias.cs" />
+    <Compile Include="Interfaces\IDALLogin.cs" />
+    <Compile Include="Interfaces\IDALPaquete.cs" />
+    <Compile Include="Interfaces\IDALProveedores.cs" />
+    <Compile Include="Interfaces\IDALProvincia.cs" />
+    <Compile Include="Interfaces\IDALRol.cs" />
+    <Compile Include="Interfaces\IDALSexo.cs" />
+    <Compile Include="Interfaces\IDALTipoActivo.cs" />
+    <Compile Include="Interfaces\IDALTipoPaquete.cs" />
+    <Compile Include="Interfaces\IDALTipoServicio.cs" />
+    <Compile Include="Interfaces\IDALUsuarios.cs" />
+    <Compile Include="Layers\BLL\BLLActivo.cs" />
+    <Compile Include="Layers\BLL\BLLBarrio.cs" />
+    <Compile Include="Layers\BLL\BLLCanton.cs" />
+    <Compile Include="Layers\BLL\BLLCLiente.cs" />
+    <Compile Include="Layers\BLL\BLLConvenios.cs" />
+    <Compile Include="Layers\BLL\BLLCotizacion.cs" />
+    <Compile Include="Layers\BLL\BLLDetFactura.cs" />
+    <Compile Include="Layers\BLL\BLLDireccionCompleta.cs" />
+    <Compile Include="Layers\BLL\BLLDistrito.cs" />
+    <Compile Include="Layers\BLL\BLLEncFactura.cs" />
+    <Compile Include="Layers\BLL\BLLFunerarias.cs" />
+    <Compile Include="Layers\BLL\BLLLogin.cs" />
+    <Compile Include="Layers\BLL\BLLPaquete.cs" />
+    <Compile Include="Layers\BLL\BLLProveedores.cs" />
+    <Compile Include="Layers\BLL\BLLProvincia.cs" />
+    <Compile Include="Layers\BLL\BLLRol.cs" />
+    <Compile Include="Layers\BLL\BLLSexo.cs" />
+    <Compile Include="Layers\BLL\BLLTipoActivo.cs" />
+    <Compile Include="Layers\BLL\BLLTipoPaquete.cs" />
+    <Compile Include="Layers\BLL\BLLTipoServicio.cs" />
+    <Compile Include="Layers\BLL\BLLUsuarios.cs" />
+    <Compile Include="Layers\DAL\DALActivo.cs" />
+    <Compile Include="Layers\DAL\DALBarrio.cs" />
+    <Compile Include="Layers\DAL\DALCanton.cs" />
+    <Compile Include="Layers\DAL\DALCliente.cs" />
+    <Compile Include="Layers\DAL\DALConvenios.cs" />
+    <Compile Include="Layers\DAL\DALCotizacion.cs" />
+    <Compile Include="Layers\DAL\DALDetFactura.cs" />
+    <Compile Include="Layers\DAL\DALDireccionCompleta.cs" />
+    <Compile Include="Layers\DAL\DALDistrito.cs" />
+    <Compile Include="Layers\DAL\DALEncFactura.cs" />
+    <Compile Include="Layers\DAL\DALFunerarias.cs" />
+    <Compile Include="Layers\DAL\DALLogin.cs" />
+    <Compile Include="Layers\DAL\DALPaquete.cs" />
+    <Compile Include="Layers\DAL\DALProveedores.cs" />
+    <Compile Include="Layers\DAL\DALProvincia.cs" />
+    <Compile Include="Layers\DAL\DALRol.cs" />
+    <Compile Include="Layers\DAL\DALSexo.cs" />
+    <Compile Include="Layers\DAL\DALTipoActivo.cs" />
+    <Compile Include="Layers\DAL\DALTipoPaquete.cs" />
+    <Compile Include="Layers\DAL\DALTipoServicio.cs" />
+    <Compile Include="Layers\DAL\DALUsuarios.cs" />
+    <Compile Include="Layers\Entities\Activo.cs" />
+    <Compile Include="Layers\Entities\Barrio.cs" />
+    <Compile Include="Layers\Entities\Canton.cs" />
+    <Compile Include="Layers\Entities\Cliente.cs" />
+    <Compile Include="Layers\Entities\Convenios.cs" />
+    <Compile Include="Layers\Entities\Cotizacion.cs" />
+    <Compile Include="Layers\Entities\DetFactura.cs" />
+    <Compile Include="Layers\Entities\DireccionCompleta.cs" />
+    <Compile Include="Layers\Entities\Distrito.cs" />
+    <Compile Include="Layers\Entities\DTO\ActivoDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\ClienteDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\PaqueteDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\ProveedorDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\UsuariosDTO.cs" />
+    <Compile Include="Layers\Entities\EncFactura.cs" />
+    <Compile Include="Layers\Entities\Funerarias.cs" />
+    <Compile Include="Layers\Entities\Paquete.cs" />
+    <Compile Include="Layers\Entities\Proveedor.cs" />
+    <Compile Include="Layers\Entities\Provincia.cs" />
+    <Compile Include="Layers\Entities\Rol.cs" />
+    <Compile Include="Layers\Entities\Sexo.cs" />
+    <Compile Include="Layers\Entities\TipoActivo.cs" />
+    <Compile Include="Layers\Entities\TipoPaquete.cs" />
+    <Compile Include="Layers\Entities\TipoServicio.cs" />
+    <Compile Include="Layers\Entities\Usuarios.cs" />
+    <Compile Include="UI\frmCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCotizacion.Designer.cs">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Procesos\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Procesos\frmFacturacion.Designer.cs">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMantCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantCliente.Designer.cs">
+      <DependentUpon>frmMantCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMantConvenios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantConvenios.Designer.cs">
+      <DependentUpon>frmMantConvenios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantEmpleado.Designer.cs">
+      <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMantPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantPaquete.Designer.cs">
+      <DependentUpon>frmMantPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmMantProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantProveedor.Designer.cs">
+      <DependentUpon>frmMantProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistencia\DataBase.cs" />
+    <Compile Include="Persistencia\FactoryConexion.cs" />
+    <Compile Include="Persistencia\FactoryDataBase.cs" />
+    <Compile Include="Persistencia\IDataBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\frmMantActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMantActivo.Designer.cs">
+      <DependentUpon>frmMantActivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmCotizacion.resx">
+      <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\frmMantActivo.resx">
+      <DependentUpon>frmMantActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantCliente.resx">
+      <DependentUpon>frmMantCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantConvenios.resx">
+      <DependentUpon>frmMantConvenios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantEmpleado.resx">
+      <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantPaquete.resx">
+      <DependentUpon>frmMantPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMantProveedor.resx">
+      <DependentUpon>frmMantProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Procesos\frmFacturacion.resx">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="diagramaAdministracion.cd" />
+    <None Include="diagramaClases.cd" />
+    <None Include="diagramaSeguridad.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Media\ReinaAngeles.jpeg" />
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

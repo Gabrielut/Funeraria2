@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Diagrama de Clases - Seguridad">
+    <Position X="1.573" Y="0.927" Height="0.323" Width="2.356" />
+  </Comment>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Usuarios">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgAAAUgCAAoAQAAIAAAgAAAAAAAgABQAg=</HashCode>
+      <FileName>Layers\Entities\Usuarios.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rol" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Rol">
+    <Position X="7" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAAAAAAAABg=</HashCode>
+      <FileName>Layers\Entities\Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

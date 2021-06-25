@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAACAAAAAAAEAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Persistencia\DataBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FactoryConexion" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistencia\FactoryConexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryDatabase" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Persistencia\FactoryDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Program" Collapsed="true">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLActivo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAEAAACAAAACACAAAEA=</HashCode>
+      <FileName>Layers\BLL\BLLActivo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLBarrio" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLBarrio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLCanton" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLCanton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLCLiente" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAACAAAAAAAAAAAAAAQAAIAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLCLiente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLConvenios" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLConvenios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLCotizacion" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLCotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLDetFactura" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLDetFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLDireccionCompleta" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLDireccionCompleta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLDistrito" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLDistrito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLEncFactura" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLEncFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLFunerarias" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLFunerarias.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLLogin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLLogin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLPaquete" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLProveedores" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLProveedores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLProvincia" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLProvincia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLRol" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLRol.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLSexo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLSexo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLTipoActivo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLTipoActivo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLTipoPaquete" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLTipoPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLTipoServicio" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLTipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.BLL.BLLUsuarios" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAABAAAAAAAAAAEACAEAAQAAAAAA=</HashCode>
+      <FileName>Layers\BLL\BLLUsuarios.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALActivo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAABAAAAAAAAAAAAAAIAEAAACAAAAAECAAAEA=</HashCode>
+      <FileName>Layers\DAL\DALActivo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALBarrio" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALBarrio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALCanton" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALCanton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALCliente" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QoAAAACAAAAAAAAAAAAAAQAAIAAAAAAAAAAAEBAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALCliente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALConvenios" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALConvenios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALCotizacion" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALCotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALDetFactura" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALDetFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALDireccionCompleta" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALDireccionCompleta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALDistrito" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALDistrito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALEncFactura" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALEncFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALFunerarias" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALFunerarias.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALLogin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALLogin.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALPaquete" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALProveedores" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALProveedores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALProvincia" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALProvincia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALRol" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALRol.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALSexo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALSexo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALTipoActivo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALTipoActivo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALTipoPaquete" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALTipoPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALTipoServicio" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALTipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.DAL.DALUsuarios" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAABAAAAAAAAAAEAiAEAAUAAAAAA=</HashCode>
+      <FileName>Layers\DAL\DALUsuarios.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Activo">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQgAIAACAAAAAAgAARAAAAAAAAAAAAACAABAg=</HashCode>
+      <FileName>Layers\Entities\Activo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Barrio" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkAAAAEAAAAAAAAAAIQAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Layers\Entities\Barrio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Canton" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAgAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Entities\Canton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Cliente" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgCAAoAAAAIAAAAAAAAAABgAAQAA=</HashCode>
+      <FileName>Layers\Entities\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Convenios" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABAAAAIAAAAEgIAAAEAAAAAAAAAAAIAAAAQAAAg=</HashCode>
+      <FileName>Layers\Entities\Convenios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Cotizacion" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAAAAAAAAQAAAAAAAAAEAAAAAAAAAAECAABCAAAAA=</HashCode>
+      <FileName>Layers\Entities\Cotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.DetFactura" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAAAAQAQAAAAAAAAAQAAAAAAAAECAAACAAAAA=</HashCode>
+      <FileName>Layers\Entities\DetFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.DireccionCompleta" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAAAAECAAAAAAAAAIABAAAAAA=</HashCode>
+      <FileName>Layers\Entities\DireccionCompleta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Distrito" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAkAAAAEAAAAAACAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layers\Entities\Distrito.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.EncFactura" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAAAAAAAAEAQEAAAAAAAAAAAAAQAAAAAgABAAAAAg=</HashCode>
+      <FileName>Layers\Entities\EncFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Funerarias" Collapsed="true">
+    <Position X="5.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAARAAAAgAAAAJAAAAgAAAAIAAAAAAAKAAAAQAAAg=</HashCode>
+      <FileName>Layers\Entities\Funerarias.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Paquete" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAEAAAAQAAAAAAAAgAARAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Layers\Entities\Paquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Proveedor" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAARAAAAAAgAAAAAAAAAAQAIAIAAAAAAABAAwAAAg=</HashCode>
+      <FileName>Layers\Entities\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Provincia" Collapsed="true">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAEAAAAAAAAAAAQAAAAEAEAAAAAAAA=</HashCode>
+      <FileName>Layers\Entities\Provincia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Rol" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAABAAAAAAAAAAAAAAAAABg=</HashCode>
+      <FileName>Layers\Entities\Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Sexo" Collapsed="true">
+    <Position X="4" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAABAAQAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Layers\Entities\Sexo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.TipoActivo" Collapsed="true">
+    <Position X="5.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAIBAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Layers\Entities\TipoActivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.TipoPaquete" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Layers\Entities\TipoPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.TipoServicio" Collapsed="true">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAg=</HashCode>
+      <FileName>Layers\Entities\TipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.Usuarios" Collapsed="true">
+    <Position X="11" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAgAAAUgCAAoAQAAIAAAgAAAAAAAgABQAg=</HashCode>
+      <FileName>Layers\Entities\Usuarios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Layers.Entities.DTO.ActivoDTO" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEQgAIAACAAAAAAgAARAAAAAAAAAAAAACAAAAg=</HashCode>
+      <FileName>Layers\Entities\DTO\ActivoDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Properties.Resources" Collapsed="true">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAABAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.Properties.Settings" Collapsed="true">
+    <Position X="2.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAIAAAAAABAAACAAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmCotizacion" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yDAIAGAIHCA1BQQAAiFQmBCIHgAAEgiECIQFYABBTQ=</HashCode>
+      <FileName>UI\frmCotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmLogin" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABABgBCAAAACAAAASUBAAMAAAwBgAAA=</HashCode>
+      <FileName>UI\frmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantActivo" Collapsed="true">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BECKGA0DIDKExrQBIBLApEOTjCREQFACyDQAECAZRAw=</HashCode>
+      <FileName>UI\frmMantActivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantCliente" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4EAIuACBAGAADJIEgCiApgECCKREAUggADEAAwAEAAA=</HashCode>
+      <FileName>UI\frmMantCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantConvenios" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAIAAAAIDCABJQAQACBBEACACAEAEACADAAAQAAAQQ=</HashCode>
+      <FileName>UI\frmMantConvenios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantEmpleado" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cEAIOAAAAnAAHJwEBACAhAACAaQQAEIyACAEIAAADgA=</HashCode>
+      <FileName>UI\frmMantEmpleado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantPaquete" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAAgAAAACAABJRQAACABAFCAAgAAEACECAAAQAAAAA=</HashCode>
+      <FileName>UI\frmMantPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmMantProveedor" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAIgAAAASCAJBSQAACIRAFCIAgAAEACECAAAQAAAAA=</HashCode>
+      <FileName>UI\frmMantProveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmPrincipal" Collapsed="true">
+    <Position X="4" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CfGYIEYg0KAhUNAAACCEVQ4TQKAAQkEKgBCo21gUCQA=</HashCode>
+      <FileName>UI\frmPrincipal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UTN.Winform.Funeraria.UI.frmFacturacion" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\Procesos\frmFacturacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IDataBase" Collapsed="true">
+    <Position X="11" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAACAAAAAAAEAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Persistencia\IDataBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLActivo" Collapsed="true">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAIAEAAACAAAAAACAAAEA=</HashCode>
+      <FileName>Interfaces\IBLLActivo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLBarrio" Collapsed="true">
+    <Position X="2.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLBarrio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLCanton" Collapsed="true">
+    <Position X="4" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLCanton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLCliente" Collapsed="true">
+    <Position X="5.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAACAAAAAAAAAAAAAAQAAIAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLCliente.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLConvenio" Collapsed="true">
+    <Position X="7.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLConvenio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLCotizacion" Collapsed="true">
+    <Position X="9.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLCotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLDetFactura" Collapsed="true">
+    <Position X="11" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Interfaces\IBLLDetFactura.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLDireccionCompleta" Collapsed="true">
+    <Position X="12.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLDireccionCompleta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLDistrito" Collapsed="true">
+    <Position X="14.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLDistrito.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLEncFactura" Collapsed="true">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLEncFactura.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLFunerarias" Collapsed="true">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLFunerarias.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLLogin" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLLogin.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLPaquete" Collapsed="true">
+    <Position X="5.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLProveedores" Collapsed="true">
+    <Position X="7.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IBLLProveedores.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLProvincia" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLProvincia.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLRol" Collapsed="true">
+    <Position X="11" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLRol.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLSexo" Collapsed="true">
+    <Position X="12.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLSexo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLTipoActivo" Collapsed="true">
+    <Position X="14.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLTipoActivo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLTipoPaquete" Collapsed="true">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLTipoPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLTipoServicio" Collapsed="true">
+    <Position X="2.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLTipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IBLLUsuarios" Collapsed="true">
+    <Position X="4" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAABAAAAAAAAAAEACAEAAQAAAAAA=</HashCode>
+      <FileName>Interfaces\IBLLUsuarios.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALActivo" Collapsed="true">
+    <Position X="5.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAABAAAAAAAAAAAAAAIAEAAACAAAAAACAAAEA=</HashCode>
+      <FileName>Interfaces\IDALActivo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALBarrio" Collapsed="true">
+    <Position X="7.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Interfaces\IDALBarrio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALCanton" Collapsed="true">
+    <Position X="9.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALCanton.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALCliente" Collapsed="true">
+    <Position X="11" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QoAAAACAAAAAAAAAAAAAAQAAIAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Interfaces\IDALCliente.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALConvenio" Collapsed="true">
+    <Position X="12.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALConvenio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALCotizacion" Collapsed="true">
+    <Position X="14.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALCotizacion.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALDetFactura" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Interfaces\IDALDetFactura.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALDireccionCompleta" Collapsed="true">
+    <Position X="2.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALDireccionCompleta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALDistrito" Collapsed="true">
+    <Position X="4" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALDistrito.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALEncFactura" Collapsed="true">
+    <Position X="5.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALEncFactura.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALFunerarias" Collapsed="true">
+    <Position X="7.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALFunerarias.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALLogin" Collapsed="true">
+    <Position X="9.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALLogin.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALPaquete" Collapsed="true">
+    <Position X="11" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALProveedores" Collapsed="true">
+    <Position X="12.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IDALProveedores.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALProvincia" Collapsed="true">
+    <Position X="14.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALProvincia.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALRol" Collapsed="true">
+    <Position X="0.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALRol.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALSexo" Collapsed="true">
+    <Position X="2.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALSexo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALTipoActivo" Collapsed="true">
+    <Position X="4" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALTipoActivo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALTipoPaquete" Collapsed="true">
+    <Position X="5.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALTipoPaquete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALTipoServicio" Collapsed="true">
+    <Position X="7.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALTipoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="UTN.Winform.Funeraria.Interfaces.IDALUsuarios" Collapsed="true">
+    <Position X="9.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAABAAAAAAAAAAEAiAEAAQAAAAAA=</HashCode>
+      <FileName>Interfaces\IDALUsuarios.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Acceso" Collapsed="true">
+    <Position X="0.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAABABA=</HashCode>
+      <FileName>Enum\Acceso.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MantenimientoEnum" Collapsed="true">
+    <Position X="2.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAAQAAA=</HashCode>
+      <FileName>Enum\MantenimientoEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
