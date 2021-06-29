@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
 using UTN.Winform.Funeraria.Layers.Entities;
+using UTN.Winform.Funeraria.Properties;
 
 namespace UTN.Winform.Funeraria.UI
 {
@@ -327,16 +328,17 @@ namespace UTN.Winform.Funeraria.UI
         }
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            //acceso(Acceso.Administrador);
+            //obtenerAcceso(Acceso.Administrador);
 
         }
-        private void acceso (Acceso pAcceso)
+        public void obtenerAcceso (Acceso pAcceso)
         {
             btnMantenimientos.Enabled = false;
             btnMenuHerramientas.Enabled = false;
             iconButton1.Enabled = false;
             iconButton2.Enabled = false;
-           
+            string login = Settings.Default.Login;
+
             switch (pAcceso)
             {
                 case Acceso.Administrador:

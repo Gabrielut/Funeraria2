@@ -9,6 +9,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 {
     class DALLogin : IDALLogin
     {
+
         public bool Login(string pUsuario, string pContrasena)
         {
             try
@@ -17,7 +18,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
                 using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(pUsuario, pContrasena)))
                 {
-                    // Si esto da error es porque el usuario no existe! 
+                     
                 }
 
                 return true;
