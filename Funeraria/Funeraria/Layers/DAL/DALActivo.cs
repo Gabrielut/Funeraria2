@@ -141,7 +141,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             DataSet ds = null;
             IDbCommand command = new SqlCommand();
             int numeroActivo;
-            string sql = @"SELECT NEXT VALUE FOR SequenceNoActivo";
+            string sql = @"Select max(IdActivo) + 1 from Activo";
 
             DataTable dt = null;
             try

@@ -42,6 +42,8 @@ namespace UTN.Winform.Funeraria.UI
             {
                 IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
                 Usuarios oUsuarios = _BLLUsuarios.LoginUsuarios(this.txtUsuario.Text);
+                IBLLRol _BLLRol = new BLLRol();
+                Rol acceso = _BLLRol.GetRolById(oUsuarios.IdRol);
                 errPro.Clear();
 
                 if (string.IsNullOrEmpty(this.txtUsuario.Text))
@@ -68,6 +70,23 @@ namespace UTN.Winform.Funeraria.UI
                     {
 
                         this.DialogResult = DialogResult.OK;
+                        frmPrincipal frm = new frmPrincipal(); 
+
+                        switch (acceso.IDRol)
+                        {
+                            case 1:                                
+                                frm.obtenerAcceso(Acceso.Administrador);
+                                break;
+                            case 2:
+                                frm.obtenerAcceso(Acceso.Operaciones);
+                                break;
+                            case 3:
+                                frm.obtenerAcceso(Acceso.Reportes);
+                                break;
+                            case 4:
+                                frm.obtenerAcceso(Acceso.Cajas);
+                                break;
+                        }
 
                     }
                     else

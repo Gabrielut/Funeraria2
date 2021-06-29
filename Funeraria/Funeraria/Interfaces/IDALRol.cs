@@ -10,5 +10,6 @@ namespace UTN.Winform.Funeraria.Interfaces
     interface IDALRol
     {
         List<Rol> GetAllRol();
+        Rol GetRolById(int pId);
     }
 }

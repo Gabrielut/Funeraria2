@@ -17,5 +17,12 @@ namespace UTN.Winform.Funeraria.Layers.BLL
 
             return _IIDALRol.GetAllRol();
         }
+
+        public Rol GetRolById(int pId)
+        {
+            IDALRol _IIDALRol = new DALRol();
+
+            return _IIDALRol.GetRolById(pId);
+        }
     }
 }
