@@ -16,7 +16,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
 
         public override string ToString()
         {
-            return codDistrito + " " + dscDistrito;
+            return dscDistrito;
         }
     }
 }

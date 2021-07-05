@@ -108,7 +108,7 @@ namespace UTN.Winform.Funeraria.UI
             switch (estado)
             {
                 case MantenimientoEnum.Nuevo:
-                    this.txtId.Text = _BllProveedor.GetNextNumeroActivo().ToString();
+                    this.txtId.Enabled = true;
                     this.txtNombre.Enabled = true;
                     this.txtDescripcion.Enabled = true;
                     this.txtPrecio.Enabled = true;
@@ -138,6 +138,12 @@ namespace UTN.Winform.Funeraria.UI
             try
             {
                 errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtId.Text))
+                {
+                    errPro.SetError(txtId, "Id requerido");
+                    this.txtId.Focus();
+                    return;
+                }
                 if (string.IsNullOrEmpty(this.txtNombre.Text))
                 {
                     errPro.SetError(txtNombre, "Nombre requerido");

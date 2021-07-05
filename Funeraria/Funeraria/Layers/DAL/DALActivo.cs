@@ -138,41 +138,48 @@ namespace UTN.Winform.Funeraria.Layers.DAL
         }
         public int GetNextNumeroActivo()
         {
-            DataSet ds = null;
-            IDbCommand command = new SqlCommand();
-            int numeroActivo;
-            string sql = @"Select max(IdActivo) + 1 from Activo";
+            //DataSet ds = null;
+            //IDbCommand command = new SqlCommand();
+            //int numeroActivo;
+            //string sql = @"SELECT NEXT VALUE FOR SequenceNoActivo";
 
-            DataTable dt = null;
-            try
-            {
-                command.CommandText = sql;
-                command.CommandType = CommandType.Text;
+            //DataTable dt = null;
+            //try
+            //{
+            //    command.CommandText = sql;
+            //    command.CommandType = CommandType.Text;
 
-                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
-                {
+            //    using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+            //    {
 
-                    ds = db.ExecuteReader(command, "query");
-                }
+            //        ds = db.ExecuteReader(command, "query");
+            //    }
 
-                // Extraer la tabla 
-                dt = ds.Tables[0];
-                //Extraer el valor que viene en el DataTable 
-                numeroActivo = int.Parse(dt.Rows[0][0].ToString());
-                return numeroActivo;
-            }
-            catch (Exception er)
-            {
-               
-                throw;
-            }
+            //     Extraer la tabla 
+            //    dt = ds.Tables[0];
+            //    Extraer el valor que viene en el DataTable 
+            //    if ((dt.Rows[0][0].ToString()) == "")
+            //    {
+            //        numeroActivo = 1;
+            //        return numeroActivo;
+            //    }
+            //    numeroActivo = int.Parse(dt.Rows[0][0].ToString());
+            //    return numeroActivo;
+            //}
+            //catch (Exception er)
+            //{
+
+            //    throw;
+            //}
+            throw new NotImplementedException();
         }
         public Activo SaveActivo(Activo pActivo)
         {
             Activo oActivo = null;
             double rows = 0;
             string sql = @"INSERT INTO Activo
-           ([Nombre]
+           ([IdActivo]
+           ,[Nombre]
            ,[Descripcion]
            ,[TipoActivo]
            ,[Cantidad]
@@ -182,7 +189,8 @@ namespace UTN.Winform.Funeraria.Layers.DAL
            ,[Img]
            ,[Estado])
      VALUES
-           (@Nombre
+           (@IdActivo
+           ,@Nombre
            ,@Descripcion
            ,@TipoActivo 
            ,@Cantidad 
@@ -192,6 +200,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
            ,@Img
            ,@Estado)";
             SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@IdActivo", pActivo.IdActivo);
             cmd.Parameters.AddWithValue("@Nombre", pActivo.Nombre);
             cmd.Parameters.AddWithValue("@Descripcion", pActivo.Descripcion);
             cmd.Parameters.AddWithValue("@TipoActivo", pActivo.TipoActivo);

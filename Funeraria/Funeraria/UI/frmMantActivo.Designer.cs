@@ -719,6 +719,16 @@ namespace UTN.Winform.Funeraria.UI
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.dGVListadoActivos = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InfoAdicional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTNombre = new System.Windows.Forms.ToolTip(this.components);
             this.toolTGuardar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTEditar = new System.Windows.Forms.ToolTip(this.components);
@@ -737,16 +747,6 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTEstado = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCantidad = new System.Windows.Forms.ToolTip(this.components);
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InfoAdicional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Imagen = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMenu.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1185,6 +1185,69 @@ namespace UTN.Winform.Funeraria.UI
             this.dGVListadoActivos.Size = new System.Drawing.Size(910, 305);
             this.dGVListadoActivos.TabIndex = 4;
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "IdActivo";
+            this.Id.HeaderText = "N°";
+            this.Id.Name = "Id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // TipoActivo
+            // 
+            this.TipoActivo.DataPropertyName = "TipoActivo";
+            this.TipoActivo.HeaderText = "TipoActivo";
+            this.TipoActivo.Name = "TipoActivo";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Costo
+            // 
+            this.Costo.DataPropertyName = "Costo";
+            this.Costo.HeaderText = "Costo";
+            this.Costo.Name = "Costo";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // InfoAdicional
+            // 
+            this.InfoAdicional.DataPropertyName = "InformacionAdicional";
+            this.InfoAdicional.HeaderText = "InfoAdicional";
+            this.InfoAdicional.Name = "InfoAdicional";
+            // 
+            // Imagen
+            // 
+            this.Imagen.DataPropertyName = "Img";
+            this.Imagen.HeaderText = "Imagen";
+            this.Imagen.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Imagen.Name = "Imagen";
+            this.Imagen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ToolTipText = "Estado";
+            // 
             // toolTNombre
             // 
             this.toolTNombre.IsBalloon = true;
@@ -1252,69 +1315,6 @@ namespace UTN.Winform.Funeraria.UI
             // errPro
             // 
             this.errPro.ContainerControl = this;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "IdActivo";
-            this.Id.HeaderText = "N°";
-            this.Id.Name = "Id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // TipoActivo
-            // 
-            this.TipoActivo.DataPropertyName = "TipoActivo";
-            this.TipoActivo.HeaderText = "TipoActivo";
-            this.TipoActivo.Name = "TipoActivo";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Costo
-            // 
-            this.Costo.DataPropertyName = "Costo";
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // InfoAdicional
-            // 
-            this.InfoAdicional.DataPropertyName = "InformacionAdicional";
-            this.InfoAdicional.HeaderText = "InfoAdicional";
-            this.InfoAdicional.Name = "InfoAdicional";
-            // 
-            // Imagen
-            // 
-            this.Imagen.DataPropertyName = "Img";
-            this.Imagen.HeaderText = "Imagen";
-            this.Imagen.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Imagen.Name = "Imagen";
-            this.Imagen.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ToolTipText = "Estado";
             // 
             // frmMantActivo
             // 
