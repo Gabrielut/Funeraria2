@@ -37,6 +37,16 @@ namespace UTN.Winform.Funeraria.UI
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboBarrio = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtOtrasSennas = new System.Windows.Forms.TextBox();
+            this.cboDistrito = new System.Windows.Forms.ComboBox();
+            this.cboCanton = new System.Windows.Forms.ComboBox();
+            this.cboProvincia = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtFax = new System.Windows.Forms.MaskedTextBox();
@@ -178,6 +188,16 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.cboBarrio);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.txtOtrasSennas);
+            this.groupBox1.Controls.Add(this.cboDistrito);
+            this.groupBox1.Controls.Add(this.cboCanton);
+            this.groupBox1.Controls.Add(this.cboProvincia);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.txtTelefono);
             this.groupBox1.Controls.Add(this.txtFax);
@@ -201,16 +221,105 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(41, 51);
+            this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(789, 239);
+            this.groupBox1.Size = new System.Drawing.Size(818, 279);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
             // 
+            // cboBarrio
+            // 
+            this.cboBarrio.FormattingEnabled = true;
+            this.cboBarrio.Location = new System.Drawing.Point(642, 164);
+            this.cboBarrio.Name = "cboBarrio";
+            this.cboBarrio.Size = new System.Drawing.Size(139, 24);
+            this.cboBarrio.TabIndex = 37;
+            this.cboBarrio.SelectedIndexChanged += new System.EventHandler(this.cboBarrio_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(528, 164);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(45, 16);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "Barrio";
+            // 
+            // txtOtrasSennas
+            // 
+            this.txtOtrasSennas.Location = new System.Drawing.Point(642, 203);
+            this.txtOtrasSennas.Multiline = true;
+            this.txtOtrasSennas.Name = "txtOtrasSennas";
+            this.txtOtrasSennas.Size = new System.Drawing.Size(155, 70);
+            this.txtOtrasSennas.TabIndex = 35;
+            // 
+            // cboDistrito
+            // 
+            this.cboDistrito.FormattingEnabled = true;
+            this.cboDistrito.Location = new System.Drawing.Point(642, 125);
+            this.cboDistrito.Name = "cboDistrito";
+            this.cboDistrito.Size = new System.Drawing.Size(139, 24);
+            this.cboDistrito.TabIndex = 34;
+            this.cboDistrito.SelectedIndexChanged += new System.EventHandler(this.cboDistrito_SelectedIndexChanged);
+            // 
+            // cboCanton
+            // 
+            this.cboCanton.FormattingEnabled = true;
+            this.cboCanton.Location = new System.Drawing.Point(642, 76);
+            this.cboCanton.Name = "cboCanton";
+            this.cboCanton.Size = new System.Drawing.Size(139, 24);
+            this.cboCanton.TabIndex = 33;
+            this.cboCanton.SelectedIndexChanged += new System.EventHandler(this.cboCanton_SelectedIndexChanged);
+            // 
+            // cboProvincia
+            // 
+            this.cboProvincia.FormattingEnabled = true;
+            this.cboProvincia.Location = new System.Drawing.Point(642, 27);
+            this.cboProvincia.Name = "cboProvincia";
+            this.cboProvincia.Size = new System.Drawing.Size(139, 24);
+            this.cboProvincia.TabIndex = 32;
+            this.cboProvincia.SelectedIndexChanged += new System.EventHandler(this.cboProvincia_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(525, 222);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 16);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Otras señas";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(525, 125);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 16);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Distrito";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(525, 73);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 16);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Cantón";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(525, 28);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Provincia";
+            // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(593, 41);
+            this.txtPrecio.Location = new System.Drawing.Point(101, 195);
             this.txtPrecio.Mask = "000000000";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(136, 24);
@@ -218,7 +327,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(336, 91);
+            this.txtTelefono.Location = new System.Drawing.Point(331, 73);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(139, 24);
@@ -226,7 +335,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtFax
             // 
-            this.txtFax.Location = new System.Drawing.Point(336, 126);
+            this.txtFax.Location = new System.Drawing.Point(331, 105);
             this.txtFax.Mask = "0000-0000";
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(139, 24);
@@ -234,7 +343,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(336, 41);
+            this.txtCelular.Location = new System.Drawing.Point(331, 148);
             this.txtCelular.Mask = "0000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(139, 24);
@@ -243,7 +352,7 @@ namespace UTN.Winform.Funeraria.UI
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(510, 91);
+            this.label9.Location = new System.Drawing.Point(18, 154);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 16);
             this.label9.TabIndex = 22;
@@ -251,7 +360,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(593, 86);
+            this.txtCantidad.Location = new System.Drawing.Point(101, 149);
             this.txtCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -269,7 +378,7 @@ namespace UTN.Winform.Funeraria.UI
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(524, 45);
+            this.label8.Location = new System.Drawing.Point(21, 198);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(46, 16);
             this.label8.TabIndex = 19;
@@ -278,7 +387,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(103, 38);
+            this.txtId.Location = new System.Drawing.Point(103, 23);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(134, 24);
             this.txtId.TabIndex = 17;
@@ -286,7 +395,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(593, 174);
+            this.cboEstado.Location = new System.Drawing.Point(331, 195);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(136, 24);
             this.cboEstado.TabIndex = 15;
@@ -294,7 +403,7 @@ namespace UTN.Winform.Funeraria.UI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(524, 179);
+            this.label5.Location = new System.Drawing.Point(246, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 14;
@@ -303,7 +412,7 @@ namespace UTN.Winform.Funeraria.UI
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 45);
+            this.label6.Location = new System.Drawing.Point(21, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 16);
             this.label6.TabIndex = 16;
@@ -312,7 +421,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboTipoServicio
             // 
             this.cboTipoServicio.FormattingEnabled = true;
-            this.cboTipoServicio.Location = new System.Drawing.Point(593, 131);
+            this.cboTipoServicio.Location = new System.Drawing.Point(138, 236);
             this.cboTipoServicio.Name = "cboTipoServicio";
             this.cboTipoServicio.Size = new System.Drawing.Size(139, 24);
             this.cboTipoServicio.TabIndex = 13;
@@ -320,7 +429,7 @@ namespace UTN.Winform.Funeraria.UI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(476, 134);
+            this.label3.Location = new System.Drawing.Point(21, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 12;
@@ -329,7 +438,7 @@ namespace UTN.Winform.Funeraria.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(269, 126);
+            this.label1.Location = new System.Drawing.Point(244, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 9;
@@ -338,7 +447,7 @@ namespace UTN.Winform.Funeraria.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(209, 182);
+            this.label2.Location = new System.Drawing.Point(241, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 11;
@@ -347,7 +456,7 @@ namespace UTN.Winform.Funeraria.UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(259, 89);
+            this.label4.Location = new System.Drawing.Point(244, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 7;
@@ -355,7 +464,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(336, 179);
+            this.txtCorreo.Location = new System.Drawing.Point(368, 20);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(139, 24);
             this.txtCorreo.TabIndex = 10;
@@ -363,7 +472,7 @@ namespace UTN.Winform.Funeraria.UI
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(267, 41);
+            this.lblCelular.Location = new System.Drawing.Point(244, 148);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(51, 16);
             this.lblCelular.TabIndex = 5;
@@ -372,7 +481,7 @@ namespace UTN.Winform.Funeraria.UI
             // lblPropietario
             // 
             this.lblPropietario.AutoSize = true;
-            this.lblPropietario.Location = new System.Drawing.Point(18, 141);
+            this.lblPropietario.Location = new System.Drawing.Point(18, 108);
             this.lblPropietario.Name = "lblPropietario";
             this.lblPropietario.Size = new System.Drawing.Size(77, 16);
             this.lblPropietario.TabIndex = 3;
@@ -380,7 +489,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtPropietario
             // 
-            this.txtPropietario.Location = new System.Drawing.Point(103, 141);
+            this.txtPropietario.Location = new System.Drawing.Point(103, 105);
             this.txtPropietario.Name = "txtPropietario";
             this.txtPropietario.Size = new System.Drawing.Size(134, 24);
             this.txtPropietario.TabIndex = 2;
@@ -388,7 +497,7 @@ namespace UTN.Winform.Funeraria.UI
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(18, 90);
+            this.lblNombre.Location = new System.Drawing.Point(18, 68);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 16);
             this.lblNombre.TabIndex = 1;
@@ -396,7 +505,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(103, 90);
+            this.txtNombre.Location = new System.Drawing.Point(103, 68);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(134, 24);
             this.txtNombre.TabIndex = 0;
@@ -658,5 +767,15 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.ToolTip toolNombre;
         private System.Windows.Forms.ErrorProvider errPro;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboDistrito;
+        private System.Windows.Forms.ComboBox cboCanton;
+        private System.Windows.Forms.ComboBox cboProvincia;
+        private System.Windows.Forms.TextBox txtOtrasSennas;
+        private System.Windows.Forms.ComboBox cboBarrio;
+        private System.Windows.Forms.Label label13;
     }
 }

@@ -9,6 +9,6 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IBLLCanton
     {
-        List<Canton> GetAllCanton();
+        List<Canton> GetCantonById(int provincia);
     }
 }

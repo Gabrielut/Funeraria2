@@ -17,19 +17,16 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             IDALActivo _DalActivo = new DALActivo();
             return _DalActivo.DaleteActivo(pId);
         }
-
         public List<Activo> GetActivoByFilter(string pDescripcion)
         {
             IDALActivo _DalActivo = new DALActivo();
             return _DalActivo.GetActivoByFilter(pDescripcion);
         }
-
         public Activo GetActivoById(int pActivo)
         {
             IDALActivo _DalActivo = new DALActivo();
             return _DalActivo.GetActivoById(pActivo);
         }
-
         public int GetNextNumeroActivo()
         {
             IDALActivo _DalActivo = new DALActivo();
@@ -50,7 +47,6 @@ namespace UTN.Winform.Funeraria.Layers.BLL
 
             return oActivo;
         }
-
         List<Activo> IBLLActivo.GetAllActivos()
         {
             IDALActivo _DalActivo = new DALActivo();

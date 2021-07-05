@@ -105,6 +105,7 @@ namespace UTN.Winform.Funeraria.UI
         public void llenarCombos()
         {
             IBLLTipoServicio _BLLTipoServicio = new BLLTipoServicio();
+            IBLLProvincia _BLLProvincia = new BLLProvincia();
 
             this.cboEstado.Items.Clear();
             this.cboTipoServicio.Items.Clear();
@@ -112,10 +113,15 @@ namespace UTN.Winform.Funeraria.UI
             {
                 this.cboTipoServicio.Items.Add(item);
             }
+            foreach (Provincia item in _BLLProvincia.GetAllProvincia())
+            {
+                this.cboProvincia.Items.Add(item);
+            }
             this.cboEstado.Items.Add("Activo");
             this.cboEstado.Items.Add("Inactivo");
             this.cboEstado.SelectedIndex = 0;
             this.cboTipoServicio.SelectedIndex = 0;
+            this.cboProvincia.SelectedIndex = 0;
         }
         private void CambiarEstado(MantenimientoEnum estado)
         {
@@ -129,6 +135,7 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCorreo.Text = "";
             this.txtPrecio.Text = "";
             this.txtCantidad.Text = "";
+            this.txtOtrasSennas.Text = "";
 
             this.txtId.Enabled = false;
             this.txtNombre.Enabled = false;
@@ -138,14 +145,19 @@ namespace UTN.Winform.Funeraria.UI
             this.txtFax.Enabled = false;
             this.txtCorreo.Enabled = false;
             this.txtPrecio.Enabled = false;
+            this.txtOtrasSennas.Enabled = false;
             this.txtCantidad.Enabled = false;
             this.cboEstado.Enabled = false;
             this.cboTipoServicio.Enabled = false;
+            this.cboProvincia.Enabled = false;
+            this.cboCanton.Enabled = false;
+            this.cboDistrito.Enabled = false;
+            this.cboBarrio.Enabled = false;
 
             switch (estado)
             {
                 case MantenimientoEnum.Nuevo:
-                    this.txtId.Text = _BllProveedor.GetNextNumeroActivo().ToString();
+                    this.txtId.Enabled = true;
                     this.txtNombre.Enabled = true;
                     this.txtPropietario.Enabled = true;
                     this.txtTelefono.Enabled = true;
@@ -156,6 +168,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCantidad.Enabled = true;
                     this.cboEstado.Enabled = true;
                     this.cboTipoServicio.Enabled = true;
+                    this.cboProvincia.Enabled = true;
                     this.txtNombre.Focus();
                     break;
                 case MantenimientoEnum.Editar:
@@ -170,6 +183,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCantidad.Enabled = true;
                     this.cboEstado.Enabled = true;
                     this.cboTipoServicio.Enabled = true;
+                    this.cboProvincia.Enabled = true;
                     this.txtNombre.Focus();
                     break;
                 case MantenimientoEnum.Borrar:
@@ -183,6 +197,12 @@ namespace UTN.Winform.Funeraria.UI
             try
             {
                 errPro.Clear();
+                if (string.IsNullOrEmpty(this.txtId.Text))
+                {
+                    errPro.SetError(txtId, "Id requerido");
+                    this.txtId.Focus();
+                    return;
+                }
                 if (string.IsNullOrEmpty(this.txtNombre.Text))
                 {
                     errPro.SetError(txtNombre, "Nombre requerido");
@@ -216,6 +236,8 @@ namespace UTN.Winform.Funeraria.UI
 
                 IBLLProveedores _BllProveedores = new BLLProveedores();
                 Proveedor oProveedores = new Proveedor();
+                DireccionCompleta oDireccionCompleta = new DireccionCompleta();
+                IBLLDireccionCompleta _BLLDireccionCompleta = new BLLDireccionCompleta();
                 oProveedores.IdProveedor = int.Parse(this.txtId.Text);
                 oProveedores.NomProveedor = this.txtNombre.Text;
                 oProveedores.Propietario = this.txtPropietario.Text;
@@ -226,7 +248,12 @@ namespace UTN.Winform.Funeraria.UI
                 oProveedores.Precio = int.Parse(this.txtPrecio.Text);
                 oProveedores.CantUni = int.Parse(this.txtCantidad.Text);
                 oProveedores.IdTipoServicio = (cboTipoServicio.SelectedItem as TipoServicio).IdTipoServicio;
-               
+                oDireccionCompleta.IdDireccion = int.Parse(this.txtId.Text);
+                oDireccionCompleta.Provincia = (cboProvincia.SelectedItem as Provincia).codProvincia;
+                oDireccionCompleta.Canton = (cboCanton.SelectedItem as Canton).codCanton;
+                oDireccionCompleta.Distrito = (cboDistrito.SelectedItem as Distrito).codDistrito;
+                oDireccionCompleta.Barrio = (cboBarrio.SelectedItem as Barrio).codBarrio;
+                oDireccionCompleta.OtrasSennas = txtOtrasSennas.Text;
                 if (cboEstado.SelectedIndex == 0)
                 {
                     oProveedores.Estado = true;
@@ -237,6 +264,7 @@ namespace UTN.Winform.Funeraria.UI
                 }
                 if (_BllProveedores.SaveProveedor(oProveedores) != null)
                 {
+                    _BLLDireccionCompleta.SaveDireccionCompleta(oDireccionCompleta);
                     llenarCombos();
                     llenarDatos();
                     CambiarEstado(MantenimientoEnum.Ninguno);
@@ -319,9 +347,52 @@ namespace UTN.Winform.Funeraria.UI
 
             }
         }
+        private void cboProvincia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int provincia = (cboProvincia.SelectedItem as Provincia).codProvincia;
+            IBLLCanton _BLLCanton = new BLLCanton();
+            cboCanton.Items.Clear();
+            foreach (Canton item in _BLLCanton.GetCantonById(provincia))
+            {
+                cboCanton.Items.Add(item);
+            }
+            cboCanton.Enabled = true;
+            cboCanton.SelectedIndex = 0;
+        }
 
+        private void cboCanton_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int provincia = (cboProvincia.SelectedItem as Provincia).codProvincia;
+            int canton = (cboCanton.SelectedItem as Canton).codCanton;
+            IBLLDistrito _BLLDistrito = new BLLDistrito();
+            cboDistrito.Items.Clear();
+            foreach (Distrito item in _BLLDistrito.GetDistritoById(provincia,canton))
+            {
+                cboDistrito.Items.Add(item);
+            }
+            cboDistrito.Enabled = true;
+            cboDistrito.SelectedIndex = 0;
+        }
+        private void cboDistrito_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int provincia = (cboProvincia.SelectedItem as Provincia).codProvincia;
+            int canton = (cboCanton.SelectedItem as Canton).codCanton;
+            int distrito = (cboDistrito.SelectedItem as Distrito).codDistrito;
+            IBLLBarrio _BLLBarrio = new BLLBarrio();
+            cboBarrio.Items.Clear();
+            foreach (Barrio item in _BLLBarrio.GetBarrioById(provincia, canton, distrito))
+            {
+                cboBarrio.Items.Add(item);
+            }
+            cboBarrio.Enabled = true;
+            cboBarrio.SelectedIndex = 0;
+        }
+        private void cboBarrio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtOtrasSennas.Enabled = true;
+        }
         #endregion
 
-       
+
     }
 }

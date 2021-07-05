@@ -8,7 +8,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
 {
     class DireccionCompleta
     {
-        public int IdCliente { get; set; }
+        public int IdDireccion { get; set; }
         public int Provincia { set; get; }
         public int Canton { set; get; }
         public int Distrito { set; get; }

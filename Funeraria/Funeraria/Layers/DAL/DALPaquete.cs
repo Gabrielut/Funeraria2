@@ -86,34 +86,35 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
         public int GetNextNumeroActivo()
         {
-            DataSet ds = null;
-            IDbCommand command = new SqlCommand();
-            int numeroActivo;
-            string sql = @"SELECT NEXT VALUE FOR SequenceNoPaquete";
+            //DataSet ds = null;
+            //IDbCommand command = new SqlCommand();
+            //int numeroActivo;
+            //string sql = @"SELECT NEXT VALUE FOR SequenceNoPaquete";
 
-            DataTable dt = null;
-            try
-            {
-                command.CommandText = sql;
-                command.CommandType = CommandType.Text;
+            //DataTable dt = null;
+            //try
+            //{
+            //    command.CommandText = sql;
+            //    command.CommandType = CommandType.Text;
 
-                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
-                {
+            //    using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+            //    {
 
-                    ds = db.ExecuteReader(command, "query");
-                }
+            //        ds = db.ExecuteReader(command, "query");
+            //    }
 
-                // Extraer la tabla 
-                dt = ds.Tables[0];
-                //Extraer el valor que viene en el DataTable 
-                numeroActivo = int.Parse(dt.Rows[0][0].ToString());
-                return numeroActivo;
-            }
-            catch (Exception er)
-            {
+            //    // Extraer la tabla 
+            //    dt = ds.Tables[0];
+            //    //Extraer el valor que viene en el DataTable 
+            //    numeroActivo = int.Parse(dt.Rows[0][0].ToString());
+            //    return numeroActivo;
+            //}
+            //catch (Exception er)
+            //{
 
-                throw;
-            }
+            //    throw;
+            //}
+            throw new NotImplementedException();
         }
 
         public List<Paquete> GetPaqueteByFilter(string pDescripcion)
@@ -172,20 +173,23 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             Paquete oPaquete = null;
             double rows = 0;
             string sql = @"INSERT INTO Paquete
-           ([Nombre]
+           ([IdPaquete]
+           ,[Nombre]
            ,[Descripcion]
            ,[Precio]
            ,[Cantidad]
            ,[IdTipoPaquete]
            ,[Estado])
      VALUES
-           (@Nombre, 
+           (@IdPaquete,
+           @Nombre, 
            @Descripcion,
            @Precio,
            @Cantidad,
            @IdTipoPaquete,
            @Estado)";
             SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@IdPaquete", pPaquete.IdPaquete);
             cmd.Parameters.AddWithValue("@Nombre", pPaquete.Nombre);
             cmd.Parameters.AddWithValue("@Descripcion", pPaquete.Descripcion);
             cmd.Parameters.AddWithValue("@Precio", pPaquete.Precio);

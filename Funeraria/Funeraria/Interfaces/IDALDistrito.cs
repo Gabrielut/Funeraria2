@@ -9,6 +9,6 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IDALDistrito
     {
-        List<Distrito> GetAllDistrito();
+        List<Distrito> GetDistritoById(int provincia, int canton);
     }
 }

@@ -9,6 +9,6 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IDALBarrio
     {
-        List<Barrio> GetAllBarrio();
+        List<Barrio> GetBarrioById(int provincia, int canton, int distrito);
     }
 }

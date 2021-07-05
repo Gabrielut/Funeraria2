@@ -167,8 +167,7 @@ namespace UTN.Winform.Funeraria.UI
             switch (estado)
             {
                 case MantenimientoEnum.Nuevo:
-                    this.txtIdActivo.Text = _BllActivo.GetNextNumeroActivo().ToString();
-                    this.txtIdActivo.Enabled = false;
+                    this.txtIdActivo.Enabled = true;
                     this.txtNombre.Enabled = true;
                     this.txtDescripcion.Enabled = true;
                     this.txtDetalles.Enabled = true;
@@ -211,6 +210,12 @@ namespace UTN.Winform.Funeraria.UI
                     errPro.SetError(pbImage, "Imagen requerida");
                     return;
                 }
+                if (string.IsNullOrEmpty(this.txtIdActivo.Text))
+                {
+                    errPro.SetError(txtIdActivo, "Id requerido");
+                    this.txtIdActivo.Focus();
+                    return;
+                }
                 if (string.IsNullOrEmpty(this.txtNombre.Text))
                 {
                     errPro.SetError(txtNombre, "Nombre requerido");
@@ -249,8 +254,8 @@ namespace UTN.Winform.Funeraria.UI
                 oActivo.Descripcion = this.txtDescripcion.Text;
                 oActivo.TipoActivo = (cbBoxTipoActivo.SelectedItem as TipoActivo).IdTipoActivo;
                 oActivo.Cantidad = (int)this.txtCantidad.Value;
-                oActivo.Costo = float.Parse(this.txtCosto.Text);
-                oActivo.Precio = float.Parse(this.txtPrecio.Text);
+                oActivo.Costo = float.Parse(this.txtCosto.Text.Replace("₡", ""));
+                oActivo.Precio = float.Parse(this.txtPrecio.Text.Replace("₡", ""));
                 oActivo.InformacionAdicional = this.txtDetalles.Text;
                 oActivo.Img = (byte[])this.pbImage.Tag;
                 if (cbBoxEstado.SelectedIndex == 0)
@@ -324,8 +329,8 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtDescripcion.Text = oActivoDTO.Descripcion;
                     this.cbBoxTipoActivo.SelectedIndex = cbBoxTipoActivo.FindString(oActivoDTO.TipoActivo.ToString());
                     this.txtCantidad.Value = oActivoDTO.Cantidad;
-                    this.txtCosto.Text = oActivoDTO.Costo.ToString();
-                    this.txtPrecio.Text = oActivoDTO.Precio.ToString();
+                    this.txtCosto.Text = oActivoDTO.Costo;
+                    this.txtPrecio.Text = oActivoDTO.Precio;
                     this.txtDetalles.Text = oActivoDTO.InformacionAdicional.ToString();
                     this.pbImage.Image = new Bitmap(new MemoryStream(oActivoDTO.Img));
                     this.pbImage.SizeMode = PictureBoxSizeMode.StretchImage;
