@@ -60,46 +60,11 @@ namespace UTN.Winform.Funeraria.UI
         public void llenarDatos()
         {
             IBLLProveedores _BLLProveedores = new BLLProveedores();
-            IBLLTipoServicio _BLLTipoServicio = new BLLTipoServicio();
-            List<Proveedor> lista = _BLLProveedores.GetAllProveedor();
-            List<TipoServicio> listaTipo = _BLLTipoServicio.GetAllTipoServicio();
-            List<ProveedorDTO> listaProveedorDTO = new List<ProveedorDTO>();
+            List<ProveedorDTO> lista = _BLLProveedores.GetAllProveedor();
             dgvDatos.AutoGenerateColumns = false;
             dgvDatos.RowTemplate.Height = 50;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            String desc = "";
-            foreach (Proveedor item in lista)
-            {
-                ProveedorDTO oActivoDto = new ProveedorDTO();
-                foreach (TipoServicio act in listaTipo)
-                {
-                    if (act.IdTipoServicio == item.IdTipoServicio)
-                    {
-                        desc = act.Descripcion;
-                    }
-                }
-                oActivoDto.IdProveedor = item.IdProveedor;
-                oActivoDto.NomProveedor = item.NomProveedor;
-                oActivoDto.Propietario = item.Propietario;
-                oActivoDto.TelCelular = item.TelCelular; ;
-                oActivoDto.TelProveedor = item.TelProveedor;
-                oActivoDto.TelFax = item.TelFax;
-                oActivoDto.Correo = item.Correo;
-                oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
-                oActivoDto.CantUni = item.CantUni;
-                oActivoDto.Servicio = desc;
-
-                if (item.Estado == true)
-                {
-                    oActivoDto.Estado = "Activo";
-                }
-                else
-                {
-                    oActivoDto.Estado = "Inactivo";
-                }
-                listaProveedorDTO.Add(oActivoDto);
-            }
-            dgvDatos.DataSource = listaProveedorDTO;
+            dgvDatos.DataSource = lista;
 
         }
         public void llenarCombos()
@@ -300,6 +265,11 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCantidad.Text = oProveedorDTO.CantUni.ToString();
                     this.cboEstado.SelectedIndex = cboEstado.FindString(oProveedorDTO.Estado.ToString());
                     this.cboTipoServicio.SelectedIndex = cboTipoServicio.FindString(oProveedorDTO.Servicio.ToString());
+                    this.cboProvincia.SelectedIndex = cboProvincia.FindString(oProveedorDTO.Provincia.ToString());
+                    this.cboCanton.SelectedIndex = cboCanton.FindString(oProveedorDTO.Canton.ToString());
+                    this.cboDistrito.SelectedIndex = cboDistrito.FindString(oProveedorDTO.Distrito.ToString());
+                    this.cboBarrio.SelectedIndex = cboBarrio.FindString(oProveedorDTO.Barrio.ToString());
+                    this.txtOtrasSennas.Text = oProveedorDTO.otrasSennas.ToString();
                 }
                 else
                 {
@@ -318,6 +288,7 @@ namespace UTN.Winform.Funeraria.UI
             {
                 ProveedorDTO oProveedorDTO = null;
                 IBLLProveedores _BllProveedor = new BLLProveedores();
+                IBLLDireccionCompleta _BllDireccionCompleta = new BLLDireccionCompleta();
                 if (this.dgvDatos.SelectedRows.Count > 0)
                 {
                     oProveedorDTO = dgvDatos.SelectedRows[0].DataBoundItem as ProveedorDTO;
@@ -325,6 +296,7 @@ namespace UTN.Winform.Funeraria.UI
                     {
                         if (MessageBox.Show($"¿Seguro que desea borrar el registro {oProveedorDTO.IdProveedor} {oProveedorDTO.ToString()}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
+                            _BllDireccionCompleta.DaleteDireccionCompleta(oProveedorDTO.IdProveedor);
                             _BllProveedor.DaleteProveedor(oProveedorDTO.IdProveedor);
                             llenarDatos();
                         }

@@ -29,6 +29,7 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
@@ -41,12 +42,20 @@ namespace UTN.Winform.Funeraria.UI
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblListado = new System.Windows.Forms.Label();
             this.pnlLinea = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rTxtDescripcion = new System.Windows.Forms.RichTextBox();
-            this.rTxtDetalles = new System.Windows.Forms.RichTextBox();
-            this.txtEmpresa = new System.Windows.Forms.TextBox();
+            this.cboServicio = new System.Windows.Forms.GroupBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.cboTipoServicio = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtTelFax = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTelCelular = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTelEmpresa = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtComentario = new System.Windows.Forms.RichTextBox();
+            this.txtUbicacion = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.txtDescuento = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdConvenio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,11 +63,23 @@ namespace UTN.Winform.Funeraria.UI
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListado)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
+            this.cboServicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescuento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -103,6 +124,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnEditar.Size = new System.Drawing.Size(60, 45);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalir
             // 
@@ -159,13 +181,25 @@ namespace UTN.Winform.Funeraria.UI
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // dtGVListado
             // 
             this.dtGVListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.NomEmpresa,
+            this.Ubicacion,
+            this.TelCelular,
+            this.TelEmpresa,
+            this.TelFax,
+            this.TipoServicio,
+            this.Descuento,
+            this.Estado,
+            this.Comentarios});
             this.dtGVListado.Location = new System.Drawing.Point(47, 309);
             this.dtGVListado.Name = "dtGVListado";
-            this.dtGVListado.Size = new System.Drawing.Size(944, 234);
+            this.dtGVListado.Size = new System.Drawing.Size(944, 276);
             this.dtGVListado.TabIndex = 23;
             // 
             // btnGuardar2
@@ -190,6 +224,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnGuardar2.Text = "Guardar";
             this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar2.UseVisualStyleBackColor = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
             // 
             // btnCancelar
             // 
@@ -219,7 +254,7 @@ namespace UTN.Winform.Funeraria.UI
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblListado);
             this.panel1.Controls.Add(this.pnlLinea);
-            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.cboServicio);
             this.panel1.Controls.Add(this.dtGVListado);
             this.panel1.Controls.Add(this.btnGuardar2);
             this.panel1.Controls.Add(this.btnCancelar);
@@ -248,74 +283,147 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlLinea.Size = new System.Drawing.Size(239, 1);
             this.pnlLinea.TabIndex = 26;
             // 
-            // groupBox1
+            // cboServicio
             // 
-            this.groupBox1.Controls.Add(this.rTxtDescripcion);
-            this.groupBox1.Controls.Add(this.rTxtDetalles);
-            this.groupBox1.Controls.Add(this.txtEmpresa);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCantidad);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtIdConvenio);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.lblDetalles);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.lblDescripcion);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(47, 43);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(787, 173);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalles";
+            this.cboServicio.Controls.Add(this.cboEstado);
+            this.cboServicio.Controls.Add(this.cboTipoServicio);
+            this.cboServicio.Controls.Add(this.label7);
+            this.cboServicio.Controls.Add(this.txtTelFax);
+            this.cboServicio.Controls.Add(this.label6);
+            this.cboServicio.Controls.Add(this.txtTelCelular);
+            this.cboServicio.Controls.Add(this.label5);
+            this.cboServicio.Controls.Add(this.txtTelEmpresa);
+            this.cboServicio.Controls.Add(this.label4);
+            this.cboServicio.Controls.Add(this.txtComentario);
+            this.cboServicio.Controls.Add(this.txtUbicacion);
+            this.cboServicio.Controls.Add(this.label3);
+            this.cboServicio.Controls.Add(this.txtDescuento);
+            this.cboServicio.Controls.Add(this.label2);
+            this.cboServicio.Controls.Add(this.txtIdConvenio);
+            this.cboServicio.Controls.Add(this.label1);
+            this.cboServicio.Controls.Add(this.lblDetalles);
+            this.cboServicio.Controls.Add(this.lblNombre);
+            this.cboServicio.Controls.Add(this.txtNombre);
+            this.cboServicio.Controls.Add(this.lblDescripcion);
+            this.cboServicio.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cboServicio.Location = new System.Drawing.Point(47, 43);
+            this.cboServicio.Name = "cboServicio";
+            this.cboServicio.Size = new System.Drawing.Size(787, 173);
+            this.cboServicio.TabIndex = 24;
+            this.cboServicio.TabStop = false;
+            this.cboServicio.Text = "Detalles";
             // 
-            // rTxtDescripcion
+            // cboEstado
             // 
-            this.rTxtDescripcion.Location = new System.Drawing.Point(547, 101);
-            this.rTxtDescripcion.Name = "rTxtDescripcion";
-            this.rTxtDescripcion.Size = new System.Drawing.Size(234, 51);
-            this.rTxtDescripcion.TabIndex = 42;
-            this.rTxtDescripcion.Text = "";
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(649, 62);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(132, 24);
+            this.cboEstado.TabIndex = 52;
             // 
-            // rTxtDetalles
+            // cboTipoServicio
             // 
-            this.rTxtDetalles.Location = new System.Drawing.Point(160, 96);
-            this.rTxtDetalles.Name = "rTxtDetalles";
-            this.rTxtDetalles.Size = new System.Drawing.Size(179, 71);
-            this.rTxtDetalles.TabIndex = 41;
-            this.rTxtDetalles.Text = "";
+            this.cboTipoServicio.FormattingEnabled = true;
+            this.cboTipoServicio.Location = new System.Drawing.Point(358, 139);
+            this.cboTipoServicio.Name = "cboTipoServicio";
+            this.cboTipoServicio.Size = new System.Drawing.Size(118, 24);
+            this.cboTipoServicio.TabIndex = 50;
             // 
-            // txtEmpresa
+            // label7
             // 
-            this.txtEmpresa.Enabled = false;
-            this.txtEmpresa.Location = new System.Drawing.Point(547, 62);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(234, 24);
-            this.txtEmpresa.TabIndex = 40;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(484, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 16);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Estado";
+            // 
+            // txtTelFax
+            // 
+            this.txtTelFax.Location = new System.Drawing.Point(358, 102);
+            this.txtTelFax.Name = "txtTelFax";
+            this.txtTelFax.Size = new System.Drawing.Size(118, 24);
+            this.txtTelFax.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(265, 105);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Tel. Fax";
+            // 
+            // txtTelCelular
+            // 
+            this.txtTelCelular.Location = new System.Drawing.Point(358, 65);
+            this.txtTelCelular.Name = "txtTelCelular";
+            this.txtTelCelular.Size = new System.Drawing.Size(118, 24);
+            this.txtTelCelular.TabIndex = 46;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(265, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Tel. Celular";
+            // 
+            // txtTelEmpresa
+            // 
+            this.txtTelEmpresa.Location = new System.Drawing.Point(358, 31);
+            this.txtTelEmpresa.Name = "txtTelEmpresa";
+            this.txtTelEmpresa.Size = new System.Drawing.Size(118, 24);
+            this.txtTelEmpresa.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(265, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 16);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Tel. Empresa";
+            // 
+            // txtComentario
+            // 
+            this.txtComentario.Location = new System.Drawing.Point(649, 104);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(132, 51);
+            this.txtComentario.TabIndex = 42;
+            this.txtComentario.Text = "";
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.Location = new System.Drawing.Point(126, 96);
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Size = new System.Drawing.Size(132, 71);
+            this.txtUbicacion.TabIndex = 41;
+            this.txtUbicacion.Text = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(380, 61);
+            this.label3.Location = new System.Drawing.Point(265, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 16);
+            this.label3.Size = new System.Drawing.Size(88, 16);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Empresa proveedora";
+            this.label3.Text = "Tipo Servicio";
             // 
-            // txtCantidad
+            // txtDescuento
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(547, 26);
-            this.txtCantidad.Minimum = new decimal(new int[] {
+            this.txtDescuento.Location = new System.Drawing.Point(649, 29);
+            this.txtDescuento.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(132, 24);
-            this.txtCantidad.TabIndex = 38;
-            this.txtCantidad.Value = new decimal(new int[] {
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(132, 24);
+            this.txtDescuento.TabIndex = 38;
+            this.txtDescuento.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -325,7 +433,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(380, 28);
+            this.label2.Location = new System.Drawing.Point(482, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 16);
             this.label2.TabIndex = 36;
@@ -333,8 +441,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtIdConvenio
             // 
-            this.txtIdConvenio.Enabled = false;
-            this.txtIdConvenio.Location = new System.Drawing.Point(160, 28);
+            this.txtIdConvenio.Location = new System.Drawing.Point(126, 28);
             this.txtIdConvenio.Name = "txtIdConvenio";
             this.txtIdConvenio.Size = new System.Drawing.Size(132, 24);
             this.txtIdConvenio.TabIndex = 35;
@@ -342,7 +449,7 @@ namespace UTN.Winform.Funeraria.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 36);
+            this.label1.Location = new System.Drawing.Point(13, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 34;
@@ -354,9 +461,9 @@ namespace UTN.Winform.Funeraria.UI
             this.lblDetalles.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalles.Location = new System.Drawing.Point(6, 105);
             this.lblDetalles.Name = "lblDetalles";
-            this.lblDetalles.Size = new System.Drawing.Size(133, 16);
+            this.lblDetalles.Size = new System.Drawing.Size(68, 16);
             this.lblDetalles.TabIndex = 33;
-            this.lblDetalles.Text = "Detalles Adicionales";
+            this.lblDetalles.Text = "Ubicacion";
             // 
             // lblNombre
             // 
@@ -364,26 +471,90 @@ namespace UTN.Winform.Funeraria.UI
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(6, 65);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(58, 16);
+            this.lblNombre.Size = new System.Drawing.Size(114, 16);
             this.lblNombre.TabIndex = 30;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre Empresa";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(160, 58);
+            this.txtNombre.Location = new System.Drawing.Point(126, 62);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(179, 24);
+            this.txtNombre.Size = new System.Drawing.Size(132, 24);
             this.txtNombre.TabIndex = 28;
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(386, 105);
+            this.lblDescripcion.Location = new System.Drawing.Point(484, 99);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(80, 16);
+            this.lblDescripcion.Size = new System.Drawing.Size(86, 16);
             this.lblDescripcion.TabIndex = 31;
-            this.lblDescripcion.Text = "Descripción";
+            this.lblDescripcion.Text = "Comentarios";
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "IdConvenio";
+            this.Id.HeaderText = "N°";
+            this.Id.Name = "Id";
+            // 
+            // NomEmpresa
+            // 
+            this.NomEmpresa.DataPropertyName = "NomEmpresa";
+            this.NomEmpresa.HeaderText = "Nombre Empresa";
+            this.NomEmpresa.Name = "NomEmpresa";
+            // 
+            // Ubicacion
+            // 
+            this.Ubicacion.DataPropertyName = "Ubicacion";
+            this.Ubicacion.HeaderText = "Ubicacion";
+            this.Ubicacion.Name = "Ubicacion";
+            // 
+            // TelCelular
+            // 
+            this.TelCelular.DataPropertyName = "TelCelular";
+            this.TelCelular.HeaderText = "Celular";
+            this.TelCelular.Name = "TelCelular";
+            // 
+            // TelEmpresa
+            // 
+            this.TelEmpresa.DataPropertyName = "TelEmpresa";
+            this.TelEmpresa.HeaderText = "TelEmpresa";
+            this.TelEmpresa.Name = "TelEmpresa";
+            // 
+            // TelFax
+            // 
+            this.TelFax.DataPropertyName = "TelFax";
+            this.TelFax.HeaderText = "Fax";
+            this.TelFax.Name = "TelFax";
+            // 
+            // TipoServicio
+            // 
+            this.TipoServicio.DataPropertyName = "TipoServicio";
+            this.TipoServicio.HeaderText = "Servicio";
+            this.TipoServicio.Name = "TipoServicio";
+            // 
+            // Descuento
+            // 
+            this.Descuento.DataPropertyName = "Descuento";
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.DataPropertyName = "Comentarios";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
             // 
             // frmMantConvenios
             // 
@@ -395,14 +566,16 @@ namespace UTN.Winform.Funeraria.UI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMantConvenios";
             this.Text = "frmMantConvenios";
+            this.Load += new System.EventHandler(this.frmMantConvenios_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListado)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
+            this.cboServicio.ResumeLayout(false);
+            this.cboServicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescuento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,7 +592,7 @@ namespace UTN.Winform.Funeraria.UI
         private FontAwesome.Sharp.IconButton btnCancelar;
         private System.Windows.Forms.DataGridView dtGVListado;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox cboServicio;
         private System.Windows.Forms.Label lblListado;
         private System.Windows.Forms.Panel pnlLinea;
         private System.Windows.Forms.Label label2;
@@ -429,10 +602,29 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.RichTextBox rTxtDescripcion;
-        private System.Windows.Forms.RichTextBox rTxtDetalles;
-        private System.Windows.Forms.TextBox txtEmpresa;
+        private System.Windows.Forms.RichTextBox txtComentario;
+        private System.Windows.Forms.RichTextBox txtUbicacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.NumericUpDown txtDescuento;
+        private System.Windows.Forms.TextBox txtTelFax;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtTelCelular;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTelEmpresa;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboTipoServicio;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.ErrorProvider errPro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomEmpresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ubicacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCelular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelEmpresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoServicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
     }
 }

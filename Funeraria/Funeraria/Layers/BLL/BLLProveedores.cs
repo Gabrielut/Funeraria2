@@ -58,7 +58,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalProveedores.UpdateProveedor(pProveedor);
         }
 
-        List<Proveedor> IBLLProveedores.GetAllProveedor()
+        List<ProveedorDTO> IBLLProveedores.GetAllProveedor()
         {
             IDALProveedores _DalProveedores = new DALProveedores();
             return _DalProveedores.GetAllProveedor();

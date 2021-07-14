@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UTN.Winform.Funeraria.Layers.Entities
+namespace UTN.Winform.Funeraria.Layers.Entities.DTO
 {
-    class Convenios
+    class ConveniosDTO
     {
         public int IdConvenio { get; set; }
         public string NomEmpresa { get; set; }
@@ -14,9 +14,9 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public string TelCelular { get; set; }
         public string TelEmpresa { get; set; }
         public string TelFax { get; set; }
-        public int TipoServicio { get; set; }
+        public string TipoServicio { get; set; }
         public int Descuento { get; set; }
-        public bool Estado { get; set; }
+        public string Estado { get; set; }
         public string Comentarios { get; set; }
 
         public override string ToString()

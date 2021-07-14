@@ -10,7 +10,7 @@ namespace UTN.Winform.Funeraria.Interfaces
 {
     interface IBLLProveedores
     {
-        List<Proveedor> GetAllProveedor();
+        List<ProveedorDTO> GetAllProveedor();
         Proveedor GetProveedorById(int pProveedor);
         Proveedor SaveProveedor(Proveedor pProveedor);
         List<Proveedor> GetProveedorByFilter(string pDescripcion);

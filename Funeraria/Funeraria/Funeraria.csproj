@@ -56,7 +56,7 @@
     <Compile Include="Interfaces\IBLLBarrio.cs" />
     <Compile Include="Interfaces\IBLLCanton.cs" />
     <Compile Include="Interfaces\IBLLCliente.cs" />
-    <Compile Include="Interfaces\IBLLConvenio.cs" />
+    <Compile Include="Interfaces\IBLLConvenios.cs" />
     <Compile Include="Interfaces\IBLLCotizacion.cs" />
     <Compile Include="Interfaces\IBLLDetFactura.cs" />
     <Compile Include="Interfaces\IBLLDireccionCompleta.cs" />
@@ -77,7 +77,7 @@
     <Compile Include="Interfaces\IDALBarrio.cs" />
     <Compile Include="Interfaces\IDALCanton.cs" />
     <Compile Include="Interfaces\IDALCliente.cs" />
-    <Compile Include="Interfaces\IDALConvenio.cs" />
+    <Compile Include="Interfaces\IDALConvenios.cs" />
     <Compile Include="Interfaces\IDALCotizacion.cs" />
     <Compile Include="Interfaces\IDALDetFactura.cs" />
     <Compile Include="Interfaces\IDALDireccionCompleta.cs" />
@@ -147,6 +147,7 @@
     <Compile Include="Layers\Entities\Distrito.cs" />
     <Compile Include="Layers\Entities\DTO\ActivoDTO.cs" />
     <Compile Include="Layers\Entities\DTO\ClienteDTO.cs" />
+    <Compile Include="Layers\Entities\DTO\ConveniosDTO.cs" />
     <Compile Include="Layers\Entities\DTO\PaqueteDTO.cs" />
     <Compile Include="Layers\Entities\DTO\ProveedorDTO.cs" />
     <Compile Include="Layers\Entities\DTO\PruebaDTO.cs" />

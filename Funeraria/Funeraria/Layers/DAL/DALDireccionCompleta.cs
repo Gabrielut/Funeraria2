@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,25 @@ namespace UTN.Winform.Funeraria.Layers.DAL
         }
         public bool DaleteDireccionCompleta(int pId)
         {
-            throw new NotImplementedException();
+            double rows = 0;
+            string sql = @"DELETE FROM DireccionCompleta
+                           WHERE IdDireccion = @filtro";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@filtro", pId);
+            cmd.CommandText = sql;
+
+            using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+            {
+                rows = db.ExecuteNonQuery(cmd);
+            }
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<DireccionCompleta> GetAllDireccionCompleta()
@@ -33,9 +52,49 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             throw new NotImplementedException();
         }
 
-        public DireccionCompleta GetDireccionCompletaById(int pProovedor)
+        public DireccionCompleta GetDireccionCompletaById(int pDireccion)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            DireccionCompleta oDireccionCompleta = null;
+            string sql = @"select * from DireccionCompleta where IdDireccion = @filtro";
+
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                command.Parameters.AddWithValue("@filtro", pDireccion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                    DataRow dr = ds.Tables[0].Rows[0];
+                    oDireccionCompleta = new DireccionCompleta()
+                    {
+                        IdDireccion = int.Parse(dr["IdDireccion"].ToString()),
+                        Provincia = int.Parse(dr["Provincia"].ToString()),
+                        Canton = int.Parse(dr["Canton"].ToString()),
+                        Distrito = int.Parse(dr["Distrito"].ToString()),
+                        Barrio = int.Parse(dr["Barrio"].ToString()),                       
+                        OtrasSennas = dr["OtrasSennas"].ToString(),
+                       
+                    };
+
+
+                }
+
+                return oDireccionCompleta;
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
         }
 
         public DireccionCompleta SaveDireccionCompleta(DireccionCompleta pDireccionCompleta)
@@ -75,6 +134,50 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             //    oDireccionCompleta = GetActivoById(pActivo.IdActivo);
             //}
             return oDireccionCompleta;
+        }
+
+        public DireccionCompleta UpdateDireccionCompleta(DireccionCompleta pDireccionCompleta)
+        {
+            DireccionCompleta oDireccionCompleta = null;
+            string sql = @"UPDATE DireccionCompleta
+                             SET [Provincia] = @Provincia
+                            ,[Canton] = @Canton
+                         ,[Distrito] = @Distrito
+                         ,[Barrio] = @Barrio
+                        ,[otrasSennas] = @otrasSennas
+                        WHERE IdDireccion = @filtro";
+
+            SqlCommand command = new SqlCommand();
+            double rows = 0;
+
+            try
+            {               
+                command.Parameters.AddWithValue("@Provincia", pDireccionCompleta.Provincia);
+                command.Parameters.AddWithValue("@Canton", pDireccionCompleta.Canton);
+                command.Parameters.AddWithValue("@Distrito", pDireccionCompleta.Distrito);
+                command.Parameters.AddWithValue("@Barrio", pDireccionCompleta.Barrio);
+                command.Parameters.AddWithValue("@otrasSennas", pDireccionCompleta.OtrasSennas);
+                command.Parameters.AddWithValue("@filtro", pDireccionCompleta.IdDireccion);
+        
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+
+                    rows = db.ExecuteNonQuery(command, IsolationLevel.ReadCommitted);
+                }
+
+                if (rows > 0)
+                    oDireccionCompleta = GetDireccionCompletaById(pDireccionCompleta.IdDireccion);
+
+                return oDireccionCompleta;
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
         }
     }
 }

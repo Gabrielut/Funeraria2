@@ -71,6 +71,12 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblListado = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,12 +88,11 @@ namespace UTN.Winform.Funeraria.UI
             this.CantUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -539,12 +544,86 @@ namespace UTN.Winform.Funeraria.UI
             this.Precio,
             this.CantUni,
             this.Servicio,
-            this.Estado});
+            this.Estado,
+            this.Provincia,
+            this.Canton,
+            this.Distrito,
+            this.Barrio,
+            this.OtrasSennas});
             this.dgvDatos.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDatos.Location = new System.Drawing.Point(41, 362);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(797, 211);
             this.dgvDatos.TabIndex = 24;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(41, 330);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 1);
+            this.panel1.TabIndex = 25;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(848, 111);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(170, 46);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.Location = new System.Drawing.Point(848, 190);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(170, 46);
+            this.iconButton2.TabIndex = 27;
+            this.iconButton2.Text = "Cancelar";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.groupBox1);
+            this.pnlContenedor.Controls.Add(this.iconButton2);
+            this.pnlContenedor.Controls.Add(this.lblListado);
+            this.pnlContenedor.Controls.Add(this.btnGuardar);
+            this.pnlContenedor.Controls.Add(this.dgvDatos);
+            this.pnlContenedor.Controls.Add(this.panel1);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
+            this.pnlContenedor.TabIndex = 28;
+            // 
+            // toolNombre
+            // 
+            this.toolNombre.IsBalloon = true;
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
             // 
             // IdProveedor
             // 
@@ -624,74 +703,35 @@ namespace UTN.Winform.Funeraria.UI
             this.Estado.Name = "Estado";
             this.Estado.Width = 50;
             // 
-            // panel1
+            // Provincia
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(41, 330);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 1);
-            this.panel1.TabIndex = 25;
+            this.Provincia.DataPropertyName = "Provincia";
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
             // 
-            // btnGuardar
+            // Canton
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(848, 111);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(170, 46);
-            this.btnGuardar.TabIndex = 26;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.Canton.DataPropertyName = "Canton";
+            this.Canton.HeaderText = "Canton";
+            this.Canton.Name = "Canton";
             // 
-            // iconButton2
+            // Distrito
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(848, 190);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(170, 46);
-            this.iconButton2.TabIndex = 27;
-            this.iconButton2.Text = "Cancelar";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            this.Distrito.DataPropertyName = "Distrito";
+            this.Distrito.HeaderText = "Distrito";
+            this.Distrito.Name = "Distrito";
             // 
-            // pnlContenedor
+            // Barrio
             // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.groupBox1);
-            this.pnlContenedor.Controls.Add(this.iconButton2);
-            this.pnlContenedor.Controls.Add(this.lblListado);
-            this.pnlContenedor.Controls.Add(this.btnGuardar);
-            this.pnlContenedor.Controls.Add(this.dgvDatos);
-            this.pnlContenedor.Controls.Add(this.panel1);
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
-            this.pnlContenedor.TabIndex = 28;
+            this.Barrio.DataPropertyName = "Barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
             // 
-            // toolNombre
+            // OtrasSennas
             // 
-            this.toolNombre.IsBalloon = true;
-            // 
-            // errPro
-            // 
-            this.errPro.ContainerControl = this;
+            this.OtrasSennas.DataPropertyName = "otrasSennas";
+            this.OtrasSennas.HeaderText = "Otras Señas";
+            this.OtrasSennas.Name = "OtrasSennas";
             // 
             // frmMantProveedor
             // 
@@ -753,17 +793,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtTelefono;
         private System.Windows.Forms.MaskedTextBox txtFax;
         private System.Windows.Forms.MaskedTextBox txtCelular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Propietario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelCelular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantUni;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.ToolTip toolNombre;
         private System.Windows.Forms.ErrorProvider errPro;
@@ -777,5 +806,21 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.TextBox txtOtrasSennas;
         private System.Windows.Forms.ComboBox cboBarrio;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Propietario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCelular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantUni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Canton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OtrasSennas;
     }
 }
