@@ -13,6 +13,7 @@ namespace UTN.Winform.Funeraria.Interfaces
         DireccionCompleta GetDireccionCompletaById(int pProovedor);
         DireccionCompleta SaveDireccionCompleta(DireccionCompleta pDireccionCompleta);
         List<DireccionCompleta> GetDireccionCompletaByFilter(string pDescripcion);
+        DireccionCompleta UpdateDireccionCompleta(DireccionCompleta pDireccionCompleta);
         bool DaleteDireccionCompleta(int pId);
     }
 }

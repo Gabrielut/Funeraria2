@@ -43,15 +43,25 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
         }
 
-        public List<Proveedor> GetAllProveedor()
+        public List<ProveedorDTO> GetAllProveedor()
         {
             DataSet ds = null;
-            List<Proveedor> lista = new List<Proveedor>();
+            List<ProveedorDTO> lista = new List<ProveedorDTO>();
             SqlCommand command = new SqlCommand();
 
             try
             {
-                string sql = @"Select * from Proveedores";
+                string sql = @"SELECT Proveedores.IdProveedor, Proveedores.NomProveedor, Proveedores.Propietario, Proveedores.TelCelular, Proveedores.TelProveedor, Proveedores.TelFax, Proveedores.Correo, Proveedores.Precio, Proveedores.CantUni, 
+                             Proveedores.Estado, Provincia.dscProvincia AS Provincia, Canton.dscCanton AS Canton, Distrito.dscDistrito AS Distrito, Barrio.dscBarrio AS Barrio, DireccionCompleta.otrasSennas, TipoServicio.Descripcion AS Servicio
+FROM                         DireccionCompleta INNER JOIN
+                             Proveedores ON DireccionCompleta.IdDireccion = Proveedores.IdProveedor INNER JOIN
+                             Barrio ON DireccionCompleta.Provincia = Barrio.codProvincia AND DireccionCompleta.Canton = Barrio.codCanton AND DireccionCompleta.Distrito = Barrio.codDistrito AND 
+                             DireccionCompleta.Barrio = Barrio.codBarrio INNER JOIN
+                             Canton ON Barrio.codProvincia = Canton.codProvincia INNER JOIN
+                             Distrito ON Barrio.codProvincia = Distrito.codProvincia AND Barrio.codCanton = Distrito.codCanton AND Barrio.codDistrito = Distrito.codDistrito AND Canton.codProvincia = Distrito.codProvincia AND 
+                             Canton.codCanton = Distrito.codCanton INNER JOIN
+                             Provincia ON Canton.codProvincia = Provincia.codProvincia INNER JOIN
+                             TipoServicio ON Proveedores.IdTipoServicio = TipoServicio.IdTipoServicio";
 
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
@@ -65,21 +75,31 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        Proveedor oProveedor = new Proveedor();
-                        oProveedor.IdProveedor = int.Parse(dr["IdProveedor"].ToString());
-                        oProveedor.NomProveedor = dr["NomProveedor"].ToString();
-                        oProveedor.Propietario = dr["Propietario"].ToString();
-                        oProveedor.TelCelular = dr["TelCelular"].ToString();
-                        oProveedor.TelProveedor = (dr["TelProveedor"].ToString());
-                        oProveedor.TelFax = (dr["TelFax"].ToString());
-                        oProveedor.Correo = (dr["Correo"].ToString());
-                        oProveedor.Precio = int.Parse(dr["Precio"].ToString());
-                        oProveedor.CantUni = int.Parse(dr["CantUni"].ToString());
-                        oProveedor.IdTipoServicio = int.Parse(dr["IdTipoServicio"].ToString());
-                        oProveedor.Estado = (bool)(dr["Estado"]);
-                       
-
-                        lista.Add(oProveedor);
+                        ProveedorDTO oProveedorDTO = new ProveedorDTO();
+                        oProveedorDTO.IdProveedor = int.Parse(dr["IdProveedor"].ToString());
+                        oProveedorDTO.NomProveedor = dr["NomProveedor"].ToString();
+                        oProveedorDTO.Propietario = dr["Propietario"].ToString();
+                        oProveedorDTO.TelCelular = dr["TelCelular"].ToString();
+                        oProveedorDTO.TelProveedor = (dr["TelProveedor"].ToString());
+                        oProveedorDTO.TelFax = (dr["TelFax"].ToString());
+                        oProveedorDTO.Correo = (dr["Correo"].ToString());
+                        oProveedorDTO.Precio = (dr["Precio"].ToString());
+                        oProveedorDTO.CantUni = int.Parse(dr["CantUni"].ToString());
+                        oProveedorDTO.Servicio = (dr["Servicio"].ToString());
+                        if ((bool)(dr["Estado"]))
+                        {
+                            oProveedorDTO.Estado = "Activo";
+                        }
+                        else
+                        {
+                            oProveedorDTO.Estado = "Desabilitado";
+                        }
+                        oProveedorDTO.Provincia = (dr["Provincia"].ToString());
+                        oProveedorDTO.Canton = (dr["Canton"].ToString());
+                        oProveedorDTO.Distrito = (dr["Distrito"].ToString());
+                        oProveedorDTO.Barrio = (dr["Barrio"].ToString());
+                        oProveedorDTO.otrasSennas = (dr["otrasSennas"].ToString());
+                        lista.Add(oProveedorDTO);
                     }
                 }
             }

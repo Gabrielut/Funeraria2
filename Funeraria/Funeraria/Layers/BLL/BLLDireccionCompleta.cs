@@ -37,8 +37,18 @@ namespace UTN.Winform.Funeraria.Layers.BLL
 
         public DireccionCompleta SaveDireccionCompleta(DireccionCompleta pDireccionCompleta)
         {
-            IDALDireccionCompleta _DalDireccionCompleta = new DALDireccionCompleta();
-            return _DalDireccionCompleta.SaveDireccionCompleta(pDireccionCompleta);
+            IDALDireccionCompleta _DALDireccionCompleta = new DALDireccionCompleta();
+            DireccionCompleta oDireccionCompleta = null;
+            if (_DALDireccionCompleta.GetDireccionCompletaById(pDireccionCompleta.IdDireccion) == null)
+            {
+                oDireccionCompleta = _DALDireccionCompleta.SaveDireccionCompleta(pDireccionCompleta);
+            }
+            else
+            {
+                oDireccionCompleta = _DALDireccionCompleta.UpdateDireccionCompleta(pDireccionCompleta);
+            }
+
+            return oDireccionCompleta;
         }
     }
 }
