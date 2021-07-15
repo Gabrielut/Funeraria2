@@ -178,7 +178,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.cbBoxEstado.Enabled = true;
                     this.pbImage.Enabled = true;
 
-                    this.txtNombre.Focus();
+                    this.txtIdActivo.Focus();
                     break;
                 case MantenimientoEnum.Editar:
                     this.txtIdActivo.Enabled = false;
@@ -254,8 +254,8 @@ namespace UTN.Winform.Funeraria.UI
                 oActivo.Descripcion = this.txtDescripcion.Text;
                 oActivo.TipoActivo = (cbBoxTipoActivo.SelectedItem as TipoActivo).IdTipoActivo;
                 oActivo.Cantidad = (int)this.txtCantidad.Value;
-                oActivo.Costo = float.Parse(this.txtCosto.Text.Replace("₡", ""));
-                oActivo.Precio = float.Parse(this.txtPrecio.Text.Replace("₡", ""));
+                oActivo.Costo = float.Parse(this.txtCosto.Text.Replace("₡", "").Replace(",",""));
+                oActivo.Precio = float.Parse(this.txtPrecio.Text.Replace("₡", "").Replace(",", ""));
                 oActivo.InformacionAdicional = this.txtDetalles.Text;
                 oActivo.Img = (byte[])this.pbImage.Tag;
                 if (cbBoxEstado.SelectedIndex == 0)
@@ -278,9 +278,6 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
-            llenarCombos();
-            llenarDatos();
-            CambiarEstado(MantenimientoEnum.Ninguno);
         }
         private void pbImage_Click(object sender, EventArgs e)
         {

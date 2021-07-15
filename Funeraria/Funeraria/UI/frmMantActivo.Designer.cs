@@ -139,7 +139,7 @@
             this.btnEditar.Location = new System.Drawing.Point(62, -1);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(60, 45);
-            this.btnEditar.TabIndex = 3;
+            this.btnEditar.TabIndex = 13;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -175,7 +175,7 @@
             this.btnNuevo.Location = new System.Drawing.Point(4, -1);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(62, 45);
-            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.TabIndex = 12;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -195,7 +195,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(128, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(56, 41);
-            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.TabIndex = 14;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -269,17 +269,18 @@
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(673, 82);
+            this.txtPrecio.Mask = "₡000,000,000";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 24);
-            this.txtPrecio.TabIndex = 29;
+            this.txtPrecio.TabIndex = 9;
             // 
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(673, 38);
+            this.txtCosto.Mask = "₡000,000,000";
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(100, 24);
-            this.txtCosto.TabIndex = 28;
-            this.txtCosto.ValidatingType = typeof(int);
+            this.txtCosto.TabIndex = 8;
             // 
             // txtIdActivo
             // 
@@ -287,12 +288,12 @@
             this.txtIdActivo.Location = new System.Drawing.Point(146, 16);
             this.txtIdActivo.Name = "txtIdActivo";
             this.txtIdActivo.Size = new System.Drawing.Size(132, 24);
-            this.txtIdActivo.TabIndex = 27;
+            this.txtIdActivo.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 25);
+            this.label1.Location = new System.Drawing.Point(10, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 26;
@@ -320,7 +321,7 @@
             0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 24);
-            this.txtCantidad.TabIndex = 24;
+            this.txtCantidad.TabIndex = 6;
             this.txtCantidad.Value = new decimal(new int[] {
             1,
             0,
@@ -333,7 +334,7 @@
             this.cbBoxEstado.Location = new System.Drawing.Point(392, 120);
             this.cbBoxEstado.Name = "cbBoxEstado";
             this.cbBoxEstado.Size = new System.Drawing.Size(118, 24);
-            this.cbBoxEstado.TabIndex = 23;
+            this.cbBoxEstado.TabIndex = 7;
             // 
             // lblEstado
             // 
@@ -351,7 +352,7 @@
             this.txtDetalles.Multiline = true;
             this.txtDetalles.Name = "txtDetalles";
             this.txtDetalles.Size = new System.Drawing.Size(132, 34);
-            this.txtDetalles.TabIndex = 20;
+            this.txtDetalles.TabIndex = 4;
             this.txtDetalles.Tag = "Ingrese los detalles Adicionales referente al activo";
             // 
             // lblDetalles
@@ -368,7 +369,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(4, 53);
+            this.lblNombre.Location = new System.Drawing.Point(10, 54);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 16);
             this.lblNombre.TabIndex = 5;
@@ -379,7 +380,7 @@
             this.txtNombre.Location = new System.Drawing.Point(146, 46);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(132, 24);
-            this.txtNombre.TabIndex = 0;
+            this.txtNombre.TabIndex = 2;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtDescripcion
@@ -388,7 +389,7 @@
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(132, 43);
-            this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.TabIndex = 3;
             // 
             // lblDescripcion
             // 
@@ -446,7 +447,7 @@
             this.cbBoxTipoActivo.Location = new System.Drawing.Point(392, 31);
             this.cbBoxTipoActivo.Name = "cbBoxTipoActivo";
             this.cbBoxTipoActivo.Size = new System.Drawing.Size(118, 24);
-            this.cbBoxTipoActivo.TabIndex = 12;
+            this.cbBoxTipoActivo.TabIndex = 5;
             // 
             // lblCosto
             // 
@@ -476,7 +477,7 @@
             this.btnGuardar2.Name = "btnGuardar2";
             this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
-            this.btnGuardar2.TabIndex = 20;
+            this.btnGuardar2.TabIndex = 10;
             this.btnGuardar2.Text = "Guardar";
             this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar2.UseVisualStyleBackColor = false;
@@ -500,7 +501,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCancelar.Size = new System.Drawing.Size(117, 46);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -526,7 +527,7 @@
             this.dGVListadoActivos.Location = new System.Drawing.Point(63, 272);
             this.dGVListadoActivos.Name = "dGVListadoActivos";
             this.dGVListadoActivos.Size = new System.Drawing.Size(910, 305);
-            this.dGVListadoActivos.TabIndex = 4;
+            this.dGVListadoActivos.TabIndex = 15;
             // 
             // Id
             // 
