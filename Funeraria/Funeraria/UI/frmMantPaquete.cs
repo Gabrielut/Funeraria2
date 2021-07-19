@@ -58,7 +58,7 @@ namespace UTN.Winform.Funeraria.UI
                 oActivoDto.Descripcion = item.Descripcion;
                 oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
                 oActivoDto.Cantidad = item.Cantidad;
-                oActivoDto.Paquete = desc;              
+                oActivoDto.TipoServicio = desc;              
                 if (item.Estado == true)
                 {
                     oActivoDto.Estado = "Activo";
@@ -210,7 +210,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtPrecio.Text = oPaqueteDTO.Precio.ToString();
                     this.txtCantidad.Value = oPaqueteDTO.Cantidad;
                     this.cboestado.SelectedIndex = cboestado.FindString(oPaqueteDTO.Estado.ToString());
-                    this.cboTipoPaquete.SelectedIndex = cboTipoPaquete.FindString(oPaqueteDTO.Paquete.ToString());
+                    this.cboTipoPaquete.SelectedIndex = cboTipoPaquete.FindString(oPaqueteDTO.TipoServicio.ToString());
                 }
                 else
                 {

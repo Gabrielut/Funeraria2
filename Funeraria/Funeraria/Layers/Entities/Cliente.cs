@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Funeraria.Layers.Entities
 {
-    class Cliente
+   public class Cliente
     {
         public int IdCliente { get; set; }
         public string Nombre { get; set; }

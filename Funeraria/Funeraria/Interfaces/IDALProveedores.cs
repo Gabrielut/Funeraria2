@@ -13,7 +13,7 @@ namespace UTN.Winform.Funeraria.Interfaces
         List<ProveedorDTO> GetAllProveedor();
         Proveedor GetProveedorById(int pProveedor);
         Proveedor SaveProveedor(Proveedor pProveedor);
-        List<Proveedor> GetProveedorByFilter(string pDescripcion);
+        List<ProveedorDTO> GetProveedorByFilter(string pDescripcion);
         bool DaleteProveedor(int pId);
         Proveedor UpdateProveedor(Proveedor pProveedor);
         int GetNextNumeroActivo();

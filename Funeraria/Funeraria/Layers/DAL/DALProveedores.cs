@@ -85,7 +85,7 @@ FROM                         DireccionCompleta INNER JOIN
                         oProveedorDTO.Correo = (dr["Correo"].ToString());
                         oProveedorDTO.Precio = (dr["Precio"].ToString());
                         oProveedorDTO.CantUni = int.Parse(dr["CantUni"].ToString());
-                        oProveedorDTO.Servicio = (dr["Servicio"].ToString());
+                        oProveedorDTO.IdTipoServicio = (dr["Servicio"].ToString());
                         if ((bool)(dr["Estado"]))
                         {
                             oProveedorDTO.Estado = "Activo";
@@ -143,9 +143,65 @@ FROM                         DireccionCompleta INNER JOIN
             throw new NotImplementedException();
         }
 
-        public List<Proveedor> GetProveedorByFilter(string pDescripcion)
+        public List<ProveedorDTO> GetProveedorByFilter(string pDescripcion)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            List<ProveedorDTO> lista = new List<ProveedorDTO>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @"SELECT Proveedores.IdProveedor, Proveedores.NomProveedor, 
+                               Proveedores.Propietario, Proveedores.TelCelular, Proveedores.TelProveedor, 
+                               Proveedores.TelFax, Proveedores.Correo, Proveedores.Precio, 
+                               Proveedores.CantUni, Proveedores.Estado, 
+                               TipoServicio.Descripcion AS IdTipoServicio FROM Proveedores INNER JOIN
+                               TipoServicio ON Proveedores.IdTipoServicio = TipoServicio.IdTipoServicio
+						       where TipoServicio.Descripcion+NomProveedor like @filtro";
+
+                command.Parameters.AddWithValue("@filtro", pDescripcion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        ProveedorDTO oProveedorDTO = new ProveedorDTO();
+                        oProveedorDTO.IdProveedor = int.Parse(dr["IdProveedor"].ToString());
+                        oProveedorDTO.NomProveedor = dr["NomProveedor"].ToString();
+                        oProveedorDTO.Propietario = dr["Propietario"].ToString();
+                        oProveedorDTO.TelCelular = dr["TelCelular"].ToString();
+                        oProveedorDTO.TelProveedor = (dr["TelProveedor"].ToString());
+                        oProveedorDTO.TelFax = (dr["TelFax"].ToString());
+                        oProveedorDTO.Correo = (dr["Correo"].ToString());
+                        oProveedorDTO.Precio = (dr["Precio"].ToString());
+                        oProveedorDTO.CantUni = int.Parse(dr["CantUni"].ToString());
+                        oProveedorDTO.IdTipoServicio = (dr["IdTipoServicio"].ToString());
+                        if ((bool)(dr["Estado"]))
+                        {
+                            oProveedorDTO.Estado = "Activo";
+                        }
+                        else
+                        {
+                            oProveedorDTO.Estado = "Desabilitado";
+                        }
+                        //oProveedorDTO.Provincia = (dr["Provincia"].ToString());
+                        //oProveedorDTO.Canton = (dr["Canton"].ToString());
+                        //oProveedorDTO.Distrito = (dr["Distrito"].ToString());
+                        //oProveedorDTO.Barrio = (dr["Barrio"].ToString());
+                        //oProveedorDTO.otrasSennas = (dr["otrasSennas"].ToString());
+                        lista.Add(oProveedorDTO);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
         }
 
         public Proveedor GetProveedorById(int pProveedor)

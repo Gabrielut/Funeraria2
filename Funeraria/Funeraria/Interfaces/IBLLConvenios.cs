@@ -13,7 +13,7 @@ namespace UTN.Winform.Funeraria.Interfaces
         List<ConveniosDTO> GetAllConvenios();
         Convenios GetConvenioById(int pConvenios);
         Convenios SaveConvenios(Convenios pConvenios);
-        List<Convenios> GetConveniosByFilter(string pDescripcion);
+        List<ConveniosDTO> GetConveniosByFilter(string pDescripcion);
         bool DaleteConvenios(int pId);
     }
 }

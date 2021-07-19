@@ -10,5 +10,6 @@ namespace UTN.Winform.Funeraria.Interfaces
     interface IDALCotizacion
     {
         List<Cotizacion> GetAllCotizacion();
+        Cotizacion SaveCotizacion(Cotizacion pCotizacion);
     }
 }
