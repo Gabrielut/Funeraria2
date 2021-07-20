@@ -291,9 +291,49 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             return lista;
         }
 
-        public List<Cliente> GetClienteByFilter(string pCorreo)
+        public List<Cliente> GetClienteByFilter(string pCliente)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            List<Cliente> lista = new List<Cliente>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @" select * from  Cliente WITH (NOLOCK) Where Nombre+PrimerApellido+SegundoApellido like @filtro ";
+                command.Parameters.AddWithValue("@filtro", pCliente);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+
+                // Si devolvió filas
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    // Iterar en todas las filas y Mapearlas
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        Cliente oCliente = new Cliente();
+                        oCliente.IdCliente = (int)dr["IdCliente"];
+                        oCliente.Nombre = dr["Nombre"].ToString();
+                        oCliente.PrimerApellido = dr["PrimerApellido"].ToString();
+                        oCliente.SegundoApellido = dr["SegundoApellido"].ToString();
+                        oCliente.Correo = dr["Correo"].ToString();
+                        oCliente.Telefono = dr["Telefono"].ToString();
+                        oCliente.Sexo = (bool)dr["Sexo"];
+                        oCliente.Direccion = dr["Direccion"].ToString();
+                        lista.Add(oCliente);
+                    }
+                }
+                
+            }
+            catch (Exception er)
+            {
+              
+            }
+            return lista;
         }
 
         public int GetNextNumeroCliente()

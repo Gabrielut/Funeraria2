@@ -264,7 +264,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtPrecio.Text = oProveedorDTO.Precio.ToString();
                     this.txtCantidad.Text = oProveedorDTO.CantUni.ToString();
                     this.cboEstado.SelectedIndex = cboEstado.FindString(oProveedorDTO.Estado.ToString());
-                    this.cboTipoServicio.SelectedIndex = cboTipoServicio.FindString(oProveedorDTO.Servicio.ToString());
+                    this.cboTipoServicio.SelectedIndex = cboTipoServicio.FindString(oProveedorDTO.IdTipoServicio.ToString());
                     this.cboProvincia.SelectedIndex = cboProvincia.FindString(oProveedorDTO.Provincia.ToString());
                     this.cboCanton.SelectedIndex = cboCanton.FindString(oProveedorDTO.Canton.ToString());
                     this.cboDistrito.SelectedIndex = cboDistrito.FindString(oProveedorDTO.Distrito.ToString());

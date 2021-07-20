@@ -30,7 +30,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalPaquete.GetNextNumeroActivo();
         }
 
-        public List<Paquete> GetPaqueteByFilter(string pDescripcion)
+        public List<PaqueteDTO> GetPaqueteByFilter(string pDescripcion)
         {
             IDALPaquete _DalPaquete = new DALPaquete();
             return _DalPaquete.GetPaqueteByFilter(pDescripcion);

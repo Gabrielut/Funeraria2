@@ -117,9 +117,56 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             throw new NotImplementedException();
         }
 
-        public List<Paquete> GetPaqueteByFilter(string pDescripcion)
+        public List<PaqueteDTO> GetPaqueteByFilter(string pDescripcion)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            List<PaqueteDTO> lista = new List<PaqueteDTO>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @"SELECT Paquete.IdPaquete, Paquete.Nombre, Paquete.Descripcion, Paquete.Precio,
+                               Paquete.Cantidad, Paquete.IdTipoPaquete, Paquete.Estado, 
+                               TipoPaquete.Descripcion AS TipoServicio
+                               FROM Paquete INNER JOIN
+                               TipoPaquete ON Paquete.IdTipoPaquete = TipoPaquete.IdTipoPaquete 
+                               Where Nombre like @filtro";
+
+                command.Parameters.AddWithValue("@filtro", pDescripcion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        PaqueteDTO oPaquete = new PaqueteDTO();
+                        oPaquete.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
+                        oPaquete.Nombre = dr["Nombre"].ToString();
+                        oPaquete.Descripcion = dr["Descripcion"].ToString();
+                        oPaquete.Precio = (dr["Precio"].ToString());
+                        oPaquete.Cantidad = (int.Parse(dr["Cantidad"].ToString()));
+                        oPaquete.TipoServicio = (dr["TipoServicio"].ToString());
+                        if ((bool)dr["Estado"])
+                        {
+                            oPaquete.Estado = "Activo";
+                        }
+                        else
+                        {
+                            oPaquete.Estado = "Desactivo";
+                        }
+
+                        lista.Add(oPaquete);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
         }
 
         public Paquete GetPaqueteById(int pPaquete)

@@ -24,7 +24,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalProveedores.GetNextNumeroActivo();
         }
 
-        public List<Proveedor> GetProveedorByFilter(string pDescripcion)
+        public List<ProveedorDTO> GetProveedorByFilter(string pDescripcion)
         {
             IDALProveedores _DalProveedores = new DALProveedores();
             return _DalProveedores.GetProveedorByFilter(pDescripcion);

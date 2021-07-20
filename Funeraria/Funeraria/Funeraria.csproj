@@ -163,6 +163,30 @@
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
+    <Compile Include="UI\Filtro\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtro\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Filtro\frmConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtro\frmConvenio.Designer.cs">
+      <DependentUpon>frmConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Filtro\frmPaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtro\frmPaquete.Designer.cs">
+      <DependentUpon>frmPaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Filtro\frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtro\frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +253,18 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Filtro\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Filtro\frmConvenio.resx">
+      <DependentUpon>frmConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Filtro\frmPaquete.resx">
+      <DependentUpon>frmPaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Filtro\frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
