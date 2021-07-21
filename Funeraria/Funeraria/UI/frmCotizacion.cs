@@ -36,12 +36,13 @@ namespace UTN.Winform.Funeraria.UI
         {
             frmConvenio frmConvenio = new frmConvenio();
             frmConvenio.ShowDialog();
-            ConveniosDTO Convenios = new ConveniosDTO();
+            ConveniosDTO convenios = new ConveniosDTO();
             List<ConveniosDTO> list = new List<ConveniosDTO>();
             if (frmConvenio.DialogResult == DialogResult.OK)
             {
-                Convenios = frmConvenio.oConveniosDTO;
-                list.Add(Convenios);
+                convenios = frmConvenio.oConveniosDTO;
+                list.Add(convenios);
+
                 dgrvConvenio.DataSource = list;
             }
         }
@@ -101,30 +102,59 @@ namespace UTN.Winform.Funeraria.UI
             listPaqueteDTO =  (List<PaqueteDTO>)dgrvPaquete.DataSource;
             listConveniosDTO = (List<ConveniosDTO>)dgrvConvenio.DataSource;
             listCliente = (List<Cliente>)dgrvCliente.DataSource;
-            foreach (ProveedorDTO item in listProveedorDTO)
+            double total = 0;
+            if (listProveedorDTO == null && listPaqueteDTO == null && listConveniosDTO == null)
             {
-                cotizacion.IdProveedores = item.IdProveedor;
+                MessageBox.Show("Debe de seleccionar almenos 1 Paquete ó Servicio", "Atencion",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            foreach (PaqueteDTO item in listPaqueteDTO)
+            if (listCliente == null)
             {
-                cotizacion.IdPaquete = item.IdPaquete;
+                MessageBox.Show("Debe de seleccionar almenos un cliente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
-            foreach (Cliente item in listCliente)
+            else
             {
-                cotizacion.IdCliente = item.IdCliente;
+                foreach (Cliente item in listCliente)
+                {
+                    cotizacion.IdCliente = item.IdCliente;
+                }
             }
-            foreach (ConveniosDTO item in listConveniosDTO)
+            if (listProveedorDTO != null)
             {
-                cotizacion.IdConvenio = item.IdConvenio;
-            }
-            cotizacion.Comentarios = "Prueba";
-            _BLLCotizacion.SaveCotizacion(cotizacion);
-            //listCliente.Add(dgrvCliente.SelectedRows[0].DataBoundItem as Cliente);
-            //for(int i = 0; i <= dgrvCliente.Rows.Count; i++)
-            //{
-            //    listProveedorDTO.Add(item);
-            //}
+                foreach (ProveedorDTO item in listProveedorDTO)
+                {
+                    cotizacion.IdProveedores = item.IdProveedor;
+                    total += double.Parse(item.Precio);
+                }
 
+            }
+            if (listPaqueteDTO != null)
+            {
+                foreach (PaqueteDTO item in listPaqueteDTO)
+                {
+                    cotizacion.IdPaquete = item.IdPaquete;
+                    total += double.Parse(item.Precio);
+                }
+            }
+    
+            if (listConveniosDTO != null)
+            {
+                foreach (ConveniosDTO item in listConveniosDTO)
+                {
+                    cotizacion.IdConvenio = item.IdConvenio;
+                }
+            }
+            cotizacion.Comentarios = txtComentarios.Text;
+            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                _BLLCotizacion.SaveCotizacion(cotizacion);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }        
         }
     }
 }

@@ -210,7 +210,7 @@ namespace UTN.Winform.Funeraria.UI
                 oProveedores.TelProveedor = this.txtTelefono.Text;
                 oProveedores.TelFax = this.txtFax.Text;
                 oProveedores.Correo = this.txtCorreo.Text;
-                oProveedores.Precio = int.Parse(this.txtPrecio.Text);
+                oProveedores.Precio = int.Parse(this.txtPrecio.Text.Replace("₡", "").Replace(",", ""));
                 oProveedores.CantUni = int.Parse(this.txtCantidad.Text);
                 oProveedores.IdTipoServicio = (cboTipoServicio.SelectedItem as TipoServicio).IdTipoServicio;
                 oDireccionCompleta.IdDireccion = int.Parse(this.txtId.Text);
@@ -240,8 +240,6 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
-            llenarCombos();
-            llenarDatos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {

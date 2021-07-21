@@ -84,7 +84,7 @@ namespace UTN.Winform.Funeraria.UI
 
                 Cliente oCliente = new Cliente();
 
-                oCliente.IdCliente = int.Parse(this.txtId.Text);
+                oCliente.IdCliente = int.Parse(this.txtId.Text.Replace("-",""));
                 oCliente.Nombre = this.txtNombre.Text;
                 oCliente.PrimerApellido = this.txtApellido1.Text;
                 oCliente.SegundoApellido = this.txtApellido2.Text;             
@@ -105,8 +105,8 @@ namespace UTN.Winform.Funeraria.UI
 
                 if (oCliente != null)
                 {
-                    this.CargarDatos();                              
-                    
+                    this.CargarDatos();
+                    CambiarEstado(MantenimientoEnum.Ninguno);
 
                 }
             }
@@ -114,8 +114,7 @@ namespace UTN.Winform.Funeraria.UI
             {
 
                 throw;
-            }
-            CargarDatos();
+            }           
         }
 
         public void CargarDatos()
@@ -180,15 +179,15 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Cliente oCliente = null;
+            ClienteDTO oCliente = null;
             try
             {
                 if (this.dtGVListadoClientes.SelectedRows.Count > 0)
                 {
-                    // Cambiar de estado
+                  
                     CambiarEstado(MantenimientoEnum.Editar);
-                    //Extraer el DTO seleccionado
-                    oCliente = this.dtGVListadoClientes.SelectedRows[0].DataBoundItem as Cliente;
+                   
+                    oCliente = this.dtGVListadoClientes.SelectedRows[0].DataBoundItem as ClienteDTO;
 
                     this.txtId.Text = oCliente.IdCliente.ToString();
                     this.txtNombre.Text = oCliente.Nombre.ToString();
@@ -196,16 +195,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtApellido2.Text = oCliente.SegundoApellido.ToString();
                     this.txtCorreo.Text = oCliente.Correo.ToString();
                     this.txtTelefono.Text = oCliente.Telefono.ToString();
-
-                    if (oCliente.Sexo == true)
-                    {
-
-                        this.cBoxSexo.SelectedIndex = cBoxSexo.FindString("Masculino");
-                    }
-                    else {
-                        this.cBoxSexo.SelectedIndex = cBoxSexo.FindString("Femenino");
-                    }
-                  //  this.cBoxSexo.SelectedIndex = cBoxSexo.FindString(oCliente.Sexo.ToString());
+                    this.cBoxSexo.SelectedIndex = cBoxSexo.FindString(oCliente.Sexo.ToString());
                     this.rTxtDireccion.Text = oCliente.Direccion.ToString();
                 }
                 else
@@ -273,6 +263,15 @@ namespace UTN.Winform.Funeraria.UI
             this.rTxtDireccion.Text = "";
             this.cBoxSexo.SelectedIndex = -1;
 
+            this.txtId.Enabled = false;
+            this.txtNombre.Enabled = false;
+            this.txtApellido1.Enabled = false;
+            this.txtApellido2.Enabled = false;
+            this.txtCorreo.Enabled = false;
+            this.txtTelefono.Enabled = false;
+            this.rTxtDireccion.Enabled = false;
+            this.cBoxSexo.Enabled = false;
+
 
             switch (estado)
             {
@@ -285,6 +284,8 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtTelefono.Enabled = true;
                     this.rTxtDireccion.Enabled = true;
                     this.cBoxSexo.Enabled = true;
+                    this.cBoxSexo.SelectedIndex = 0;
+                    this.txtId.Focus();
                     break;
                 case MantenimientoEnum.Editar:
                     this.txtId.Enabled = false;
@@ -294,6 +295,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCorreo.Enabled = true;
                     this.txtTelefono.Enabled = true;
                     this.rTxtDireccion.Enabled = true;
+                    this.cBoxSexo.Enabled = true;
                     this.txtNombre.Focus();
                     break;
                 case MantenimientoEnum.Borrar:
@@ -310,6 +312,7 @@ namespace UTN.Winform.Funeraria.UI
             // TODO: This line of code loads data into the 'proyectoFunerariaVirgenAngelesDataSet.Cliente' table. You can move, or remove it, as needed.
 
             CargarDatos();
+            CambiarEstado(MantenimientoEnum.Ninguno);
 
         }
 

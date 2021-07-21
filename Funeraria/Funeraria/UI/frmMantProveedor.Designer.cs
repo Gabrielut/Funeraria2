@@ -325,7 +325,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(101, 195);
-            this.txtPrecio.Mask = "000000000";
+            this.txtPrecio.Mask = "₡000,000,000";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(136, 24);
             this.txtPrecio.TabIndex = 27;
@@ -691,7 +691,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // Servicio
             // 
-            this.Servicio.DataPropertyName = "Servicio";
+            this.Servicio.DataPropertyName = "IdTipoServicio";
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.Name = "Servicio";
             this.Servicio.Width = 75;

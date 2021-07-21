@@ -99,6 +99,7 @@ namespace UTN.Winform.Funeraria.UI
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.toolTNombreConvenio = new System.Windows.Forms.ToolTip(this.components);
+            this.txtComentarios = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -256,7 +257,7 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado.AutoSize = true;
             this.lblListado.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListado.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblListado.Location = new System.Drawing.Point(540, 305);
+            this.lblListado.Location = new System.Drawing.Point(427, 288);
             this.lblListado.Name = "lblListado";
             this.lblListado.Size = new System.Drawing.Size(168, 19);
             this.lblListado.TabIndex = 51;
@@ -265,7 +266,7 @@ namespace UTN.Winform.Funeraria.UI
             // pnlLinea
             // 
             this.pnlLinea.BackColor = System.Drawing.Color.Black;
-            this.pnlLinea.Location = new System.Drawing.Point(510, 327);
+            this.pnlLinea.Location = new System.Drawing.Point(410, 310);
             this.pnlLinea.Name = "pnlLinea";
             this.pnlLinea.Size = new System.Drawing.Size(223, 1);
             this.pnlLinea.TabIndex = 52;
@@ -355,7 +356,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.iconButton3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(269, 6);
+            this.groupBox1.Location = new System.Drawing.Point(224, 24);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(612, 206);
             this.groupBox1.TabIndex = 5;
@@ -496,9 +497,9 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // btnBuscarPaquete
             // 
-            this.btnBuscarPaquete.Location = new System.Drawing.Point(245, 34);
+            this.btnBuscarPaquete.Location = new System.Drawing.Point(227, 23);
             this.btnBuscarPaquete.Name = "btnBuscarPaquete";
-            this.btnBuscarPaquete.Size = new System.Drawing.Size(138, 70);
+            this.btnBuscarPaquete.Size = new System.Drawing.Size(124, 61);
             this.btnBuscarPaquete.TabIndex = 60;
             this.btnBuscarPaquete.Text = "Buscar";
             this.btnBuscarPaquete.UseVisualStyleBackColor = true;
@@ -533,6 +534,7 @@ namespace UTN.Winform.Funeraria.UI
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.txtComentarios);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.panel3);
             this.tabPage3.Controls.Add(this.groupBox3);
@@ -549,7 +551,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label7.Location = new System.Drawing.Point(552, 291);
+            this.label7.Location = new System.Drawing.Point(443, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 19);
             this.label7.TabIndex = 56;
@@ -558,7 +560,7 @@ namespace UTN.Winform.Funeraria.UI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(522, 313);
+            this.panel3.Location = new System.Drawing.Point(413, 302);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(223, 1);
             this.panel3.TabIndex = 57;
@@ -569,9 +571,9 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.iconButton7);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(219, 35);
+            this.groupBox3.Location = new System.Drawing.Point(238, 37);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(676, 211);
+            this.groupBox3.Size = new System.Drawing.Size(506, 179);
             this.groupBox3.TabIndex = 47;
             this.groupBox3.TabStop = false;
             // 
@@ -710,7 +712,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label14.Location = new System.Drawing.Point(383, 332);
+            this.label14.Location = new System.Drawing.Point(390, 301);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(133, 19);
             this.label14.TabIndex = 59;
@@ -719,7 +721,7 @@ namespace UTN.Winform.Funeraria.UI
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(341, 360);
+            this.panel4.Location = new System.Drawing.Point(348, 329);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(223, 1);
             this.panel4.TabIndex = 60;
@@ -727,7 +729,7 @@ namespace UTN.Winform.Funeraria.UI
             // dgrvCliente
             // 
             this.dgrvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvCliente.Location = new System.Drawing.Point(20, 373);
+            this.dgrvCliente.Location = new System.Drawing.Point(27, 342);
             this.dgrvCliente.Name = "dgrvCliente";
             this.dgrvCliente.Size = new System.Drawing.Size(948, 183);
             this.dgrvCliente.TabIndex = 58;
@@ -738,7 +740,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.iconButton8);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
-            this.groupBox4.Location = new System.Drawing.Point(220, 32);
+            this.groupBox4.Location = new System.Drawing.Point(261, 54);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(388, 127);
             this.groupBox4.TabIndex = 48;
@@ -806,6 +808,15 @@ namespace UTN.Winform.Funeraria.UI
             // toolTNombreConvenio
             // 
             this.toolTNombreConvenio.IsBalloon = true;
+            // 
+            // txtComentarios
+            // 
+            this.txtComentarios.Location = new System.Drawing.Point(15, 60);
+            this.txtComentarios.MaxLength = 100;
+            this.txtComentarios.Multiline = true;
+            this.txtComentarios.Name = "txtComentarios";
+            this.txtComentarios.Size = new System.Drawing.Size(201, 78);
+            this.txtComentarios.TabIndex = 58;
             // 
             // frmCotizacion
             // 
@@ -917,5 +928,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadUni;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoServicio;
+        private System.Windows.Forms.TextBox txtComentarios;
     }
 }
