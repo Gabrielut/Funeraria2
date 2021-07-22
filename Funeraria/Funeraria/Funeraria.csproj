@@ -36,6 +36,24 @@
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -163,6 +181,7 @@
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UI\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +248,41 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Reportes\DataSetActivo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetActivo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteActivo.Designer.cs">
+      <DependentUpon>frmReporteActivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteCliente.Designer.cs">
+      <DependentUpon>frmReporteCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReportePaquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReportePaquete.Designer.cs">
+      <DependentUpon>frmReportePaquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteProveedor.Designer.cs">
+      <DependentUpon>frmReporteProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\frmReporteUsuario.Designer.cs">
+      <DependentUpon>frmReporteUsuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +323,24 @@
     <EmbeddedResource Include="UI\Procesos\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\frmReporteActivo.resx">
+      <DependentUpon>frmReporteActivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\frmReporteCliente.resx">
+      <DependentUpon>frmReporteCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\frmReportePaquete.resx">
+      <DependentUpon>frmReportePaquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\frmReporteProveedor.resx">
+      <DependentUpon>frmReporteProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\frmReporteUsuario.resx">
+      <DependentUpon>frmReporteUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\rptReporteActivoTipoActivo.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\rptReporteCliente.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\rptReporteUsuarioTipoU.rdlc" />
     <None Include="diagramaAdministracion.cd" />
     <None Include="diagramaClases.cd" />
     <None Include="diagramaSeguridad.cd" />
@@ -282,15 +354,37 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UI\Reportes\DataSetActivo.xsc">
+      <DependentUpon>DataSetActivo.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Reportes\DataSetActivo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetActivo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Reportes\DataSetActivo.xss">
+      <DependentUpon>DataSetActivo.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Media\ReinaAngeles.jpeg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

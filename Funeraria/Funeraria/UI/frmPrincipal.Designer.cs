@@ -39,8 +39,10 @@
             this.btnRptProveedores = new System.Windows.Forms.Button();
             this.btnRptActivos = new System.Windows.Forms.Button();
             this.pnlHerramientas = new System.Windows.Forms.Panel();
+            this.btnFacturacion = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
             this.pnlMantenimientos = new System.Windows.Forms.Panel();
+            this.btnConvenios = new System.Windows.Forms.Button();
             this.btnMantEmpleados = new System.Windows.Forms.Button();
             this.btnMantPaquetes = new System.Windows.Forms.Button();
             this.btnMantClientes = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.btnMantActivos = new System.Windows.Forms.Button();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
-            this.btnFacturacion = new System.Windows.Forms.Button();
-            this.btnConvenios = new System.Windows.Forms.Button();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -146,6 +146,7 @@
             this.btnRptEmpleados.Text = "Empleados";
             this.btnRptEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRptEmpleados.UseVisualStyleBackColor = false;
+            this.btnRptEmpleados.Click += new System.EventHandler(this.btnRptEmpleados_Click);
             // 
             // btnRptPaquetes
             // 
@@ -164,6 +165,7 @@
             this.btnRptPaquetes.Text = "Paquetes";
             this.btnRptPaquetes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRptPaquetes.UseVisualStyleBackColor = false;
+            this.btnRptPaquetes.Click += new System.EventHandler(this.btnRptPaquetes_Click_1);
             // 
             // btnRptClientes
             // 
@@ -182,6 +184,7 @@
             this.btnRptClientes.Text = "Clientes";
             this.btnRptClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRptClientes.UseVisualStyleBackColor = false;
+            this.btnRptClientes.Click += new System.EventHandler(this.btnRptClientes_Click_1);
             // 
             // btnRptProveedores
             // 
@@ -200,6 +203,7 @@
             this.btnRptProveedores.Text = "Proveedores";
             this.btnRptProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRptProveedores.UseVisualStyleBackColor = false;
+            this.btnRptProveedores.Click += new System.EventHandler(this.btnRptProveedores_Click_1);
             // 
             // btnRptActivos
             // 
@@ -218,6 +222,7 @@
             this.btnRptActivos.Text = "Activos";
             this.btnRptActivos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRptActivos.UseVisualStyleBackColor = false;
+            this.btnRptActivos.Click += new System.EventHandler(this.btnRptActivos_Click_1);
             // 
             // pnlHerramientas
             // 
@@ -229,6 +234,24 @@
             this.pnlHerramientas.Name = "pnlHerramientas";
             this.pnlHerramientas.Size = new System.Drawing.Size(256, 98);
             this.pnlHerramientas.TabIndex = 4;
+            // 
+            // btnFacturacion
+            // 
+            this.btnFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFacturacion.FlatAppearance.BorderSize = 0;
+            this.btnFacturacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnFacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturacion.ForeColor = System.Drawing.Color.White;
+            this.btnFacturacion.Location = new System.Drawing.Point(0, 50);
+            this.btnFacturacion.Name = "btnFacturacion";
+            this.btnFacturacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnFacturacion.Size = new System.Drawing.Size(256, 48);
+            this.btnFacturacion.TabIndex = 1;
+            this.btnFacturacion.Text = "Facturación";
+            this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturacion.UseVisualStyleBackColor = false;
             // 
             // btnCotizaciones
             // 
@@ -263,6 +286,25 @@
             this.pnlMantenimientos.Name = "pnlMantenimientos";
             this.pnlMantenimientos.Size = new System.Drawing.Size(256, 243);
             this.pnlMantenimientos.TabIndex = 2;
+            // 
+            // btnConvenios
+            // 
+            this.btnConvenios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnConvenios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConvenios.FlatAppearance.BorderSize = 0;
+            this.btnConvenios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.btnConvenios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnConvenios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConvenios.ForeColor = System.Drawing.Color.White;
+            this.btnConvenios.Location = new System.Drawing.Point(0, 202);
+            this.btnConvenios.Name = "btnConvenios";
+            this.btnConvenios.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnConvenios.Size = new System.Drawing.Size(256, 42);
+            this.btnConvenios.TabIndex = 5;
+            this.btnConvenios.Text = "Convenios";
+            this.btnConvenios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConvenios.UseVisualStyleBackColor = false;
+            this.btnConvenios.Click += new System.EventHandler(this.btnConvenios_Click);
             // 
             // btnMantEmpleados
             // 
@@ -380,43 +422,6 @@
             this.pnlFormularios.Name = "pnlFormularios";
             this.pnlFormularios.Size = new System.Drawing.Size(1028, 697);
             this.pnlFormularios.TabIndex = 4;
-            // 
-            // btnFacturacion
-            // 
-            this.btnFacturacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnFacturacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturacion.FlatAppearance.BorderSize = 0;
-            this.btnFacturacion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnFacturacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
-            this.btnFacturacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturacion.ForeColor = System.Drawing.Color.White;
-            this.btnFacturacion.Location = new System.Drawing.Point(0, 50);
-            this.btnFacturacion.Name = "btnFacturacion";
-            this.btnFacturacion.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnFacturacion.Size = new System.Drawing.Size(256, 48);
-            this.btnFacturacion.TabIndex = 1;
-            this.btnFacturacion.Text = "Facturación";
-            this.btnFacturacion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturacion.UseVisualStyleBackColor = false;
-            // 
-            // btnConvenios
-            // 
-            this.btnConvenios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnConvenios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConvenios.FlatAppearance.BorderSize = 0;
-            this.btnConvenios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
-            this.btnConvenios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
-            this.btnConvenios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConvenios.ForeColor = System.Drawing.Color.White;
-            this.btnConvenios.Location = new System.Drawing.Point(0, 202);
-            this.btnConvenios.Name = "btnConvenios";
-            this.btnConvenios.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnConvenios.Size = new System.Drawing.Size(256, 42);
-            this.btnConvenios.TabIndex = 5;
-            this.btnConvenios.Text = "Convenios";
-            this.btnConvenios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConvenios.UseVisualStyleBackColor = false;
-            this.btnConvenios.Click += new System.EventHandler(this.btnConvenios_Click);
             // 
             // pbLogo
             // 

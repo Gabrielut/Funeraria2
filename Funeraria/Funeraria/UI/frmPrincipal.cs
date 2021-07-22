@@ -12,6 +12,7 @@ using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
 using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Properties;
+using UTN.Winform.Funeraria.UI.Reportes;
 
 namespace UTN.Winform.Funeraria.UI
 {
@@ -388,6 +389,36 @@ namespace UTN.Winform.Funeraria.UI
         {
             esconderSubMenu();
             abrirForumalario<frmMantConvenios>();
+        }
+
+        private void btnRptActivos_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmReporteActivo>();
+        }
+
+        private void btnRptEmpleados_Click(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmReporteUsuario>();
+        }
+
+        private void btnRptProveedores_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmReporteProveedor>();
+        }
+
+        private void btnRptClientes_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmReporteCliente>();
+        }
+
+        private void btnRptPaquetes_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmReportePaquete>();
         }
     }
 }
