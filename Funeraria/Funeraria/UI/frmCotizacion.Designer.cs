@@ -72,6 +72,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label6 = new System.Windows.Forms.Label();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.txtComentarios = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -99,7 +100,6 @@ namespace UTN.Winform.Funeraria.UI
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.toolTNombreConvenio = new System.Windows.Forms.ToolTip(this.components);
-            this.txtComentarios = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -185,6 +185,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnNuevo.Size = new System.Drawing.Size(50, 45);
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnSalvarCotizacion
             // 
@@ -209,7 +210,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenido.Location = new System.Drawing.Point(0, 51);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(1028, 749);
+            this.pnlContenido.Size = new System.Drawing.Size(1028, 737);
             this.pnlContenido.TabIndex = 2;
             this.pnlContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenido_Paint);
             // 
@@ -257,7 +258,7 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado.AutoSize = true;
             this.lblListado.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListado.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblListado.Location = new System.Drawing.Point(427, 288);
+            this.lblListado.Location = new System.Drawing.Point(427, 261);
             this.lblListado.Name = "lblListado";
             this.lblListado.Size = new System.Drawing.Size(168, 19);
             this.lblListado.TabIndex = 51;
@@ -266,7 +267,7 @@ namespace UTN.Winform.Funeraria.UI
             // pnlLinea
             // 
             this.pnlLinea.BackColor = System.Drawing.Color.Black;
-            this.pnlLinea.Location = new System.Drawing.Point(410, 310);
+            this.pnlLinea.Location = new System.Drawing.Point(410, 283);
             this.pnlLinea.Name = "pnlLinea";
             this.pnlLinea.Size = new System.Drawing.Size(223, 1);
             this.pnlLinea.TabIndex = 52;
@@ -285,7 +286,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Estado,
             this.Comentarios,
             this.Servicio});
-            this.dgrvConvenio.Location = new System.Drawing.Point(37, 343);
+            this.dgrvConvenio.Location = new System.Drawing.Point(37, 316);
             this.dgrvConvenio.Name = "dgrvConvenio";
             this.dgrvConvenio.Size = new System.Drawing.Size(912, 193);
             this.dgrvConvenio.TabIndex = 50;
@@ -417,7 +418,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label18.Location = new System.Drawing.Point(416, 286);
+            this.label18.Location = new System.Drawing.Point(414, 245);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(160, 19);
             this.label18.TabIndex = 53;
@@ -426,7 +427,7 @@ namespace UTN.Winform.Funeraria.UI
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(386, 308);
+            this.panel2.Location = new System.Drawing.Point(384, 267);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 1);
             this.panel2.TabIndex = 54;
@@ -441,7 +442,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Precio,
             this.Cantidad,
             this.TipoServicio});
-            this.dgrvPaquete.Location = new System.Drawing.Point(27, 315);
+            this.dgrvPaquete.Location = new System.Drawing.Point(25, 274);
             this.dgrvPaquete.Name = "dgrvPaquete";
             this.dgrvPaquete.Size = new System.Drawing.Size(892, 199);
             this.dgrvPaquete.TabIndex = 51;
@@ -491,7 +492,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(294, 32);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(416, 241);
+            this.groupBox2.Size = new System.Drawing.Size(416, 156);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             // 
@@ -546,12 +547,21 @@ namespace UTN.Winform.Funeraria.UI
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Servicios Adicionales";
             // 
+            // txtComentarios
+            // 
+            this.txtComentarios.Location = new System.Drawing.Point(15, 60);
+            this.txtComentarios.MaxLength = 100;
+            this.txtComentarios.Multiline = true;
+            this.txtComentarios.Name = "txtComentarios";
+            this.txtComentarios.Size = new System.Drawing.Size(201, 78);
+            this.txtComentarios.TabIndex = 58;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label7.Location = new System.Drawing.Point(443, 280);
+            this.label7.Location = new System.Drawing.Point(443, 237);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 19);
             this.label7.TabIndex = 56;
@@ -560,7 +570,7 @@ namespace UTN.Winform.Funeraria.UI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(413, 302);
+            this.panel3.Location = new System.Drawing.Point(413, 259);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(223, 1);
             this.panel3.TabIndex = 57;
@@ -627,7 +637,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Monto,
             this.CantidadUni,
             this.IdTipoServicio});
-            this.dgrvProveedor.Location = new System.Drawing.Point(103, 341);
+            this.dgrvProveedor.Location = new System.Drawing.Point(103, 298);
             this.dgrvProveedor.Name = "dgrvProveedor";
             this.dgrvProveedor.Size = new System.Drawing.Size(789, 193);
             this.dgrvProveedor.TabIndex = 55;
@@ -712,7 +722,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label14.Location = new System.Drawing.Point(390, 301);
+            this.label14.Location = new System.Drawing.Point(381, 274);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(133, 19);
             this.label14.TabIndex = 59;
@@ -721,7 +731,7 @@ namespace UTN.Winform.Funeraria.UI
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(348, 329);
+            this.panel4.Location = new System.Drawing.Point(339, 302);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(223, 1);
             this.panel4.TabIndex = 60;
@@ -729,7 +739,7 @@ namespace UTN.Winform.Funeraria.UI
             // dgrvCliente
             // 
             this.dgrvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvCliente.Location = new System.Drawing.Point(27, 342);
+            this.dgrvCliente.Location = new System.Drawing.Point(18, 315);
             this.dgrvCliente.Name = "dgrvCliente";
             this.dgrvCliente.Size = new System.Drawing.Size(948, 183);
             this.dgrvCliente.TabIndex = 58;
@@ -809,20 +819,11 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.toolTNombreConvenio.IsBalloon = true;
             // 
-            // txtComentarios
-            // 
-            this.txtComentarios.Location = new System.Drawing.Point(15, 60);
-            this.txtComentarios.MaxLength = 100;
-            this.txtComentarios.Multiline = true;
-            this.txtComentarios.Name = "txtComentarios";
-            this.txtComentarios.Size = new System.Drawing.Size(201, 78);
-            this.txtComentarios.TabIndex = 58;
-            // 
             // frmCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 800);
+            this.ClientSize = new System.Drawing.Size(1028, 788);
             this.Controls.Add(this.pnlContenido);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

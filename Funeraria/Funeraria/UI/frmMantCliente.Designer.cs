@@ -68,14 +68,12 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
@@ -198,12 +196,12 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1064, 630);
-            this.pnlContenedor.TabIndex = 2;            
+            this.pnlContenedor.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(28, 399);
+            this.panel1.Location = new System.Drawing.Point(28, 360);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 1);
             this.panel1.TabIndex = 10;
@@ -213,7 +211,7 @@ namespace UTN.Winform.Funeraria.UI
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label12.Location = new System.Drawing.Point(24, 379);
+            this.label12.Location = new System.Drawing.Point(24, 340);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(246, 21);
             this.label12.TabIndex = 9;
@@ -432,7 +430,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono,
             this.Sexo,
             this.Direccion});
-            this.dtGVListadoClientes.Location = new System.Drawing.Point(28, 415);
+            this.dtGVListadoClientes.Location = new System.Drawing.Point(28, 376);
             this.dtGVListadoClientes.Name = "dtGVListadoClientes";
             this.dtGVListadoClientes.Size = new System.Drawing.Size(879, 177);
             this.dtGVListadoClientes.TabIndex = 0;
@@ -488,10 +486,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // errPro
             // 
-
             this.errPro.ContainerControl = this;
             // 
-
             // frmMantCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,9 +505,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);

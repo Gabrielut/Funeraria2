@@ -146,15 +146,29 @@ namespace UTN.Winform.Funeraria.UI
                 }
             }
             cotizacion.Comentarios = txtComentarios.Text;
-            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Some Title", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Informacion", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 _BLLCotizacion.SaveCotizacion(cotizacion);
+                limpiar();
             }
             else if (dialogResult == DialogResult.No)
             {
                 return;
             }        
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        public void limpiar()
+        {
+            dgrvCliente.DataSource = null;
+            dgrvConvenio.DataSource = null;
+            dgrvPaquete.DataSource = null;
+            dgrvProveedor.DataSource = null;
         }
     }
 }
