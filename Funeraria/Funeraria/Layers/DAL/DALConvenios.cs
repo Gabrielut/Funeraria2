@@ -145,9 +145,62 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
         }
 
-        public List<Convenios> GetConveniosByFilter(string pDescripcion)
+        public List<ConveniosDTO> GetConveniosByFilter(string pDescripcion)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            List<ConveniosDTO> lista = new List<ConveniosDTO>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @" SELECT Convenios.IdConvenio, Convenios.NomEmpresa, 
+                               Convenios.Ubicacion, Convenios.TelCelular, Convenios.TelEmpresa,
+                               Convenios.TelFax, Convenios.Descuento, Convenios.Estado, 
+                               Convenios.Comentarios, 
+                               TipoServicio.Descripcion AS 'TipoServicio'
+                               FROM Convenios INNER JOIN
+                               TipoServicio ON Convenios.TipoServicio = TipoServicio.IdTipoServicio
+							   Where NomEmpresa like @filtro ";
+
+                command.Parameters.AddWithValue("@filtro", pDescripcion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        ConveniosDTO oConveniosDTO = new ConveniosDTO();
+                        oConveniosDTO.IdConvenio = int.Parse(dr["IdConvenio"].ToString());
+                        oConveniosDTO.NomEmpresa = dr["NomEmpresa"].ToString();
+                        oConveniosDTO.ubicacion = dr["Ubicacion"].ToString();
+                        oConveniosDTO.TelCelular = dr["TelCelular"].ToString();
+                        oConveniosDTO.TelEmpresa = dr["TelEmpresa"].ToString();
+                        oConveniosDTO.TelFax = dr["TelFax"].ToString();
+                        oConveniosDTO.TipoServicio = dr["TipoServicio"].ToString();
+                        oConveniosDTO.Descuento = int.Parse(dr["Descuento"].ToString());
+                        if (bool.Parse(dr["Estado"].ToString()))
+                        {
+                            oConveniosDTO.Estado = "Activo";
+                        }
+                        else
+                        {
+                            oConveniosDTO.Estado = "Inactivo";
+                        }
+
+                        oConveniosDTO.Comentarios = dr["Comentarios"].ToString();
+                        lista.Add(oConveniosDTO);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
         }
 
         public Convenios SaveConvenios(Convenios pConvenios)

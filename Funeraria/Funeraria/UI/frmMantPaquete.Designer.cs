@@ -55,6 +55,9 @@ namespace UTN.Winform.Funeraria.UI
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +65,6 @@ namespace UTN.Winform.Funeraria.UI
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -222,7 +222,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(114, 233);
-            this.txtPrecio.Mask = "000000000000";
+            this.txtPrecio.Mask = "₡000,000,000";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(186, 24);
             this.txtPrecio.TabIndex = 12;
@@ -325,7 +325,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.Location = new System.Drawing.Point(1, 51);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1099, 639);
-            this.pnlContenedor.TabIndex = 3;            
+            this.pnlContenedor.TabIndex = 3;
             // 
             // panel2
             // 
@@ -364,48 +364,6 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(805, 183);
             this.dgvDatos.TabIndex = 5;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "IdPaquete";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Paquete
-            // 
-            this.Paquete.DataPropertyName = "Paquete";
-            this.Paquete.HeaderText = "Paquete";
-            this.Paquete.Name = "Paquete";
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
             // 
             // btnCancelar
             // 
@@ -449,6 +407,48 @@ namespace UTN.Winform.Funeraria.UI
             // errPro
             // 
             this.errPro.ContainerControl = this;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "IdPaquete";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Paquete
+            // 
+            this.Paquete.DataPropertyName = "TipoServicio";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // frmMantPaquete
             // 
@@ -505,6 +505,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ErrorProvider errPro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -512,6 +513,5 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.ErrorProvider errPro;
     }
 }

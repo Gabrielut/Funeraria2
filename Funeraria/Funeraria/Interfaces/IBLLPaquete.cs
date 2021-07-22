@@ -13,7 +13,7 @@ namespace UTN.Winform.Funeraria.Interfaces
         List<Paquete> GetAllPaquete();
         Paquete GetPaqueteById(int pPaquete);
         Paquete SavePaquete(Paquete pPaquete);
-        List<Paquete> GetPaqueteByFilter(string pDescripcion);
+        List<PaqueteDTO> GetPaqueteByFilter(string pDescripcion);
         bool DaletePaquete(int pId);
         Paquete UpdatePaquete(Paquete pPaquete);
         int GetNextNumeroActivo();

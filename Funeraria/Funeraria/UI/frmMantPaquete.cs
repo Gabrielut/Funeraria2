@@ -58,7 +58,7 @@ namespace UTN.Winform.Funeraria.UI
                 oActivoDto.Descripcion = item.Descripcion;
                 oActivoDto.Precio = item.Precio.ToString("₡" + "#,##0");
                 oActivoDto.Cantidad = item.Cantidad;
-                oActivoDto.Paquete = desc;              
+                oActivoDto.TipoServicio = desc;              
                 if (item.Estado == true)
                 {
                     oActivoDto.Estado = "Activo";
@@ -115,7 +115,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCantidad.Enabled = true;
                     this.cboestado.Enabled = true;
                     this.cboTipoPaquete.Enabled = true;
-                    this.txtNombre.Focus();
+                    this.txtId.Focus();
                     break;
                 case MantenimientoEnum.Editar:
                     this.txtNombre.Enabled = true;
@@ -167,7 +167,7 @@ namespace UTN.Winform.Funeraria.UI
                 oPaquete.IdPaquete = int.Parse(this.txtId.Text);
                 oPaquete.Nombre = this.txtNombre.Text;
                 oPaquete.Descripcion = this.txtDescripcion.Text;
-                oPaquete.Precio = (float.Parse(this.txtPrecio.Text));
+                oPaquete.Precio = float.Parse(this.txtPrecio.Text.Replace("₡", "").Replace(",", ""));
                 oPaquete.Cantidad = (int)this.txtCantidad.Value;
                 oPaquete.IdTipoPaquete = (cboTipoPaquete.SelectedItem as TipoPaquete).IdTipoPaquete;
                 if (cboestado.SelectedIndex == 0)
@@ -190,8 +190,6 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
-            llenarCombos();
-            llenarDatos();
         }       
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -210,7 +208,7 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtPrecio.Text = oPaqueteDTO.Precio.ToString();
                     this.txtCantidad.Value = oPaqueteDTO.Cantidad;
                     this.cboestado.SelectedIndex = cboestado.FindString(oPaqueteDTO.Estado.ToString());
-                    this.cboTipoPaquete.SelectedIndex = cboTipoPaquete.FindString(oPaqueteDTO.Paquete.ToString());
+                    this.cboTipoPaquete.SelectedIndex = cboTipoPaquete.FindString(oPaqueteDTO.TipoServicio.ToString());
                 }
                 else
                 {

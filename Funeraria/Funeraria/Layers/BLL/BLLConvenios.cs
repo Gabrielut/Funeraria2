@@ -30,7 +30,7 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalConvenios.GetConvenioById(pConvenios);
         }
 
-        public List<Convenios> GetConveniosByFilter(string pDescripcion)
+        public List<ConveniosDTO> GetConveniosByFilter(string pDescripcion)
         {
             IDALConvenios _DalConvenios = new DALConvenios();
             return _DalConvenios.GetConveniosByFilter(pDescripcion);

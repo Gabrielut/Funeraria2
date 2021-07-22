@@ -155,18 +155,22 @@ namespace UTN.Winform.Funeraria.UI
                     this.rdbDesabilitar.Enabled = true;
                     break;
                 case MantenimientoEnum.Editar:
-                    this.txtCedula.Enabled = false;
+                    this.txtCedula.Enabled = true;
                     this.txtNombre.Enabled = true;
                     this.txtApellido1.Enabled = true;
                     this.txtApellido2.Enabled = true;
                     this.txtCorreo.Enabled = false;
-                    this.txtContrasenna.Enabled = true;
+                    this.txtContrasenna.Enabled = false;
                     this.txtTelefono.Enabled = true;
                     this.txtDireccion.Enabled = true;
+                    this.cboSexo.Enabled = true;
+                    this.cboRol.Enabled = true;
+                    this.dtpFechaNac.Enabled = true;
+                    this.txtCedula.Focus();
+                    this.btnAceptar.Enabled = true;
+                    this.btnCancelar.Enabled = true;
                     this.rdbHabilitar.Enabled = true;
                     this.rdbDesabilitar.Enabled = true;
-                    this.cboSexo.Enabled = true;
-                    this.txtNombre.Focus();
                     break;
                 case MantenimientoEnum.Borrar:
                     break;
@@ -257,6 +261,7 @@ namespace UTN.Winform.Funeraria.UI
                 {
                     llenarCombos();
                     llenarDatos();
+                    CambiarEstado(MantenimientoEnum.Ninguno);
                 }
             }
             catch (Exception)
@@ -264,20 +269,18 @@ namespace UTN.Winform.Funeraria.UI
 
                 throw;
             }
-            llenarCombos();
-            llenarDatos();
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
-                Usuarios oUsuarios = null;
+                UsuariosDTO oUsuarios = null;
                 IBLLUsuarios _BllUsuario = new BLLUsuarios();
 
                 if (this.dgvDatos.SelectedRows.Count > 0)
                 {
                     CambiarEstado(MantenimientoEnum.Editar);
-                    oUsuarios = dgvDatos.SelectedRows[0].DataBoundItem as Usuarios;
+                    oUsuarios = dgvDatos.SelectedRows[0].DataBoundItem as UsuariosDTO;
                     this.txtCedula.Text = oUsuarios.IDUsuario;
                     this.txtNombre.Text = oUsuarios.Nombre;
                     this.txtApellido1.Text = oUsuarios.PrimerApellido;
@@ -285,11 +288,10 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtCorreo.Text = oUsuarios.Correo;
                     this.txtContrasenna.Text = oUsuarios.Contrasenna;
                     this.txtTelefono.Text = oUsuarios.Telefono;
-                    (cboSexo.SelectedItem as Sexo).IdSexo = oUsuarios.Sexo;
-                    (cboRol.SelectedItem as Rol).IDRol = oUsuarios.IdRol;
-                    dtpFechaNac.Value = oUsuarios.FechaNacimiento;
+                    cboSexo.SelectedIndex  = cboSexo.FindString(oUsuarios.Sexo.ToString());
+                    cboRol.SelectedIndex = cboSexo.FindString(oUsuarios.IdRol.ToString());
+                    dtpFechaNac.Value = DateTime.Parse(oUsuarios.FechaNacimiento.ToString());
                     this.txtDireccion.Text = oUsuarios.Direccion.ToString();
-
                 }
                 else
                 {

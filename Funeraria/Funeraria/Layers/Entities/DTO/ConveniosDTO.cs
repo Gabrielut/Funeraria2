@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Funeraria.Layers.Entities.DTO
 {
-    class ConveniosDTO
+   public class ConveniosDTO
     {
         public int IdConvenio { get; set; }
         public string NomEmpresa { get; set; }
