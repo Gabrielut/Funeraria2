@@ -40,5 +40,10 @@ namespace UTN.Winform.Funeraria.UI.Filtro
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

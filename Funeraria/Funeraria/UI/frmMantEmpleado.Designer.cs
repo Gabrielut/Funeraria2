@@ -30,10 +30,6 @@ namespace UTN.Winform.Funeraria.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnBorrar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -58,18 +54,8 @@ namespace UTN.Winform.Funeraria.UI
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.rdbHabilitar = new System.Windows.Forms.RadioButton();
-            this.btnAceptar = new FontAwesome.Sharp.IconButton();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.rdbDesabilitar = new System.Windows.Forms.RadioButton();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,6 +65,20 @@ namespace UTN.Winform.Funeraria.UI
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.btnBorrar = new FontAwesome.Sharp.IconButton();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.btnAceptar = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
@@ -87,71 +87,6 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 36;
-            this.btnSalir.Location = new System.Drawing.Point(171, 1);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(62, 45);
-            this.btnSalir.TabIndex = 3;
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.FlatAppearance.BorderSize = 0;
-            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.Cut;
-            this.btnBorrar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBorrar.IconSize = 36;
-            this.btnBorrar.Location = new System.Drawing.Point(119, 3);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(62, 45);
-            this.btnBorrar.TabIndex = 2;
-            this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Upload;
-            this.btnEditar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 36;
-            this.btnEditar.Location = new System.Drawing.Point(65, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(62, 45);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
-            this.btnNuevo.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.IconSize = 36;
-            this.btnNuevo.Location = new System.Drawing.Point(12, 3);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(62, 45);
-            this.btnNuevo.TabIndex = 0;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // txtCorreo
             // 
@@ -353,44 +288,6 @@ namespace UTN.Winform.Funeraria.UI
             this.rdbHabilitar.Text = "Habilitar";
             this.rdbHabilitar.UseVisualStyleBackColor = true;
             // 
-            // btnAceptar
-            // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
-            this.btnAceptar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAceptar.Location = new System.Drawing.Point(885, 84);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(133, 46);
-            this.btnAceptar.TabIndex = 15;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.Location = new System.Drawing.Point(885, 149);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(133, 46);
-            this.btnCancelar.TabIndex = 16;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
             // rdbDesabilitar
             // 
             this.rdbDesabilitar.AutoSize = true;
@@ -420,11 +317,65 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.Size = new System.Drawing.Size(956, 152);
             this.dgvDatos.TabIndex = 17;
             // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "PrimerApellido";
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            // 
+            // Identificacion
+            // 
+            this.Identificacion.DataPropertyName = "IDUsuario";
+            this.Identificacion.HeaderText = "Identificacion";
+            this.Identificacion.Name = "Identificacion";
+            // 
+            // Telefono
+            // 
+            this.Telefono.DataPropertyName = "Telefono";
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Fecha_Nac
+            // 
+            this.Fecha_Nac.DataPropertyName = "FechaNacimiento";
+            this.Fecha_Nac.HeaderText = "Fecha_Nac";
+            this.Fecha_Nac.Name = "Fecha_Nac";
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            // 
+            // Rol
+            // 
+            this.Rol.DataPropertyName = "IDRol";
+            this.Rol.HeaderText = "Rol";
+            this.Rol.Name = "Rol";
+            // 
+            // Sexo
+            // 
+            this.Sexo.DataPropertyName = "Sexo";
+            this.Sexo.HeaderText = "Sexo";
+            this.Sexo.Name = "Sexo";
+            // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.pnlMenu.Controls.Add(this.btnCerrar);
             this.pnlMenu.Controls.Add(this.lblTitulo);
-            this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnEditar);
@@ -434,6 +385,26 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1048, 46);
             this.pnlMenu.TabIndex = 18;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1004, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 25;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitulo
             // 
@@ -446,23 +417,70 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo.TabIndex = 24;
             this.lblTitulo.Text = "Empleados";
             // 
-            // iconButton1
+            // btnNuevo
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 36;
-            this.iconButton1.Location = new System.Drawing.Point(1008, 8);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(37, 31);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            this.btnNuevo.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNuevo.IconSize = 36;
+            this.btnNuevo.Location = new System.Drawing.Point(12, 3);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(62, 45);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
+            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 36;
+            this.btnSalir.Location = new System.Drawing.Point(171, 1);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(62, 45);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Upload;
+            this.btnEditar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEditar.IconSize = 36;
+            this.btnEditar.Location = new System.Drawing.Point(65, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(62, 45);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.FlatAppearance.BorderSize = 0;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.IconChar = FontAwesome.Sharp.IconChar.Cut;
+            this.btnBorrar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnBorrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBorrar.IconSize = 36;
+            this.btnBorrar.Location = new System.Drawing.Point(119, 3);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(62, 45);
+            this.btnBorrar.TabIndex = 2;
+            this.btnBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // pnlContenedor
             // 
@@ -476,6 +494,25 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1048, 596);
             this.pnlContenedor.TabIndex = 19;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnAceptar.FlatAppearance.BorderSize = 0;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.btnAceptar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnAceptar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAceptar.Location = new System.Drawing.Point(885, 84);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(133, 46);
+            this.btnAceptar.TabIndex = 15;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // groupBox1
             // 
@@ -532,63 +569,28 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Usuario";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.Location = new System.Drawing.Point(885, 149);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(133, 46);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
             // errPro
             // 
             this.errPro.ContainerControl = this;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Apellido
-            // 
-            this.Apellido.DataPropertyName = "PrimerApellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            // 
-            // Identificacion
-            // 
-            this.Identificacion.DataPropertyName = "IDUsuario";
-            this.Identificacion.HeaderText = "Identificacion";
-            this.Identificacion.Name = "Identificacion";
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Fecha_Nac
-            // 
-            this.Fecha_Nac.DataPropertyName = "FechaNacimiento";
-            this.Fecha_Nac.HeaderText = "Fecha_Nac";
-            this.Fecha_Nac.Name = "Fecha_Nac";
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            // 
-            // Rol
-            // 
-            this.Rol.DataPropertyName = "IDRol";
-            this.Rol.HeaderText = "Rol";
-            this.Rol.Name = "Rol";
-            // 
-            // Sexo
-            // 
-            this.Sexo.DataPropertyName = "Sexo";
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.Name = "Sexo";
             // 
             // frmMantEmpleado
             // 
@@ -652,7 +654,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.RadioButton rdbDesabilitar;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlContenedor;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -667,5 +668,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }

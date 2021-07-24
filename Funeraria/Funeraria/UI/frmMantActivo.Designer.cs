@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.pnlContenido = new System.Windows.Forms.Panel();
@@ -103,9 +103,9 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.lblTitulo);
             this.pnlMenu.Controls.Add(this.btnEditar);
-            this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Controls.Add(this.btnEliminar);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -114,6 +114,26 @@
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.pnlMenu.Size = new System.Drawing.Size(1064, 45);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnSalir.IconColor = System.Drawing.Color.White;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 25;
+            this.btnSalir.Location = new System.Drawing.Point(1019, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(32, 31);
+            this.btnSalir.TabIndex = 23;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // lblTitulo
             // 
@@ -142,25 +162,6 @@
             this.btnEditar.TabIndex = 13;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 36;
-            this.btnSalir.Location = new System.Drawing.Point(1022, 6);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(37, 31);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevo
             // 
@@ -473,7 +474,7 @@
             this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
             this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar2.Location = new System.Drawing.Point(856, 78);
+            this.btnGuardar2.Location = new System.Drawing.Point(879, 70);
             this.btnGuardar2.Name = "btnGuardar2";
             this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
@@ -497,7 +498,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(856, 157);
+            this.btnCancelar.Location = new System.Drawing.Point(879, 149);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCancelar.Size = new System.Drawing.Size(117, 46);
@@ -689,7 +690,6 @@
 
         private System.Windows.Forms.Panel pnlMenu;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.Panel pnlContenido;
@@ -748,5 +748,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn InfoAdicional;
         private System.Windows.Forms.DataGridViewImageColumn Imagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }

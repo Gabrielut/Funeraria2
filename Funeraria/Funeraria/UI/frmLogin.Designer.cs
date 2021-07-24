@@ -40,7 +40,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.pnlLogin.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +74,7 @@
             this.btnRecuperarContrasena.TabIndex = 12;
             this.btnRecuperarContrasena.Text = "Olvido su contraseña?";
             this.btnRecuperarContrasena.UseVisualStyleBackColor = false;
+            this.btnRecuperarContrasena.Click += new System.EventHandler(this.btnRecuperarContrasena_Click);
             // 
             // lblBienvenido
             // 
@@ -150,6 +153,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.panel2.Controls.Add(this.btnCerrar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -159,6 +163,26 @@
             // errPro
             // 
             this.errPro.ContainerControl = this;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1210, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 19;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmLogin
             // 
@@ -177,6 +201,7 @@
             this.Text = "Form1";
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
 
@@ -194,6 +219,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRecuperarContrasena;
         private System.Windows.Forms.ErrorProvider errPro;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }
 

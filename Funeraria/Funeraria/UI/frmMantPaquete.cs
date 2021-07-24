@@ -269,5 +269,10 @@ namespace UTN.Winform.Funeraria.UI
             }
         }
         #endregion
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

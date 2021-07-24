@@ -9,35 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
-using UTN.Winform.Funeraria.Layers.Entities.DTO;
+using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.UI.Filtro
 {
-    public partial class frmProveedor : Form
+    public partial class frmActivo : Form
     {
-        public ProveedorDTO oProveedoresDTO { get; private set; } = null;
-        public frmProveedor()
+      //  public Activo oActivo { get; private set; } = null;
+        public frmActivo()
         {
             InitializeComponent();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            IBLLProveedores _BLLProveedores = new BLLProveedores();
+            frmActivo frmActivo = new frmActivo();
+            frmActivo.ShowDialog();
+
+            IBLLActivo _BLLCliente = new BLLActivo();
             String filtro = txtFiltro.Text;
             filtro.Replace(" ", "%");
             filtro = "%" + filtro + "%";
-            dgrvDatos.AutoGenerateColumns = false;
-            dgrvDatos.DataSource = _BLLProveedores.GetProveedorByFilter(filtro);
-        }
-
-        private void dgrvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgrvDatos.CurrentCell.Selected)
-            {
-                oProveedoresDTO = dgrvDatos.SelectedRows[0].DataBoundItem as ProveedorDTO;
-                this.DialogResult = DialogResult.OK;
-            }
+            dgrvActivo.AutoGenerateColumns = false;
+            //dgrvDatos.DataSource = _BLLCliente.GetActivoByFilter(filtro);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

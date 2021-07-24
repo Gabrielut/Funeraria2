@@ -12,11 +12,13 @@ using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
 using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Properties;
+using UTN.Winform.Funeraria.UI;
 
 namespace UTN.Winform.Funeraria.UI
 {
     public partial class frmLogin : Form
     {
+       
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -32,6 +34,7 @@ namespace UTN.Winform.Funeraria.UI
         public frmLogin()
         {
             InitializeComponent();
+            
         }
 
 
@@ -129,7 +132,18 @@ namespace UTN.Winform.Funeraria.UI
             Application.Exit();
         }
 
+        private void btnRecuperarContrasena_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+           // this.DialogResult = DialogResult.OK;
+            frmRecuperarContrena ofrmContrena = new frmRecuperarContrena();
+            ofrmContrena.Show();
+            
+        }
 
-
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

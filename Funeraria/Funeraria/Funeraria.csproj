@@ -181,9 +181,13 @@
     <Compile Include="Layers\Entities\TipoPaquete.cs" />
     <Compile Include="Layers\Entities\TipoServicio.cs" />
     <Compile Include="Layers\Entities\Usuarios.cs" />
-
     <Compile Include="SqlServerTypes\Loader.cs" />
-
+    <Compile Include="UI\Filtro\frmActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Filtro\frmActivo.Designer.cs">
+      <DependentUpon>frmActivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Filtro\frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,12 +212,23 @@
     <Compile Include="UI\Filtro\frmProveedor.Designer.cs">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
-
     <Compile Include="UI\frmCotizacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmCotizacion.Designer.cs">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmRecuperarContrena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmRecuperarContrena.Designer.cs">
+      <DependentUpon>frmRecuperarContrena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmValidarToken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmValidarToken.Designer.cs">
+      <DependentUpon>frmValidarToken.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Procesos\frmFacturacion.cs">
       <SubType>Form</SubType>
@@ -275,7 +290,6 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-
     <Compile Include="UI\Reportes\DataSetActivo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -311,7 +325,9 @@
     <Compile Include="UI\Reportes\frmReporteUsuario.Designer.cs">
       <DependentUpon>frmReporteUsuario.cs</DependentUpon>
     </Compile>
-
+    <EmbeddedResource Include="UI\Filtro\frmActivo.resx">
+      <DependentUpon>frmActivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Filtro\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,7 +340,6 @@
     <EmbeddedResource Include="UI\Filtro\frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="UI\frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +376,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmRecuperarContrena.resx">
+      <DependentUpon>frmRecuperarContrena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmValidarToken.resx">
+      <DependentUpon>frmValidarToken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Procesos\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>

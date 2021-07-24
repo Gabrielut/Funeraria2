@@ -31,8 +31,8 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
@@ -68,14 +68,12 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).BeginInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
             this.SuspendLayout();
@@ -84,8 +82,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Controls.Add(this.btnCerrar);
             this.pnlMenu.Controls.Add(this.label1);
-            this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.btnEditar);
             this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Controls.Add(this.btnEliminar);
@@ -95,6 +93,26 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.pnlMenu.Size = new System.Drawing.Size(1064, 51);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1019, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label1
             // 
@@ -106,24 +124,6 @@ namespace UTN.Winform.Funeraria.UI
             this.label1.Size = new System.Drawing.Size(162, 21);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ventana de Clientes";
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 36;
-            this.iconButton1.Location = new System.Drawing.Point(1001, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(62, 45);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnEditar
             // 
@@ -198,7 +198,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(1064, 630);
-            this.pnlContenedor.TabIndex = 2;            
+            this.pnlContenedor.TabIndex = 2;
             // 
             // panel1
             // 
@@ -488,10 +488,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // errPro
             // 
-
             this.errPro.ContainerControl = this;
             // 
-
             // frmMantCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,9 +507,7 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlContenedor.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListadoClientes)).EndInit();
-
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).EndInit();
             this.ResumeLayout(false);
@@ -525,7 +521,6 @@ namespace UTN.Winform.Funeraria.UI
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnEliminar;
-        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.DataGridView dtGVListadoClientes;
@@ -562,5 +557,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.ErrorProvider errPro;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }
