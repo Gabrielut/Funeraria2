@@ -31,9 +31,9 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,9 +55,6 @@ namespace UTN.Winform.Funeraria.UI
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +62,9 @@ namespace UTN.Winform.Funeraria.UI
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -76,9 +76,9 @@ namespace UTN.Winform.Funeraria.UI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -86,6 +86,26 @@ namespace UTN.Winform.Funeraria.UI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1099, 51);
             this.panel1.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1055, 7);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitulo
             // 
@@ -112,22 +132,6 @@ namespace UTN.Winform.Funeraria.UI
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 36;
-            this.btnSalir.Location = new System.Drawing.Point(1052, 6);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(42, 32);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevo
             // 
@@ -365,6 +369,48 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.Size = new System.Drawing.Size(805, 183);
             this.dgvDatos.TabIndex = 5;
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "IdPaquete";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.DataPropertyName = "Cantidad";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Paquete
+            // 
+            this.Paquete.DataPropertyName = "TipoServicio";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -408,48 +454,6 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.errPro.ContainerControl = this;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "IdPaquete";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Paquete
-            // 
-            this.Paquete.DataPropertyName = "TipoServicio";
-            this.Paquete.HeaderText = "Paquete";
-            this.Paquete.Name = "Paquete";
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
             // frmMantPaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,7 +484,6 @@ namespace UTN.Winform.Funeraria.UI
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.Label lblTitulo;
@@ -513,5 +516,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }

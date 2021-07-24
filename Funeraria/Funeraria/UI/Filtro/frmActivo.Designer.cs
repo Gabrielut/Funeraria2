@@ -1,6 +1,7 @@
-﻿namespace UTN.Winform.Funeraria.UI.Filtro
+﻿
+namespace UTN.Winform.Funeraria.UI.Filtro
 {
-    partial class frmPaquete
+    partial class frmActivo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,108 +29,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dgrvDatos = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgrvActivo = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrvActivo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtFiltro
-            // 
-            this.txtFiltro.Location = new System.Drawing.Point(186, 34);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(196, 20);
-            this.txtFiltro.TabIndex = 0;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(624, 22);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(105, 43);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // dgrvDatos
-            // 
-            this.dgrvDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.dgrvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Nombre,
-            this.Descripcion,
-            this.Precio,
-            this.Cantidad,
-            this.TipoServicio,
-            this.Estado});
-            this.dgrvDatos.Location = new System.Drawing.Point(59, 89);
-            this.dgrvDatos.Name = "dgrvDatos";
-            this.dgrvDatos.Size = new System.Drawing.Size(551, 150);
-            this.dgrvDatos.TabIndex = 2;
-            this.dgrvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDatos_CellClick);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "IdPaquete";
-            this.Id.HeaderText = "IdPaquete";
-            this.Id.Name = "Id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.DataPropertyName = "Cantidad";
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // TipoServicio
-            // 
-            this.TipoServicio.DataPropertyName = "TipoServicio";
-            this.TipoServicio.HeaderText = "TipoServicio";
-            this.TipoServicio.Name = "TipoServicio";
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
             // 
             // panel1
             // 
@@ -158,7 +73,7 @@
             this.btnCerrar.IconColor = System.Drawing.Color.White;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrar.IconSize = 25;
-            this.btnCerrar.Location = new System.Drawing.Point(929, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(929, 7);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(32, 31);
             this.btnCerrar.TabIndex = 75;
@@ -201,70 +116,104 @@
             this.label23.ForeColor = System.Drawing.Color.Goldenrod;
             this.label23.Location = new System.Drawing.Point(361, 19);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(233, 23);
+            this.label23.Size = new System.Drawing.Size(216, 23);
             this.label23.TabIndex = 74;
-            this.label23.Text = "Información de Paquetes";
+            this.label23.Text = "Información de Activos";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Controls.Add(this.dgrvActivo);
             this.groupBox1.Controls.Add(this.txtFiltro);
-            this.groupBox1.Controls.Add(this.dgrvDatos);
-            this.groupBox1.Location = new System.Drawing.Point(113, 89);
+            this.groupBox1.Controls.Add(this.btnBuscar);
+            this.groupBox1.Location = new System.Drawing.Point(16, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(756, 280);
+            this.groupBox1.Size = new System.Drawing.Size(910, 320);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(113, 49);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(259, 20);
+            this.txtFiltro.TabIndex = 4;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(733, 36);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(109, 43);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(0, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(964, 378);
+            this.groupBox2.TabIndex = 54;
+            this.groupBox2.TabStop = false;
+            // 
+            // dgrvActivo
+            // 
+            this.dgrvActivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrvActivo.Location = new System.Drawing.Point(25, 150);
+            this.dgrvActivo.Name = "dgrvActivo";
+            this.dgrvActivo.Size = new System.Drawing.Size(862, 150);
+            this.dgrvActivo.TabIndex = 6;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(47, 38);
+            this.lblNombre.Location = new System.Drawing.Point(22, 51);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(58, 16);
-            this.lblNombre.TabIndex = 6;
+            this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre";
             // 
-            // frmPaquete
+            // frmActivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(964, 435);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPaquete";
-            this.Text = "frmPaquete";
-            ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).EndInit();
+            this.Name = "frmActivo";
+            this.Text = "frmActivo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgrvActivo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFiltro;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dgrvDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoServicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton8;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtFiltro;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.DataGridView dgrvActivo;
         private System.Windows.Forms.Label lblNombre;
     }
 }

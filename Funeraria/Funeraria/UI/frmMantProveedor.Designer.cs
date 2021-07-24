@@ -31,9 +31,9 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,12 +71,6 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblListado = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +87,12 @@ namespace UTN.Winform.Funeraria.UI
             this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OtrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -105,9 +105,9 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Controls.Add(this.btnCerrar);
             this.pnlMenu.Controls.Add(this.lblTitulo);
             this.pnlMenu.Controls.Add(this.btnEditar);
-            this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Controls.Add(this.btnDelete);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -116,6 +116,26 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.pnlMenu.Size = new System.Drawing.Size(1064, 51);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1019, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitulo
             // 
@@ -142,22 +162,6 @@ namespace UTN.Winform.Funeraria.UI
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 36;
-            this.btnSalir.Location = new System.Drawing.Point(1009, 5);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(50, 45);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevo
             // 
@@ -556,75 +560,6 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.Size = new System.Drawing.Size(797, 211);
             this.dgvDatos.TabIndex = 24;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(41, 330);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 1);
-            this.panel1.TabIndex = 25;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(848, 111);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(170, 46);
-            this.btnGuardar.TabIndex = 26;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(848, 190);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(170, 46);
-            this.iconButton2.TabIndex = 27;
-            this.iconButton2.Text = "Cancelar";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.groupBox1);
-            this.pnlContenedor.Controls.Add(this.iconButton2);
-            this.pnlContenedor.Controls.Add(this.lblListado);
-            this.pnlContenedor.Controls.Add(this.btnGuardar);
-            this.pnlContenedor.Controls.Add(this.dgvDatos);
-            this.pnlContenedor.Controls.Add(this.panel1);
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
-            this.pnlContenedor.TabIndex = 28;
-            // 
-            // toolNombre
-            // 
-            this.toolNombre.IsBalloon = true;
-            // 
-            // errPro
-            // 
-            this.errPro.ContainerControl = this;
-            // 
             // IdProveedor
             // 
             this.IdProveedor.DataPropertyName = "IdProveedor";
@@ -733,6 +668,75 @@ namespace UTN.Winform.Funeraria.UI
             this.OtrasSennas.HeaderText = "Otras Señas";
             this.OtrasSennas.Name = "OtrasSennas";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(41, 330);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 1);
+            this.panel1.TabIndex = 25;
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.groupBox1);
+            this.pnlContenedor.Controls.Add(this.iconButton2);
+            this.pnlContenedor.Controls.Add(this.lblListado);
+            this.pnlContenedor.Controls.Add(this.btnGuardar);
+            this.pnlContenedor.Controls.Add(this.dgvDatos);
+            this.pnlContenedor.Controls.Add(this.panel1);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
+            this.pnlContenedor.TabIndex = 28;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.Location = new System.Drawing.Point(848, 190);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(170, 46);
+            this.iconButton2.TabIndex = 27;
+            this.iconButton2.Text = "Cancelar";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(848, 111);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(170, 46);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // toolNombre
+            // 
+            this.toolNombre.IsBalloon = true;
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
+            // 
             // frmMantProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -761,7 +765,6 @@ namespace UTN.Winform.Funeraria.UI
 
         private System.Windows.Forms.Panel pnlMenu;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.Label lblTitulo;
@@ -822,5 +825,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasSennas;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }

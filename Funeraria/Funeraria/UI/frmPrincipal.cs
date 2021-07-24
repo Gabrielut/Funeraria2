@@ -420,5 +420,11 @@ namespace UTN.Winform.Funeraria.UI
             esconderSubMenu();
             abrirForumalario<frmReportePaquete>();
         }
+
+        private void btnFacturacion_Click(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmFacturacion>();
+        }
     }
 }

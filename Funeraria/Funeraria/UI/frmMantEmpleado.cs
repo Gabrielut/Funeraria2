@@ -356,5 +356,10 @@ namespace UTN.Winform.Funeraria.UI
         {
 
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

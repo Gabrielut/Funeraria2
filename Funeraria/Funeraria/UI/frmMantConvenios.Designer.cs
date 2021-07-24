@@ -31,14 +31,22 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.dtGVListado = new System.Windows.Forms.DataGridView();
-            this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblListado = new System.Windows.Forms.Label();
             this.pnlLinea = new System.Windows.Forms.Panel();
@@ -63,17 +71,9 @@ namespace UTN.Winform.Funeraria.UI
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
+            this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVListado)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,9 +86,9 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMenu.Controls.Add(this.btnCerrar);
             this.pnlMenu.Controls.Add(this.lblTitulo);
             this.pnlMenu.Controls.Add(this.btnEditar);
-            this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Controls.Add(this.btnEliminar);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -97,6 +97,26 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlMenu.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.pnlMenu.Size = new System.Drawing.Size(1048, 45);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(135)))), ((int)(((byte)(18)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCerrar.IconColor = System.Drawing.Color.White;
+            this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrar.IconSize = 25;
+            this.btnCerrar.Location = new System.Drawing.Point(1003, 3);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(32, 31);
+            this.btnCerrar.TabIndex = 24;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // lblTitulo
             // 
@@ -125,25 +145,6 @@ namespace UTN.Winform.Funeraria.UI
             this.btnEditar.TabIndex = 3;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.ExternalLinkAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 36;
-            this.btnSalir.Location = new System.Drawing.Point(1006, 6);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(37, 31);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnNuevo
             // 
@@ -202,52 +203,65 @@ namespace UTN.Winform.Funeraria.UI
             this.dtGVListado.Size = new System.Drawing.Size(944, 276);
             this.dtGVListado.TabIndex = 23;
             // 
-            // btnGuardar2
+            // Id
             // 
-            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar2.Location = new System.Drawing.Point(874, 65);
-            this.btnGuardar2.Name = "btnGuardar2";
-            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
-            this.btnGuardar2.TabIndex = 22;
-            this.btnGuardar2.Text = "Guardar";
-            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar2.UseVisualStyleBackColor = false;
-            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
+            this.Id.DataPropertyName = "IdConvenio";
+            this.Id.HeaderText = "N°";
+            this.Id.Name = "Id";
             // 
-            // btnCancelar
+            // NomEmpresa
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(874, 144);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCancelar.Size = new System.Drawing.Size(117, 46);
-            this.btnCancelar.TabIndex = 21;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.NomEmpresa.DataPropertyName = "NomEmpresa";
+            this.NomEmpresa.HeaderText = "Nombre Empresa";
+            this.NomEmpresa.Name = "NomEmpresa";
+            // 
+            // Ubicacion
+            // 
+            this.Ubicacion.DataPropertyName = "Ubicacion";
+            this.Ubicacion.HeaderText = "Ubicacion";
+            this.Ubicacion.Name = "Ubicacion";
+            // 
+            // TelCelular
+            // 
+            this.TelCelular.DataPropertyName = "TelCelular";
+            this.TelCelular.HeaderText = "Celular";
+            this.TelCelular.Name = "TelCelular";
+            // 
+            // TelEmpresa
+            // 
+            this.TelEmpresa.DataPropertyName = "TelEmpresa";
+            this.TelEmpresa.HeaderText = "TelEmpresa";
+            this.TelEmpresa.Name = "TelEmpresa";
+            // 
+            // TelFax
+            // 
+            this.TelFax.DataPropertyName = "TelFax";
+            this.TelFax.HeaderText = "Fax";
+            this.TelFax.Name = "TelFax";
+            // 
+            // TipoServicio
+            // 
+            this.TipoServicio.DataPropertyName = "TipoServicio";
+            this.TipoServicio.HeaderText = "Servicio";
+            this.TipoServicio.Name = "TipoServicio";
+            // 
+            // Descuento
+            // 
+            this.Descuento.DataPropertyName = "Descuento";
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.DataPropertyName = "Comentarios";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
             // 
             // panel1
             // 
@@ -492,69 +506,56 @@ namespace UTN.Winform.Funeraria.UI
             this.lblDescripcion.TabIndex = 31;
             this.lblDescripcion.Text = "Comentarios";
             // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar2.Location = new System.Drawing.Point(874, 65);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGuardar2.Size = new System.Drawing.Size(117, 46);
+            this.btnGuardar2.TabIndex = 22;
+            this.btnGuardar2.Text = "Guardar";
+            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar2.UseVisualStyleBackColor = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(874, 144);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 46);
+            this.btnCancelar.TabIndex = 21;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // errPro
             // 
             this.errPro.ContainerControl = this;
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "IdConvenio";
-            this.Id.HeaderText = "N°";
-            this.Id.Name = "Id";
-            // 
-            // NomEmpresa
-            // 
-            this.NomEmpresa.DataPropertyName = "NomEmpresa";
-            this.NomEmpresa.HeaderText = "Nombre Empresa";
-            this.NomEmpresa.Name = "NomEmpresa";
-            // 
-            // Ubicacion
-            // 
-            this.Ubicacion.DataPropertyName = "Ubicacion";
-            this.Ubicacion.HeaderText = "Ubicacion";
-            this.Ubicacion.Name = "Ubicacion";
-            // 
-            // TelCelular
-            // 
-            this.TelCelular.DataPropertyName = "TelCelular";
-            this.TelCelular.HeaderText = "Celular";
-            this.TelCelular.Name = "TelCelular";
-            // 
-            // TelEmpresa
-            // 
-            this.TelEmpresa.DataPropertyName = "TelEmpresa";
-            this.TelEmpresa.HeaderText = "TelEmpresa";
-            this.TelEmpresa.Name = "TelEmpresa";
-            // 
-            // TelFax
-            // 
-            this.TelFax.DataPropertyName = "TelFax";
-            this.TelFax.HeaderText = "Fax";
-            this.TelFax.Name = "TelFax";
-            // 
-            // TipoServicio
-            // 
-            this.TipoServicio.DataPropertyName = "TipoServicio";
-            this.TipoServicio.HeaderText = "Servicio";
-            this.TipoServicio.Name = "TipoServicio";
-            // 
-            // Descuento
-            // 
-            this.Descuento.DataPropertyName = "Descuento";
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.DataPropertyName = "Comentarios";
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
             // 
             // frmMantConvenios
             // 
@@ -585,7 +586,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnNuevo;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private FontAwesome.Sharp.IconButton btnGuardar2;
@@ -626,5 +626,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }
