@@ -117,11 +117,12 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrvActivo = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarActivo = new System.Windows.Forms.Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.label29 = new System.Windows.Forms.Label();
             this.toolTNombreConvenio = new System.Windows.Forms.ToolTip(this.components);
+            this.btnBuscarLocalizacion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -404,6 +405,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnBuscarLocalizacion);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.iconButton7);
             this.groupBox3.Controls.Add(this.btnBuscarProoveedor);
@@ -446,9 +448,9 @@ namespace UTN.Winform.Funeraria.UI
             this.btnBuscarProoveedor.FlatAppearance.BorderSize = 0;
             this.btnBuscarProoveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProoveedor.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarProoveedor.Location = new System.Drawing.Point(857, 23);
+            this.btnBuscarProoveedor.Location = new System.Drawing.Point(732, 23);
             this.btnBuscarProoveedor.Name = "btnBuscarProoveedor";
-            this.btnBuscarProoveedor.Size = new System.Drawing.Size(95, 36);
+            this.btnBuscarProoveedor.Size = new System.Drawing.Size(95, 46);
             this.btnBuscarProoveedor.TabIndex = 58;
             this.btnBuscarProoveedor.Text = "Buscar";
             this.btnBuscarProoveedor.UseVisualStyleBackColor = false;
@@ -886,7 +888,7 @@ namespace UTN.Winform.Funeraria.UI
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.btnBuscarActivo);
             this.groupBox5.Controls.Add(this.iconButton1);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
@@ -906,19 +908,19 @@ namespace UTN.Winform.Funeraria.UI
             this.label2.TabIndex = 57;
             this.label2.Text = "Activos en Bodega";
             // 
-            // button1
+            // btnBuscarActivo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(857, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 36);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscarActivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnBuscarActivo.FlatAppearance.BorderSize = 0;
+            this.btnBuscarActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarActivo.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarActivo.Location = new System.Drawing.Point(857, 23);
+            this.btnBuscarActivo.Name = "btnBuscarActivo";
+            this.btnBuscarActivo.Size = new System.Drawing.Size(95, 36);
+            this.btnBuscarActivo.TabIndex = 60;
+            this.btnBuscarActivo.Text = "Buscar";
+            this.btnBuscarActivo.UseVisualStyleBackColor = false;
+            this.btnBuscarActivo.Click += new System.EventHandler(this.button1_Click);
             // 
             // iconButton1
             // 
@@ -973,6 +975,20 @@ namespace UTN.Winform.Funeraria.UI
             // toolTNombreConvenio
             // 
             this.toolTNombreConvenio.IsBalloon = true;
+            // 
+            // btnBuscarLocalizacion
+            // 
+            this.btnBuscarLocalizacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnBuscarLocalizacion.FlatAppearance.BorderSize = 0;
+            this.btnBuscarLocalizacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarLocalizacion.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarLocalizacion.Location = new System.Drawing.Point(860, 23);
+            this.btnBuscarLocalizacion.Name = "btnBuscarLocalizacion";
+            this.btnBuscarLocalizacion.Size = new System.Drawing.Size(95, 46);
+            this.btnBuscarLocalizacion.TabIndex = 61;
+            this.btnBuscarLocalizacion.Text = "Buscar por localizacion";
+            this.btnBuscarLocalizacion.UseVisualStyleBackColor = false;
+            this.btnBuscarLocalizacion.Click += new System.EventHandler(this.btnBuscarLocalizacion_Click);
             // 
             // frmCotizacion
             // 
@@ -1059,7 +1075,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBuscarActivo;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton iconButton1;
@@ -1092,5 +1108,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.Button btnBuscarLocalizacion;
     }
 }

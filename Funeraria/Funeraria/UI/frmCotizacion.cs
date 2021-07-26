@@ -167,18 +167,22 @@ namespace UTN.Winform.Funeraria.UI
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+            //frmActivo frmActivo = new frmActivo();
+            //frmActivo.ShowDialog();
+            //Activo activo = new Activo();
+            //List<Activo> list = new List<Activo>();
+            //if (frmActivo.DialogResult == DialogResult.OK)
+            //{
+            //   // activo = frmActivo.oActivo;
+            //    list.Add(activo);         
+            //    dgrvActivo.DataSource = list;
+            //}
+     
+
+        private void btnBuscarLocalizacion_Click(object sender, EventArgs e)
         {
-            frmActivo frmActivo = new frmActivo();
-            frmActivo.ShowDialog();
-            Activo activo = new Activo();
-            List<Activo> list = new List<Activo>();
-            if (frmActivo.DialogResult == DialogResult.OK)
-            {
-               // activo = frmActivo.oActivo;
-                list.Add(activo);         
-                dgrvActivo.DataSource = list;
-            }
+
         }
     }
 }
