@@ -30,7 +30,6 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             dgrvDatos.AutoGenerateColumns = false;
             dgrvDatos.DataSource = _BLLProveedores.GetProveedorByFilter(filtro);
         }
-
         private void dgrvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgrvDatos.CurrentCell.Selected)

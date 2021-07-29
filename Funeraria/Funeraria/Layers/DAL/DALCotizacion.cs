@@ -25,6 +25,32 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             throw new NotImplementedException();
         }
 
+        public int nextValue()
+        {
+            DataSet ds = null;
+            int nextValue;
+            string sql = @"select MAX(IdCotizacion) + 1 from Cotizacion";
+            SqlCommand command = new SqlCommand();
+            DataTable dt = null;
+            try
+            {
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+                dt = ds.Tables[0];
+                nextValue = int.Parse(dt.Rows[0][0].ToString());
+                return nextValue;
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
+        }
+
         public Cotizacion SaveCotizacion(Cotizacion pCotizacion)
         {
             Cotizacion oCotizacion = null;

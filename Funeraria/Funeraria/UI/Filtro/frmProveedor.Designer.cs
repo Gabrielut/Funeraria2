@@ -30,6 +30,15 @@
         {
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgrvDatos = new System.Windows.Forms.DataGridView();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,15 +49,11 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdTipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.label23 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantón = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,72 +89,17 @@
             this.Correo,
             this.Precio,
             this.CantUni,
-            this.IdTipoServicio});
+            this.IdTipoServicio,
+            this.Provincia,
+            this.Cantón,
+            this.Distrito,
+            this.Barrio,
+            this.otrasSennas});
             this.dgrvDatos.Location = new System.Drawing.Point(19, 106);
             this.dgrvDatos.Name = "dgrvDatos";
             this.dgrvDatos.Size = new System.Drawing.Size(808, 150);
             this.dgrvDatos.TabIndex = 1;
             this.dgrvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDatos_CellClick);
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.DataPropertyName = "IdProveedor";
-            this.IdProveedor.HeaderText = "IdProveedor";
-            this.IdProveedor.Name = "IdProveedor";
-            // 
-            // NomProveedor
-            // 
-            this.NomProveedor.DataPropertyName = "NomProveedor";
-            this.NomProveedor.HeaderText = "NomProveedor";
-            this.NomProveedor.Name = "NomProveedor";
-            // 
-            // Propietario
-            // 
-            this.Propietario.DataPropertyName = "Propietario";
-            this.Propietario.HeaderText = "Propietario";
-            this.Propietario.Name = "Propietario";
-            // 
-            // TelCelular
-            // 
-            this.TelCelular.DataPropertyName = "TelCelular";
-            this.TelCelular.HeaderText = "TelCelular";
-            this.TelCelular.Name = "TelCelular";
-            // 
-            // TelProveedor
-            // 
-            this.TelProveedor.DataPropertyName = "TelProveedor";
-            this.TelProveedor.HeaderText = "TelProveedor";
-            this.TelProveedor.Name = "TelProveedor";
-            // 
-            // TelFax
-            // 
-            this.TelFax.DataPropertyName = "TelFax";
-            this.TelFax.HeaderText = "TelFax";
-            this.TelFax.Name = "TelFax";
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // CantUni
-            // 
-            this.CantUni.DataPropertyName = "CantUni";
-            this.CantUni.HeaderText = "CantUni";
-            this.CantUni.Name = "CantUni";
-            // 
-            // IdTipoServicio
-            // 
-            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
-            this.IdTipoServicio.HeaderText = "Servicio";
-            this.IdTipoServicio.Name = "IdTipoServicio";
             // 
             // txtFiltro
             // 
@@ -263,6 +213,96 @@
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
             // 
+            // IdProveedor
+            // 
+            this.IdProveedor.DataPropertyName = "IdProveedor";
+            this.IdProveedor.HeaderText = "IdProveedor";
+            this.IdProveedor.Name = "IdProveedor";
+            // 
+            // NomProveedor
+            // 
+            this.NomProveedor.DataPropertyName = "NomProveedor";
+            this.NomProveedor.HeaderText = "NomProveedor";
+            this.NomProveedor.Name = "NomProveedor";
+            // 
+            // Propietario
+            // 
+            this.Propietario.DataPropertyName = "Propietario";
+            this.Propietario.HeaderText = "Propietario";
+            this.Propietario.Name = "Propietario";
+            // 
+            // TelCelular
+            // 
+            this.TelCelular.DataPropertyName = "TelCelular";
+            this.TelCelular.HeaderText = "TelCelular";
+            this.TelCelular.Name = "TelCelular";
+            // 
+            // TelProveedor
+            // 
+            this.TelProveedor.DataPropertyName = "TelProveedor";
+            this.TelProveedor.HeaderText = "TelProveedor";
+            this.TelProveedor.Name = "TelProveedor";
+            // 
+            // TelFax
+            // 
+            this.TelFax.DataPropertyName = "TelFax";
+            this.TelFax.HeaderText = "TelFax";
+            this.TelFax.Name = "TelFax";
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // CantUni
+            // 
+            this.CantUni.DataPropertyName = "CantUni";
+            this.CantUni.HeaderText = "CantUni";
+            this.CantUni.Name = "CantUni";
+            // 
+            // IdTipoServicio
+            // 
+            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
+            this.IdTipoServicio.HeaderText = "Servicio";
+            this.IdTipoServicio.Name = "IdTipoServicio";
+            // 
+            // Provincia
+            // 
+            this.Provincia.DataPropertyName = "Provincia";
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            // 
+            // Cantón
+            // 
+            this.Cantón.DataPropertyName = "Canton";
+            this.Cantón.HeaderText = "Cantón";
+            this.Cantón.Name = "Cantón";
+            // 
+            // Distrito
+            // 
+            this.Distrito.DataPropertyName = "Distrito";
+            this.Distrito.HeaderText = "Distrito";
+            this.Distrito.Name = "Distrito";
+            // 
+            // Barrio
+            // 
+            this.Barrio.DataPropertyName = "Barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            // 
+            // otrasSennas
+            // 
+            this.otrasSennas.DataPropertyName = "otrasSennas";
+            this.otrasSennas.HeaderText = "Otras Señas";
+            this.otrasSennas.Name = "otrasSennas";
+            // 
             // frmProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +329,14 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgrvDatos;
         private System.Windows.Forms.TextBox txtFiltro;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Propietario;
@@ -299,13 +347,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantUni;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoServicio;
-        private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton iconButton8;
-        private FontAwesome.Sharp.IconButton btnSalir;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private FontAwesome.Sharp.IconButton btnCerrar;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantón;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn otrasSennas;
     }
 }

@@ -11,5 +11,6 @@ namespace UTN.Winform.Funeraria.Interfaces
     {
         List<Cotizacion> GetAllCotizacion();
         Cotizacion SaveCotizacion(Cotizacion pCotizacion);
+        int nextValue();
     }
 }

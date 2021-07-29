@@ -17,6 +17,12 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DalCotizacion.GetAllCotizacion();
         }
 
+        public int nextValue()
+        {
+            IDALCotizacion _DalCotizacion = new DALCotizacion();
+            return _DalCotizacion.nextValue();
+        }
+
         public Cotizacion SaveCotizacion(Cotizacion pCotizacion)
         {
             IDALCotizacion _DalCotizacion = new DALCotizacion();

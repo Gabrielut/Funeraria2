@@ -17,6 +17,7 @@ namespace UTN.Winform.Funeraria.UI
 {
     public partial class frmCotizacion : Form
     {
+        List<ProveedorDTO> list = new List<ProveedorDTO>();
         public frmCotizacion()
         {
             InitializeComponent();
@@ -57,6 +58,7 @@ namespace UTN.Winform.Funeraria.UI
             {
                 cliente = frmCliente.oCliente;
                 list.Add(cliente);
+                dgrvCliente.AutoGenerateColumns = false;
                 dgrvCliente.DataSource = list;
             }
         }
@@ -80,12 +82,14 @@ namespace UTN.Winform.Funeraria.UI
             frmProveedor frmProveedor = new frmProveedor();
             frmProveedor.ShowDialog();
             ProveedorDTO ProveedorDTO = new ProveedorDTO();
-            List<ProveedorDTO> list = new List<ProveedorDTO>();
             if (frmProveedor.DialogResult == DialogResult.OK)
             {
                 ProveedorDTO = frmProveedor.oProveedoresDTO;
                 list.Add(ProveedorDTO);
-                dgrvProveedor.DataSource = list;
+                this.dgrvProveedor.Rows.Add(ProveedorDTO.IdProveedor, ProveedorDTO.NomProveedor, ProveedorDTO.IdTipoServicio,
+                    ProveedorDTO.Propietario, ProveedorDTO.Correo, ProveedorDTO.TelCelular, ProveedorDTO.TelProveedor, ProveedorDTO.TelFax,
+                    ProveedorDTO.Precio, ProveedorDTO.CantUni, ProveedorDTO.Provincia, ProveedorDTO.Canton, ProveedorDTO.Distrito,
+                    ProveedorDTO.Barrio, ProveedorDTO.otrasSennas, ProveedorDTO.Estado);
             }
         }
 
@@ -146,10 +150,13 @@ namespace UTN.Winform.Funeraria.UI
                 }
             }
             cotizacion.Comentarios = txtComentarios.Text;
-            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Some Title", MessageBoxButtons.YesNo);
+            
+            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Cotización #" + _BLLCotizacion.nextValue(), MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 _BLLCotizacion.SaveCotizacion(cotizacion);
+                MessageBox.Show("Cotizacion guardada exitosamente!");
+                limpiar();
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -182,7 +189,30 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnBuscarLocalizacion_Click(object sender, EventArgs e)
         {
+            //frmProveedor frmProveedor = new frmProveedor();
+            //frmProveedor.ShowDialog();
+            //ProveedorDTO ProveedorDTO = new ProveedorDTO();
+            //List<ProveedorDTO> list = new List<ProveedorDTO>();
+            //if (frmProveedor.DialogResult == DialogResult.OK)
+            //{
+            //    ProveedorDTO = frmProveedor.oProveedoresDTO;
+            //    list.Add(ProveedorDTO);
+            //    dgrvProveedor.DataSource = list;
+            //}
+        }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void limpiar()
+        {
+            dgrvCliente.DataSource = null;
+            dgrvPaquete.DataSource = null;
+            dgrvActivo.DataSource = null;
+            dgrvConvenio.DataSource = null;
+            dgrvProveedor.DataSource = null;
         }
     }
 }

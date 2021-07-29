@@ -151,13 +151,24 @@ FROM                         DireccionCompleta INNER JOIN
 
             try
             {
-                string sql = @"SELECT Proveedores.IdProveedor, Proveedores.NomProveedor, 
-                               Proveedores.Propietario, Proveedores.TelCelular, Proveedores.TelProveedor, 
-                               Proveedores.TelFax, Proveedores.Correo, Proveedores.Precio, 
-                               Proveedores.CantUni, Proveedores.Estado, 
-                               TipoServicio.Descripcion AS IdTipoServicio FROM Proveedores INNER JOIN
+                string sql = @"SELECT Proveedores.IdProveedor, Proveedores.NomProveedor, Proveedores.Propietario,
+                               Proveedores.TelCelular, Proveedores.TelProveedor, Proveedores.TelFax, Proveedores.Correo,
+                               Proveedores.Precio, Proveedores.CantUni, Proveedores.Estado, TipoServicio.Descripcion AS IdTipoServicio, 
+                               Provincia.dscProvincia AS Provincia, Canton.dscCanton AS Canton, 
+                               Distrito.dscDistrito AS Distrito, Barrio.dscBarrio AS Barrio, DireccionCompleta.otrasSennas
+                               FROM Barrio INNER JOIN
+                               Canton ON Barrio.codProvincia = Canton.codProvincia INNER JOIN
+                               DireccionCompleta ON Barrio.codProvincia = DireccionCompleta.Provincia AND 
+                               Barrio.codCanton = DireccionCompleta.Canton AND Barrio.codDistrito = DireccionCompleta.Distrito AND 
+                               Barrio.codBarrio = DireccionCompleta.Barrio INNER JOIN
+                               Distrito ON Barrio.codProvincia = Distrito.codProvincia AND Barrio.codCanton = Distrito.codCanton AND 
+                               Barrio.codDistrito = Distrito.codDistrito AND Canton.codProvincia = Distrito.codProvincia AND 
+                               Canton.codCanton = Distrito.codCanton INNER JOIN
+                               Proveedores ON DireccionCompleta.IdDireccion = Proveedores.IdProveedor INNER JOIN
+                               Provincia ON Canton.codProvincia = Provincia.codProvincia INNER JOIN
                                TipoServicio ON Proveedores.IdTipoServicio = TipoServicio.IdTipoServicio
-						       where TipoServicio.Descripcion+NomProveedor like @filtro";
+						       Where NomProveedor+Propietario+TipoServicio.Descripcion+Provincia.dscProvincia+Canton.dscCanton+
+                               Distrito.dscDistrito+Barrio.dscBarrio+DireccionCompleta.otrasSennas like @filtro";
 
                 command.Parameters.AddWithValue("@filtro", pDescripcion);
                 command.CommandText = sql;
@@ -188,11 +199,11 @@ FROM                         DireccionCompleta INNER JOIN
                         {
                             oProveedorDTO.Estado = "Desabilitado";
                         }
-                        //oProveedorDTO.Provincia = (dr["Provincia"].ToString());
-                        //oProveedorDTO.Canton = (dr["Canton"].ToString());
-                        //oProveedorDTO.Distrito = (dr["Distrito"].ToString());
-                        //oProveedorDTO.Barrio = (dr["Barrio"].ToString());
-                        //oProveedorDTO.otrasSennas = (dr["otrasSennas"].ToString());
+                        oProveedorDTO.Provincia = (dr["Provincia"].ToString());
+                        oProveedorDTO.Canton = (dr["Canton"].ToString());
+                        oProveedorDTO.Distrito = (dr["Distrito"].ToString());
+                        oProveedorDTO.Barrio = (dr["Barrio"].ToString());
+                        oProveedorDTO.otrasSennas = (dr["otrasSennas"].ToString());
                         lista.Add(oProveedorDTO);
                     }
                 }

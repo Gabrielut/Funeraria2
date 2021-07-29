@@ -30,22 +30,21 @@
         {
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgrvDatos = new System.Windows.Forms.DataGridView();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrimerApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SegundoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.label23 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,62 +76,12 @@
             this.PrimerApellido,
             this.SegundoApellido,
             this.Correo,
-            this.Telefono,
             this.Direccion});
             this.dgrvDatos.Location = new System.Drawing.Point(9, 156);
             this.dgrvDatos.Name = "dgrvDatos";
             this.dgrvDatos.Size = new System.Drawing.Size(923, 195);
             this.dgrvDatos.TabIndex = 1;
             this.dgrvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDatos_CellClick);
-            // 
-            // IdCliente
-            // 
-            this.IdCliente.DataPropertyName = "IdCliente";
-            this.IdCliente.HeaderText = "ID";
-            this.IdCliente.Name = "IdCliente";
-            this.IdCliente.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // PrimerApellido
-            // 
-            this.PrimerApellido.DataPropertyName = "PrimerApellido";
-            this.PrimerApellido.HeaderText = "Apellido";
-            this.PrimerApellido.Name = "PrimerApellido";
-            this.PrimerApellido.Width = 125;
-            // 
-            // SegundoApellido
-            // 
-            this.SegundoApellido.DataPropertyName = "SegundoApellido";
-            this.SegundoApellido.HeaderText = "Apellido";
-            this.SegundoApellido.Name = "SegundoApellido";
-            this.SegundoApellido.Width = 125;
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.Width = 150;
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Sexo";
-            this.Telefono.HeaderText = "Sexo";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.Width = 50;
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 180;
             // 
             // txtFiltro
             // 
@@ -178,6 +127,16 @@
             this.groupBox1.Size = new System.Drawing.Size(938, 398);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(16, 79);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(58, 16);
+            this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "Nombre";
             // 
             // panel1
             // 
@@ -236,15 +195,47 @@
             this.groupBox2.TabIndex = 52;
             this.groupBox2.TabStop = false;
             // 
-            // lblNombre
+            // IdCliente
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(16, 79);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(58, 16);
-            this.lblNombre.TabIndex = 6;
-            this.lblNombre.Text = "Nombre";
+            this.IdCliente.DataPropertyName = "IdCliente";
+            this.IdCliente.HeaderText = "ID";
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // PrimerApellido
+            // 
+            this.PrimerApellido.DataPropertyName = "PrimerApellido";
+            this.PrimerApellido.HeaderText = "Apellido";
+            this.PrimerApellido.Name = "PrimerApellido";
+            this.PrimerApellido.Width = 125;
+            // 
+            // SegundoApellido
+            // 
+            this.SegundoApellido.DataPropertyName = "SegundoApellido";
+            this.SegundoApellido.HeaderText = "Apellido";
+            this.SegundoApellido.Name = "SegundoApellido";
+            this.SegundoApellido.Width = 125;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.Width = 150;
+            // 
+            // Direccion
+            // 
+            this.Direccion.DataPropertyName = "Direccion";
+            this.Direccion.HeaderText = "Direccion";
+            this.Direccion.Name = "Direccion";
+            this.Direccion.Width = 180;
             // 
             // frmCliente
             // 
@@ -278,15 +269,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrimerApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn SegundoApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton btnCerrar;
-        private System.Windows.Forms.Label lblNombre;
     }
 }
