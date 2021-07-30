@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UTN.Winform.Funeraria.Interfaces;
+using UTN.Winform.Funeraria.Layers.BLL;
+using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.UI
 {
@@ -42,14 +45,43 @@ namespace UTN.Winform.Funeraria.UI
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        
-    }
+    
 
         private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmValidarToken_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Focus();
+        }
+
+        private void btnCambiar_Click(object sender, EventArgs e)
+        {
+            IBLLUsuarios _BLLUsuarios = new BLLUsuarios();
+            if (txtContrasenna.Text.Equals(txtConfirmacion.Text))
+            {
+                Usuarios usuario =_BLLUsuarios.GetUsuariosByCorreo(txtUsuario.Text);
+                if (usuario.Token.Equals(txtToken.Text))
+                {
+                    usuario.Contrasenna = txtContrasenna.Text;
+                    if (_BLLUsuarios.SaveUsuarios(usuario) != null)
+                    {
+                        MessageBox.Show("Contraseña cambiada exitosamente");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocurrio un problema, porfavor intente mas tarde");
+                    }
+                    
+
+                }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
