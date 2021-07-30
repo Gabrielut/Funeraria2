@@ -11,10 +11,12 @@ namespace UTN.Winform.Funeraria.Interfaces
     {
         List<Usuarios> GetAllUsuarios();
         Usuarios GetUsuariosById(string pUsuarios);
+        Usuarios GetUsuariosByCorreo(string pUsuarios);
         Usuarios SaveUsuarios(Usuarios pUsuarios);
         List<Usuarios> GetUsuariosByFilter(string pDescripcion);
         bool DaleteUsuarios(string pId);
         Usuarios LoginUsuarios(string pCorreo);
+        Usuarios updatePassword(Usuarios pUsuarios);
 
     }
 }

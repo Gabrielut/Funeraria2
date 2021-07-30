@@ -23,6 +23,12 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             return _DALUsuarios.GetAllUsuarios();
         }
 
+        public Usuarios GetUsuariosByCorreo(string pCorreo)
+        {
+            IDALUsuarios _DALUsuarios = new DALUsuarios();
+            return _DALUsuarios.GetUsuariosByCorreo(pCorreo);
+        }
+
         public List<Usuarios> GetUsuariosByFilter(string pDescripcion)
         {
             IDALUsuarios _DALUsuarios = new DALUsuarios();
@@ -55,6 +61,12 @@ namespace UTN.Winform.Funeraria.Layers.BLL
             }
 
             return oUsuarios;
+        }
+
+        public Usuarios updatePassword(Usuarios pUsuarios)
+        {
+            IDALUsuarios _DALUsuarios = new DALUsuarios();
+            return _DALUsuarios.updatePassword(pUsuarios);
         }
     }
 }

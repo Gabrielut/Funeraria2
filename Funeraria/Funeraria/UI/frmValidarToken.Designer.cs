@@ -31,18 +31,17 @@ namespace UTN.Winform.Funeraria.UI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidarToken));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtToken = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCambiar = new System.Windows.Forms.Button();
+            this.txtContrasenna = new System.Windows.Forms.TextBox();
+            this.txtConfirmacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
@@ -60,7 +59,6 @@ namespace UTN.Winform.Funeraria.UI
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.White;
-            this.pnlLogin.Controls.Add(this.button2);
             this.pnlLogin.Controls.Add(this.groupBox2);
             this.pnlLogin.Controls.Add(this.groupBox1);
             this.pnlLogin.Location = new System.Drawing.Point(15, 92);
@@ -68,31 +66,15 @@ namespace UTN.Winform.Funeraria.UI
             this.pnlLogin.Size = new System.Drawing.Size(386, 507);
             this.pnlLogin.TabIndex = 27;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(300, 467);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 40);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnLogin);
-            this.groupBox2.Controls.Add(this.txtContrasena);
+            this.groupBox2.Controls.Add(this.txtToken);
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(15, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 231);
+            this.groupBox2.Size = new System.Drawing.Size(350, 170);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             // 
@@ -107,32 +89,16 @@ namespace UTN.Winform.Funeraria.UI
             this.label1.TabIndex = 11;
             this.label1.Text = "Usuario";
             // 
-            // btnLogin
+            // txtToken
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(81, 173);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(156, 40);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "ConfirmarToken";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // txtContrasena
-            // 
-            this.txtContrasena.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasena.Location = new System.Drawing.Point(27, 121);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(283, 26);
-            this.txtContrasena.TabIndex = 16;
-            this.txtContrasena.Text = "123456";
+            this.txtToken.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtToken.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtToken.Location = new System.Drawing.Point(27, 121);
+            this.txtToken.Margin = new System.Windows.Forms.Padding(4);
+            this.txtToken.Name = "txtToken";
+            this.txtToken.PasswordChar = '*';
+            this.txtToken.Size = new System.Drawing.Size(283, 26);
+            this.txtToken.TabIndex = 16;
             // 
             // txtUsuario
             // 
@@ -144,7 +110,6 @@ namespace UTN.Winform.Funeraria.UI
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(283, 26);
             this.txtUsuario.TabIndex = 6;
-            this.txtUsuario.Text = "admin@admin.com";
             // 
             // label2
             // 
@@ -159,72 +124,87 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.btnCambiar);
+            this.groupBox1.Controls.Add(this.txtContrasenna);
+            this.groupBox1.Controls.Add(this.txtConfirmacion);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(15, 271);
+            this.groupBox1.Location = new System.Drawing.Point(15, 204);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 203);
+            this.groupBox1.Size = new System.Drawing.Size(350, 270);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(261, 224);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(83, 40);
+            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(30, 14);
+            this.label3.Location = new System.Drawing.Point(23, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 21);
             this.label3.TabIndex = 17;
             this.label3.Text = "Contraseña";
             // 
-            // button1
+            // btnCambiar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(69, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 40);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Cambiar contraseña";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCambiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnCambiar.FlatAppearance.BorderSize = 0;
+            this.btnCambiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiar.ForeColor = System.Drawing.Color.White;
+            this.btnCambiar.Location = new System.Drawing.Point(62, 162);
+            this.btnCambiar.Name = "btnCambiar";
+            this.btnCambiar.Size = new System.Drawing.Size(196, 40);
+            this.btnCambiar.TabIndex = 21;
+            this.btnCambiar.Text = "Cambiar contraseña";
+            this.btnCambiar.UseVisualStyleBackColor = false;
+            this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
             // 
-            // textBox1
+            // txtContrasenna
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(34, 39);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(283, 26);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.Text = "123456";
+            this.txtContrasenna.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtContrasenna.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasenna.Location = new System.Drawing.Point(27, 44);
+            this.txtContrasenna.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContrasenna.Name = "txtContrasenna";
+            this.txtContrasenna.PasswordChar = '*';
+            this.txtContrasenna.Size = new System.Drawing.Size(283, 26);
+            this.txtContrasenna.TabIndex = 18;
             // 
-            // textBox2
+            // txtConfirmacion
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(34, 110);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(283, 26);
-            this.textBox2.TabIndex = 20;
-            this.textBox2.Text = "123456";
+            this.txtConfirmacion.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtConfirmacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmacion.Location = new System.Drawing.Point(27, 115);
+            this.txtConfirmacion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmacion.Name = "txtConfirmacion";
+            this.txtConfirmacion.PasswordChar = '*';
+            this.txtConfirmacion.Size = new System.Drawing.Size(283, 26);
+            this.txtConfirmacion.TabIndex = 20;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(30, 85);
+            this.label4.Location = new System.Drawing.Point(23, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 21);
             this.label4.TabIndex = 19;
@@ -325,6 +305,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Name = "frmValidarToken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmValidarToken";
+            this.Load += new System.EventHandler(this.frmValidarToken_Load);
             this.pnlLogin.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -341,14 +322,13 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCambiar;
+        private System.Windows.Forms.TextBox txtConfirmacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtContrasenna;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtContrasena;
+        private System.Windows.Forms.TextBox txtToken;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel1;
@@ -356,7 +336,7 @@ namespace UTN.Winform.Funeraria.UI
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCancelar;
         private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }

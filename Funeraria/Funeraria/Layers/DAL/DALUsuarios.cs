@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Properties;
@@ -88,6 +91,56 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 throw er;
             }
             return lista;
+        }
+
+        public Usuarios GetUsuariosByCorreo(string pCorreo)
+        {
+            DataSet ds = null;
+            Usuarios oUsuarios = null;
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @" select * from Usuarios where Correo =  @Correo";
+                command.Parameters.AddWithValue("@Correo", pCorreo);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+                //command.CommandText = "usp_SELECT_Cliente_ByID";
+                //command.CommandType = CommandType.StoredProcedure;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+                }
+
+                // Si devolvió filas
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    // Iterar en todas las filas y Mapearlas
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        oUsuarios = new Usuarios();
+                        oUsuarios.IDUsuario = dr["IDUsuario"].ToString();
+                        oUsuarios.Nombre = dr["Nombre"].ToString();
+                        oUsuarios.PrimerApellido = dr["PrimerApellido"].ToString();
+                        oUsuarios.SegundoApellido = dr["SegundoApellido"].ToString();
+                        oUsuarios.Correo = dr["Correo"].ToString();
+                        oUsuarios.Telefono = dr["Telefono"].ToString();
+                        oUsuarios.Direccion = dr["Direccion"].ToString();
+                        oUsuarios.IdRol = (int)dr["IDRol"];
+                        oUsuarios.Contrasenna = dr["Contrasenna"].ToString();
+                        oUsuarios.Estado = (bool)dr["Estado"];
+                        oUsuarios.Sexo = (int)dr["Sexo"];
+                        oUsuarios.Token = dr["Token"].ToString();
+                        oUsuarios.FechaNacimiento = DateTime.Parse(dr["FechaNacimiento"].ToString());
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+
+            }
+            return oUsuarios;
         }
 
         public List<Usuarios> GetUsuariosByFilter(string pDescripcion)
@@ -311,6 +364,44 @@ values (@IDUsuario,@Nombre,@PrimerApellido,@SegundoApellido,@Correo,@Contrasenna
                 command.Parameters.AddWithValue("@Direccion", pUsuarios.Direccion);
                 command.Parameters.AddWithValue("@Estado", pUsuarios.Estado);
                 command.Parameters.AddWithValue("@Token", pUsuarios.Token);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+
+                    rows = db.ExecuteNonQuery(command, IsolationLevel.ReadCommitted);
+                }
+
+                if (rows > 0)
+                    oUsuarios = GetUsuariosById(pUsuarios.IDUsuario);
+
+                return oUsuarios;
+            }
+            catch (Exception er)
+            {
+                throw;
+            }
+        }
+
+        public Usuarios updatePassword(Usuarios pUsuarios)
+        {
+            Usuarios oUsuarios = null;
+            string sql = @" 
+                          UPDATE [dbo].[Usuarios]
+                          SET Contrasenna = @password
+                          WHERE Correo = @filtro";
+
+            SqlCommand command = new SqlCommand();
+            double rows = 0;
+
+            try
+            {
+
+                command.Parameters.AddWithValue("@password", pUsuarios.Correo);
+                command.Parameters.AddWithValue("@filtro", pUsuarios.Contrasenna);
+                
                 command.CommandText = sql;
                 command.CommandType = CommandType.Text;
 
