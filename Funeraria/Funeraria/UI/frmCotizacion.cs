@@ -86,10 +86,11 @@ namespace UTN.Winform.Funeraria.UI
             {
                 ProveedorDTO = frmProveedor.oProveedoresDTO;
                 list.Add(ProveedorDTO);
-                this.dgrvProveedor.Rows.Add(ProveedorDTO.IdProveedor, ProveedorDTO.NomProveedor, ProveedorDTO.IdTipoServicio,
-                    ProveedorDTO.Propietario, ProveedorDTO.Correo, ProveedorDTO.TelCelular, ProveedorDTO.TelProveedor, ProveedorDTO.TelFax,
-                    ProveedorDTO.Precio, ProveedorDTO.CantUni, ProveedorDTO.Provincia, ProveedorDTO.Canton, ProveedorDTO.Distrito,
-                    ProveedorDTO.Barrio, ProveedorDTO.otrasSennas, ProveedorDTO.Estado);
+                //this.dgrvProveedor.Rows.Add(ProveedorDTO.IdProveedor, ProveedorDTO.NomProveedor, ProveedorDTO.IdTipoServicio,
+                //    ProveedorDTO.Propietario, ProveedorDTO.Correo, ProveedorDTO.TelCelular, ProveedorDTO.TelProveedor, ProveedorDTO.TelFax,
+                //    ProveedorDTO.Precio, ProveedorDTO.CantUni, ProveedorDTO.Provincia, ProveedorDTO.Canton, ProveedorDTO.Distrito,
+                //    ProveedorDTO.Barrio, ProveedorDTO.otrasSennas, ProveedorDTO.Estado);
+                dgrvProveedor.DataSource = list;
             }
         }
 
@@ -101,12 +102,12 @@ namespace UTN.Winform.Funeraria.UI
             List<PaqueteDTO> listPaqueteDTO = new List<PaqueteDTO>();
             List<Cliente> listCliente = new List<Cliente>();
             List<ConveniosDTO> listConveniosDTO = new List<ConveniosDTO>();
-
             listProveedorDTO =  (List<ProveedorDTO>)dgrvProveedor.DataSource;
             listPaqueteDTO =  (List<PaqueteDTO>)dgrvPaquete.DataSource;
             listConveniosDTO = (List<ConveniosDTO>)dgrvConvenio.DataSource;
             listCliente = (List<Cliente>)dgrvCliente.DataSource;
             double total = 0;
+            int numCoti = _BLLCotizacion.nextValue();
             if (listProveedorDTO == null && listPaqueteDTO == null && listConveniosDTO == null)
             {
                 MessageBox.Show("Debe de seleccionar almenos 1 Paquete ó Servicio", "Atencion",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,7 +129,7 @@ namespace UTN.Winform.Funeraria.UI
             {
                 foreach (ProveedorDTO item in listProveedorDTO)
                 {
-                    cotizacion.IdProveedores = item.IdProveedor;
+                   
                     total += double.Parse(item.Precio);
                 }
 
@@ -137,24 +138,30 @@ namespace UTN.Winform.Funeraria.UI
             {
                 foreach (PaqueteDTO item in listPaqueteDTO)
                 {
-                    cotizacion.IdPaquete = item.IdPaquete;
+                    
                     total += double.Parse(item.Precio);
                 }
             }
-    
-            if (listConveniosDTO != null)
-            {
-                foreach (ConveniosDTO item in listConveniosDTO)
-                {
-                    cotizacion.IdConvenio = item.IdConvenio;
-                }
-            }
-            cotizacion.Comentarios = txtComentarios.Text;
-            
-            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Cotización #" + _BLLCotizacion.nextValue(), MessageBoxButtons.YesNo);
+   
+            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Cotización #" + numCoti, MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                _BLLCotizacion.SaveCotizacion(cotizacion);
+                foreach (ProveedorDTO item in listProveedorDTO)
+                {
+                    cotizacion.IdCotizacion = numCoti;
+                    cotizacion.IdProveedores = item.IdProveedor;
+                    cotizacion.IdPaquete = 0;
+                    cotizacion.Comentarios = txtComentarios.Text;
+                    _BLLCotizacion.SaveCotizacion(cotizacion);
+                }
+                foreach (PaqueteDTO item in listPaqueteDTO)
+                {
+                    cotizacion.IdCotizacion = numCoti;
+                    cotizacion.IdPaquete = item.IdPaquete;
+                    cotizacion.IdProveedores = 0;
+                    _BLLCotizacion.SaveCotizacion(cotizacion);
+                }
+                //Falta Bodega
                 MessageBox.Show("Cotizacion guardada exitosamente!");
                 limpiar();
             }

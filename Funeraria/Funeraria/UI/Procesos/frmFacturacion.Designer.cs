@@ -33,8 +33,15 @@ namespace UTN.Winform.Funeraria.UI
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgrFactura = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnFacturar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
             this.txtIdCotizacion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCosto = new System.Windows.Forms.Label();
@@ -42,17 +49,16 @@ namespace UTN.Winform.Funeraria.UI
             this.label2 = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtTotal = new System.Windows.Forms.MaskedTextBox();
+            this.txtDescuento = new System.Windows.Forms.MaskedTextBox();
+            this.txtIVA = new System.Windows.Forms.MaskedTextBox();
+            this.txtSubTotal = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
-            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,19 +124,56 @@ namespace UTN.Winform.Funeraria.UI
             this.btnSalir.TabIndex = 2;
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgrFactura
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 198);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(978, 147);
-            this.dataGridView1.TabIndex = 3;
+            this.dgrFactura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.dgrFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.Cliente,
+            this.Paquete,
+            this.Servicio,
+            this.Comentarios});
+            this.dgrFactura.Location = new System.Drawing.Point(12, 198);
+            this.dgrFactura.Name = "dgrFactura";
+            this.dgrFactura.Size = new System.Drawing.Size(978, 209);
+            this.dgrFactura.TabIndex = 3;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "IdCotizacion";
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Cliente
+            // 
+            this.Cliente.DataPropertyName = "cliente";
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // Paquete
+            // 
+            this.Paquete.DataPropertyName = "paquete";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            // 
+            // Servicio
+            // 
+            this.Servicio.DataPropertyName = "proveedores";
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.DataPropertyName = "comentariosProveedores";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnFacturar);
             this.groupBox1.Controls.Add(this.btnGuardar2);
             this.groupBox1.Controls.Add(this.txtIdCotizacion);
             this.groupBox1.Controls.Add(this.label1);
@@ -141,6 +184,58 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
+            // 
+            // btnFacturar
+            // 
+            this.btnFacturar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFacturar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnFacturar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnFacturar.FlatAppearance.BorderSize = 0;
+            this.btnFacturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturar.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturar.ForeColor = System.Drawing.Color.White;
+            this.btnFacturar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnFacturar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnFacturar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFacturar.IconSize = 35;
+            this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFacturar.Location = new System.Drawing.Point(503, 24);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnFacturar.Size = new System.Drawing.Size(116, 38);
+            this.btnFacturar.TabIndex = 51;
+            this.btnFacturar.Text = "Facturar";
+            this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturar.UseVisualStyleBackColor = false;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
+            // 
+            // btnGuardar2
+            // 
+            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGuardar2.FlatAppearance.BorderSize = 0;
+            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Binoculars;
+            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar2.IconSize = 35;
+            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar2.Location = new System.Drawing.Point(345, 24);
+            this.btnGuardar2.Name = "btnGuardar2";
+            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnGuardar2.Size = new System.Drawing.Size(116, 38);
+            this.btnGuardar2.TabIndex = 50;
+            this.btnGuardar2.Text = "Buscar";
+            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar2.UseVisualStyleBackColor = false;
+            this.btnGuardar2.Click += new System.EventHandler(this.btnGuardar2_Click);
             // 
             // txtIdCotizacion
             // 
@@ -209,21 +304,53 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.maskedTextBox3);
-            this.groupBox2.Controls.Add(this.maskedTextBox2);
-            this.groupBox2.Controls.Add(this.maskedTextBox1);
-            this.groupBox2.Controls.Add(this.txtPrecio);
+            this.groupBox2.Controls.Add(this.txtTotal);
+            this.groupBox2.Controls.Add(this.txtDescuento);
+            this.groupBox2.Controls.Add(this.txtIVA);
+            this.groupBox2.Controls.Add(this.txtSubTotal);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.lblCosto);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(625, 377);
+            this.groupBox2.Location = new System.Drawing.Point(625, 413);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(365, 187);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total";
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(177, 150);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTotal.Size = new System.Drawing.Size(136, 24);
+            this.txtTotal.TabIndex = 31;
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Location = new System.Drawing.Point(177, 109);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDescuento.Size = new System.Drawing.Size(136, 24);
+            this.txtDescuento.TabIndex = 30;
+            // 
+            // txtIVA
+            // 
+            this.txtIVA.Location = new System.Drawing.Point(177, 67);
+            this.txtIVA.Name = "txtIVA";
+            this.txtIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtIVA.Size = new System.Drawing.Size(136, 24);
+            this.txtIVA.TabIndex = 29;
+            // 
+            // txtSubTotal
+            // 
+            this.txtSubTotal.Location = new System.Drawing.Point(177, 27);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSubTotal.Size = new System.Drawing.Size(136, 24);
+            this.txtSubTotal.TabIndex = 28;
             // 
             // label3
             // 
@@ -258,70 +385,13 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgrFactura);
             this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Location = new System.Drawing.Point(0, 46);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1012, 612);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
-            // 
-            // btnGuardar2
-            // 
-            this.btnGuardar2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnGuardar2.FlatAppearance.BorderSize = 0;
-            this.btnGuardar2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar2.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar2.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar2.IconChar = FontAwesome.Sharp.IconChar.Fax;
-            this.btnGuardar2.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar2.IconSize = 35;
-            this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar2.Location = new System.Drawing.Point(786, 24);
-            this.btnGuardar2.Name = "btnGuardar2";
-            this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGuardar2.Size = new System.Drawing.Size(116, 38);
-            this.btnGuardar2.TabIndex = 50;
-            this.btnGuardar2.Text = "Buscar";
-            this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar2.UseVisualStyleBackColor = false;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(177, 27);
-            this.txtPrecio.Mask = "₡000,000,000";
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(136, 24);
-            this.txtPrecio.TabIndex = 28;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(177, 67);
-            this.maskedTextBox1.Mask = "₡000,000,000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(136, 24);
-            this.maskedTextBox1.TabIndex = 29;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(177, 109);
-            this.maskedTextBox2.Mask = "₡000,000,000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(136, 24);
-            this.maskedTextBox2.TabIndex = 30;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(177, 150);
-            this.maskedTextBox3.Mask = "₡000,000,000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(136, 24);
-            this.maskedTextBox3.TabIndex = 31;
             // 
             // frmFacturacion
             // 
@@ -336,7 +406,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Text = "frmFacturacion";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -353,7 +423,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnSalir;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgrFactura;
         private FontAwesome.Sharp.IconButton btnCerrar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtIdCotizacion;
@@ -368,9 +438,15 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private FontAwesome.Sharp.IconButton btnGuardar2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox txtPrecio;
+        private System.Windows.Forms.MaskedTextBox txtTotal;
+        private System.Windows.Forms.MaskedTextBox txtDescuento;
+        private System.Windows.Forms.MaskedTextBox txtIVA;
+        private System.Windows.Forms.MaskedTextBox txtSubTotal;
+        private FontAwesome.Sharp.IconButton btnFacturar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
     }
 }

@@ -15,7 +15,7 @@ namespace UTN.Winform.Funeraria.Layers.Entities
         public float Subtotal { get; set; }
         public float IVA { get; set; }
         public float Total { get; set; }
-        public Cotizacion IdCotizacion { get; set; }
+        public int IdCotizacion { get; set; }
         public bool Estado { get; set; }
 
     }
