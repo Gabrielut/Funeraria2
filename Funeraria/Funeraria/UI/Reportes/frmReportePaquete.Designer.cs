@@ -29,12 +29,30 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.PaqueteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetActivo = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.PaqueteTableAdapter = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivoTableAdapters.PaqueteTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.PaqueteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetActivo)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // PaqueteBindingSource
+            // 
+            this.PaqueteBindingSource.DataMember = "Paquete";
+            this.PaqueteBindingSource.DataSource = this.DataSetActivo;
+            // 
+            // DataSetActivo
+            // 
+            this.DataSetActivo.DataSetName = "DataSetActivo";
+            this.DataSetActivo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -93,16 +111,37 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.btnNuevo.TabIndex = 1;
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.PaqueteBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "UTN.Winform.Funeraria.UI.Reportes.rptReportPaquetes.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 51);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(932, 553);
+            this.reportViewer1.TabIndex = 5;
+            // 
+            // PaqueteTableAdapter
+            // 
+            this.PaqueteTableAdapter.ClearBeforeFill = true;
+            // 
             // frmReportePaquete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(932, 604);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReportePaquete";
             this.Text = "frmReportePaquete";
+            this.Load += new System.EventHandler(this.frmReportePaquete_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PaqueteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetActivo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,5 +154,9 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnSalir;
         private FontAwesome.Sharp.IconButton btnNuevo;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource PaqueteBindingSource;
+        private DataSetActivo DataSetActivo;
+        private DataSetActivoTableAdapters.PaqueteTableAdapter PaqueteTableAdapter;
     }
 }

@@ -405,6 +405,8 @@
     <EmbeddedResource Include="UI\Reportes\rptReporteActivoTipoActivo.rdlc" />
     <EmbeddedResource Include="UI\Reportes\rptReporteCliente.rdlc" />
     <EmbeddedResource Include="UI\Reportes\rptReporteUsuarioTipoU.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\rptReportPaquetes.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\rptReportProveedor.rdlc" />
     <None Include="diagramaAdministracion.cd" />
     <None Include="diagramaClases.cd" />
     <None Include="diagramaSeguridad.cd" />

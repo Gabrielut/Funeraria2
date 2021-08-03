@@ -39,8 +39,8 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlLogin.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
@@ -84,9 +84,10 @@
             this.lblBienvenido.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblBienvenido.Location = new System.Drawing.Point(86, 69);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(218, 31);
+            this.lblBienvenido.Size = new System.Drawing.Size(223, 31);
             this.lblBienvenido.TabIndex = 1;
-            this.lblBienvenido.Text = "Ingreso y registro";
+            this.lblBienvenido.Text = "Ingreso al Sistema";
+            this.lblBienvenido.Click += new System.EventHandler(this.lblBienvenido_Click);
             // 
             // label1
             // 
@@ -160,10 +161,6 @@
             this.panel2.Size = new System.Drawing.Size(1254, 43);
             this.panel2.TabIndex = 10;
             // 
-            // errPro
-            // 
-            this.errPro.ContainerControl = this;
-            // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -183,6 +180,10 @@
             this.btnCerrar.TabIndex = 19;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
             // 
             // frmLogin
             // 

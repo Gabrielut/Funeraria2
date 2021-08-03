@@ -30,7 +30,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ActivoTipoActivoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSetActivo = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivo();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -67,14 +67,14 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            reportDataSource2.Name = "DataSetActivo";
-            reportDataSource2.Value = this.ActivoTipoActivoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSetActivo";
+            reportDataSource1.Value = this.ActivoTipoActivoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "UTN.Winform.Funeraria.UI.Reportes.rptReporteActivoTipoActivo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(13, 130);
+            this.reportViewer1.Location = new System.Drawing.Point(15, 121);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1001, 531);
+            this.reportViewer1.Size = new System.Drawing.Size(888, 529);
             this.reportViewer1.TabIndex = 0;
             // 
             // panel1
@@ -88,7 +88,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(1028, 51);
+            this.panel1.Size = new System.Drawing.Size(915, 51);
             this.panel1.TabIndex = 2;
             // 
             // lblTitulo
@@ -97,7 +97,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblTitulo.Location = new System.Drawing.Point(414, 16);
+            this.lblTitulo.Location = new System.Drawing.Point(358, 16);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(153, 21);
             this.lblTitulo.TabIndex = 24;
@@ -113,7 +113,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 36;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalir.Location = new System.Drawing.Point(964, 4);
+            this.btnSalir.Location = new System.Drawing.Point(851, 4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.btnSalir.Size = new System.Drawing.Size(50, 45);
@@ -148,7 +148,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 35;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.Location = new System.Drawing.Point(850, 69);
+            this.btnLimpiar.Location = new System.Drawing.Point(737, 69);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(148, 46);
             this.btnLimpiar.TabIndex = 19;
@@ -214,7 +214,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1028, 697);
+            this.ClientSize = new System.Drawing.Size(915, 662);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtDescripcion);
