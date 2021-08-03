@@ -10,5 +10,7 @@ namespace UTN.Winform.Funeraria.Interfaces
     interface IDALEncFactura
     {
         List<EncFactura> GetAllEncFactura();
+        EncFactura SaveEncFactura(EncFactura pEncFactura);
+        EncFactura GetEncFacturaById(int id);
     }
 }

@@ -10,5 +10,8 @@ namespace UTN.Winform.Funeraria.Interfaces
     interface IBLLDetFactura
     {
         List<DetFactura> GetAllDetFactura();
+        bool SaveDetFactura(DetFactura pDetFactura);
+
+        int GetNumeroFactura();
     }
 }

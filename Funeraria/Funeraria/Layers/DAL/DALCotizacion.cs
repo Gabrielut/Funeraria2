@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.Entities;
+using UTN.Winform.Funeraria.Layers.Entities.DTO;
 using UTN.Winform.Funeraria.Properties;
 
 namespace UTN.Winform.Funeraria.Layers.DAL
@@ -23,6 +24,83 @@ namespace UTN.Winform.Funeraria.Layers.DAL
         public List<Cotizacion> GetAllCotizacion()
         {
             throw new NotImplementedException();
+        }
+        public List<Cotizacion> GetCotizacionById(int id)
+        {
+            DataSet ds = null;
+            List<Cotizacion> lista = new List<Cotizacion>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @"select * from Cotizacion where IdCotizacion = @IdCotizacion";
+
+                command.Parameters.AddWithValue("@IdCotizacion", id);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        Cotizacion oCotizacion = new Cotizacion();
+                        oCotizacion.IdCotizacion = int.Parse(dr["IdCotizacion"].ToString());
+                        oCotizacion.IdCliente = int.Parse(dr["IdCliente"].ToString());
+                        oCotizacion.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
+                        oCotizacion.IdConvenio = int.Parse(dr["IdConvenio"].ToString());
+                        oCotizacion.IdProveedores = int.Parse(dr["IdProveedores"].ToString());
+                        oCotizacion.Comentarios = dr["Comentarios"].ToString();
+
+                        lista.Add(oCotizacion);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
+        }
+
+        public List<CotizacionDTO> GetCotizacionByIdDTO(int id)
+        {
+            DataSet ds = null;
+            List<CotizacionDTO> lista = new List<CotizacionDTO>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @"select * from Cotizacion where IdCotizacion = @IdCotizacion";
+
+                command.Parameters.AddWithValue("@IdCotizacion", id);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        CotizacionDTO oCotizacion = new CotizacionDTO();
+                        //oCotizacion.IdCotizacion = int.Parse(dr["IdCotizacion"].ToString());
+                        //oCotizacion.IdCliente = int.Parse(dr["IdCliente"].ToString());
+                        //oCotizacion.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
+                        //oCotizacion.IdConvenio = int.Parse(dr["IdConvenio"].ToString());
+                        //oCotizacion.IdProveedores = int.Parse(dr["IdProveedores"].ToString());
+                        //oCotizacion.Comentarios = dr["Comentarios"].ToString();
+
+                        lista.Add(oCotizacion);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
         }
 
         public int nextValue()
@@ -50,19 +128,20 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 throw;
             }
         }
-
         public Cotizacion SaveCotizacion(Cotizacion pCotizacion)
         {
             Cotizacion oCotizacion = null;
             double rows = 0;
             string sql = @"INSERT INTO Cotizacion
-                            ([IdCliente]
+                            ([IdCotizacion]
+                            ,[IdCliente]
                             ,[IdPaquete]
                             ,[IdConvenio]
                             ,[IdProveedores]
                             ,[Comentarios])
                             VALUES
-                            (@IdCliente,
+                            (@IdCotizacion,
+                             @IdCliente,
                              @IdPaquete,
                              @IdConvenio,
                              @IdProveedores,
@@ -71,6 +150,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             SqlCommand cmd = new SqlCommand();
             try
             {
+                cmd.Parameters.AddWithValue("@IdCotizacion", pCotizacion.IdCotizacion);
                 cmd.Parameters.AddWithValue("@IdCliente", pCotizacion.IdCliente);
                 cmd.Parameters.AddWithValue("@IdPaquete", pCotizacion.IdPaquete);
                 cmd.Parameters.AddWithValue("@IdConvenio", pCotizacion.IdConvenio);
