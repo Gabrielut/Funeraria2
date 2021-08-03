@@ -145,5 +145,10 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.Close();
         }
+
+        private void lblBienvenido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

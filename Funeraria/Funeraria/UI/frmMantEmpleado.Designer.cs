@@ -314,7 +314,7 @@ namespace UTN.Winform.Funeraria.UI
             this.Sexo});
             this.dgvDatos.Location = new System.Drawing.Point(32, 421);
             this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(956, 152);
+            this.dgvDatos.Size = new System.Drawing.Size(943, 152);
             this.dgvDatos.TabIndex = 17;
             // 
             // Nombre

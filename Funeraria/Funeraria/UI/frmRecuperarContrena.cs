@@ -79,14 +79,14 @@ namespace UTN.Winform.Funeraria.UI
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("gsts343@gmail.com");
+                mail.From = new MailAddress("mrs.oz.2730@gmail.com");
                 mail.To.Add(pCorreo);
                 mail.Subject = "Recuperacion de Contraseña";
                 mail.Body = token;
 
                 SmtpServer.Port = 587;
                 SmtpServer.Credentials = new
-                System.Net.NetworkCredential("gsts343@gmail.com", "lapelota4");
+                System.Net.NetworkCredential("mrs.oz.2730@gmail.com", "Queso13Queso");
                 SmtpServer.EnableSsl = true;
                 SmtpServer.Send(mail);
                 sent = true;

@@ -22,5 +22,13 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         {
             this.Close();
         }
+
+        private void frmReportePaquete_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'DataSetActivo.Paquete' table. You can move, or remove it, as needed.
+            this.PaqueteTableAdapter.Fill(this.DataSetActivo.Paquete);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
