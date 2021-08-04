@@ -237,7 +237,12 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            frmLogin ofrmLogin = new frmLogin();
+            ofrmLogin.ShowDialog();
+            if (ofrmLogin.DialogResult == DialogResult.OK)
+                this.Show();
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -425,6 +430,11 @@ namespace UTN.Winform.Funeraria.UI
         {
             esconderSubMenu();
             abrirForumalario<frmFacturacion>();
+        }
+
+        private void iconButton3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

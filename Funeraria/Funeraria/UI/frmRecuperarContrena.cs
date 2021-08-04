@@ -127,5 +127,13 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.Close();
         }
+
+        private void frmRecuperarContrena_Load(object sender, EventArgs e)
+        {
+            toolTCorreo.SetToolTip(txtUsuario, "Por favor digite el nombre del usuario");
+            toolTCancel.SetToolTip(btnCancelar, "Cancelar");
+            toolTGenToken.SetToolTip(btnToken, "Generar un nuevo token");
+            toolTVolver.SetToolTip(btnSalir, "Salir");
+        }
     }
 }

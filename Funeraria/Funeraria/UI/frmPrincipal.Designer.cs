@@ -60,6 +60,7 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlReportes.SuspendLayout();
@@ -82,7 +83,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1284, 52);
+            this.panel2.Size = new System.Drawing.Size(1100, 52);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -125,7 +126,7 @@
             this.btnMinimizar.IconColor = System.Drawing.Color.White;
             this.btnMinimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimizar.IconSize = 25;
-            this.btnMinimizar.Location = new System.Drawing.Point(1178, 13);
+            this.btnMinimizar.Location = new System.Drawing.Point(994, 13);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(30, 28);
             this.btnMinimizar.TabIndex = 20;
@@ -145,7 +146,7 @@
             this.btnMaximizar.IconColor = System.Drawing.Color.White;
             this.btnMaximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximizar.IconSize = 25;
-            this.btnMaximizar.Location = new System.Drawing.Point(1209, 12);
+            this.btnMaximizar.Location = new System.Drawing.Point(1025, 12);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(35, 27);
             this.btnMaximizar.TabIndex = 19;
@@ -165,7 +166,7 @@
             this.btnCerrar.IconColor = System.Drawing.Color.White;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrar.IconSize = 25;
-            this.btnCerrar.Location = new System.Drawing.Point(1249, 10);
+            this.btnCerrar.Location = new System.Drawing.Point(1065, 10);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(32, 31);
             this.btnCerrar.TabIndex = 18;
@@ -175,6 +176,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.pnlMenu.Controls.Add(this.iconButton3);
             this.pnlMenu.Controls.Add(this.iconButton1);
             this.pnlMenu.Controls.Add(this.pnlReportes);
             this.pnlMenu.Controls.Add(this.iconButton2);
@@ -186,7 +188,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 52);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(256, 697);
+            this.pnlMenu.Size = new System.Drawing.Size(256, 848);
             this.pnlMenu.TabIndex = 3;
             // 
             // iconButton1
@@ -590,7 +592,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1284, 749);
+            this.pnlContenedor.Size = new System.Drawing.Size(1100, 900);
             this.pnlContenedor.TabIndex = 5;
             // 
             // pnlFormularios
@@ -600,7 +602,7 @@
             this.pnlFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularios.Location = new System.Drawing.Point(256, 52);
             this.pnlFormularios.Name = "pnlFormularios";
-            this.pnlFormularios.Size = new System.Drawing.Size(1028, 697);
+            this.pnlFormularios.Size = new System.Drawing.Size(844, 848);
             this.pnlFormularios.TabIndex = 4;
             // 
             // pbLogo
@@ -615,13 +617,29 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton3.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 40;
+            this.iconButton3.Location = new System.Drawing.Point(207, 799);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(43, 46);
+            this.iconButton3.TabIndex = 8;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1284, 749);
+            this.ClientSize = new System.Drawing.Size(1100, 900);
             this.Controls.Add(this.pnlContenedor);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -678,5 +696,6 @@
         private FontAwesome.Sharp.IconButton btnCancelar;
         private System.Windows.Forms.Button btnFacturacion;
         private System.Windows.Forms.Button btnConvenios;
+        private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

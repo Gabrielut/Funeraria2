@@ -41,6 +41,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTUsuario = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTContrasena = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTIngresar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTOlvidar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTCerrar = new System.Windows.Forms.ToolTip(this.components);
             this.pnlLogin.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errPro)).BeginInit();
@@ -221,6 +226,11 @@
         private System.Windows.Forms.Button btnRecuperarContrasena;
         private System.Windows.Forms.ErrorProvider errPro;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.ToolTip toolTUsuario;
+        private System.Windows.Forms.ToolTip toolTContrasena;
+        private System.Windows.Forms.ToolTip toolTIngresar;
+        private System.Windows.Forms.ToolTip toolTOlvidar;
+        private System.Windows.Forms.ToolTip toolTCerrar;
     }
 }
 

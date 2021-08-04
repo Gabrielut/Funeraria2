@@ -114,6 +114,8 @@ namespace UTN.Winform.Funeraria.UI
             
             pnlLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlLogin.Width, pnlLogin.Height, 20, 25));
 
+            toolTCerrar.SetToolTip(btnCerrar, "Cerrar Sesión");
+
         }
 
         private void button1_Click(object sender, EventArgs e)

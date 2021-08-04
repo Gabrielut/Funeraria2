@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.dgrvDatos = new System.Windows.Forms.DataGridView();
@@ -47,8 +50,8 @@
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,8 +81,21 @@
             // 
             // dgrvDatos
             // 
-            this.dgrvDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            this.dgrvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgrvDatos.BackgroundColor = System.Drawing.Color.White;
+            this.dgrvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgrvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgrvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgrvDatos.ColumnHeadersHeight = 30;
             this.dgrvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.NomEmpresa,
@@ -91,8 +107,20 @@
             this.Estado,
             this.Comentarios,
             this.TipoServicio});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvDatos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgrvDatos.EnableHeadersVisualStyles = false;
             this.dgrvDatos.Location = new System.Drawing.Point(48, 152);
             this.dgrvDatos.Name = "dgrvDatos";
+            this.dgrvDatos.ReadOnly = true;
+            this.dgrvDatos.RowHeadersVisible = false;
+            this.dgrvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrvDatos.Size = new System.Drawing.Size(870, 158);
             this.dgrvDatos.TabIndex = 2;
             this.dgrvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDatos_CellClick);
@@ -102,60 +130,70 @@
             this.ID.DataPropertyName = "IdConvenio";
             this.ID.HeaderText = "IdConvenio";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // NomEmpresa
             // 
             this.NomEmpresa.DataPropertyName = "NomEmpresa";
             this.NomEmpresa.HeaderText = "Nombre Empresa";
             this.NomEmpresa.Name = "NomEmpresa";
+            this.NomEmpresa.ReadOnly = true;
             // 
             // Ubicacion
             // 
             this.Ubicacion.DataPropertyName = "Ubicacion";
             this.Ubicacion.HeaderText = "Ubicacion";
             this.Ubicacion.Name = "Ubicacion";
+            this.Ubicacion.ReadOnly = true;
             // 
             // TelCelular
             // 
             this.TelCelular.DataPropertyName = "TelCelular";
             this.TelCelular.HeaderText = "Celular";
             this.TelCelular.Name = "TelCelular";
+            this.TelCelular.ReadOnly = true;
             // 
             // TelEmpresa
             // 
             this.TelEmpresa.DataPropertyName = "TelEmpresa";
             this.TelEmpresa.HeaderText = "TelEmpresa";
             this.TelEmpresa.Name = "TelEmpresa";
+            this.TelEmpresa.ReadOnly = true;
             // 
             // TelFax
             // 
             this.TelFax.DataPropertyName = "TelFax";
             this.TelFax.HeaderText = "TelFax";
             this.TelFax.Name = "TelFax";
+            this.TelFax.ReadOnly = true;
             // 
             // Descuento
             // 
             this.Descuento.DataPropertyName = "Descuento";
             this.Descuento.HeaderText = "Descuento";
             this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
             // 
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // Comentarios
             // 
             this.Comentarios.DataPropertyName = "Comentarios";
             this.Comentarios.HeaderText = "Comentarios";
             this.Comentarios.Name = "Comentarios";
+            this.Comentarios.ReadOnly = true;
             // 
             // TipoServicio
             // 
             this.TipoServicio.DataPropertyName = "TipoServicio";
             this.TipoServicio.HeaderText = "Servicio";
             this.TipoServicio.Name = "TipoServicio";
+            this.TipoServicio.ReadOnly = true;
             // 
             // panel1
             // 
@@ -168,7 +206,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.panel1.Size = new System.Drawing.Size(964, 51);
+            this.panel1.Size = new System.Drawing.Size(980, 51);
             this.panel1.TabIndex = 52;
             // 
             // btnCerrar
@@ -184,7 +222,7 @@
             this.btnCerrar.IconColor = System.Drawing.Color.White;
             this.btnCerrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrar.IconSize = 25;
-            this.btnCerrar.Location = new System.Drawing.Point(929, 11);
+            this.btnCerrar.Location = new System.Drawing.Point(945, 11);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(32, 31);
             this.btnCerrar.TabIndex = 75;
@@ -242,16 +280,6 @@
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.dgrvDatos);
-            this.groupBox2.Location = new System.Drawing.Point(0, 48);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(964, 387);
-            this.groupBox2.TabIndex = 54;
-            this.groupBox2.TabStop = false;
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -262,16 +290,27 @@
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "Nombre";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.dgrvDatos);
+            this.groupBox2.Location = new System.Drawing.Point(0, 48);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(977, 475);
+            this.groupBox2.TabIndex = 54;
+            this.groupBox2.TabStop = false;
+            // 
             // frmConvenio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(964, 435);
+            this.ClientSize = new System.Drawing.Size(980, 523);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConvenio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConvenio";
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).EndInit();
             this.panel1.ResumeLayout(false);
