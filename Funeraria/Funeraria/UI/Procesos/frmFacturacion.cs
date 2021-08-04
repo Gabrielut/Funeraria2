@@ -60,8 +60,9 @@ namespace UTN.Winform.Funeraria.UI
             foreach (Cotizacion item in pListCotizacion)
             {
                 CotizacionDTO oCotizacionDTO = new CotizacionDTO();
-                oCotizacionDTO.IdCotizacion = item.IdCotizacion;
-                oCotizacionDTO.cliente = _BLLCliente.GetClienteById(item.IdCliente).Nombre + " " +
+                lblNumero.Text = "N° " + item.IdCotizacion;
+                    
+                txtNombreCliente.Text = _BLLCliente.GetClienteById(item.IdCliente).Nombre + " " +
                                 _BLLCliente.GetClienteById(item.IdCliente).PrimerApellido + " " +
                                 _BLLCliente.GetClienteById(item.IdCliente).SegundoApellido;
                 if (item.IdPaquete != 0)
@@ -96,9 +97,9 @@ namespace UTN.Winform.Funeraria.UI
 
                 }
             }
-            txtSubTotal.Text = total.ToString();
-            txtIVA.Text = calcIVA(total).ToString();
-            txtTotal.Text = (total + calcIVA(total)).ToString();
+            txtSubTotal.Text = String.Format("{0:n}", total) ;
+            txtIVA.Text = String.Format("{0:n}", calcIVA(total));
+            txtTotal.Text = String.Format("{0:n}", (total + calcIVA(total)));
         }
         private double calcIVA(double pMonto)
         {

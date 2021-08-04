@@ -34,11 +34,6 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.dgrFactura = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFacturar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
@@ -57,6 +52,11 @@ namespace UTN.Winform.Funeraria.UI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNumero = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -129,45 +129,13 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrFactura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
             this.dgrFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Cliente,
             this.Paquete,
             this.Servicio,
             this.Comentarios});
-            this.dgrFactura.Location = new System.Drawing.Point(12, 198);
+            this.dgrFactura.Location = new System.Drawing.Point(12, 271);
             this.dgrFactura.Name = "dgrFactura";
-            this.dgrFactura.Size = new System.Drawing.Size(978, 209);
+            this.dgrFactura.Size = new System.Drawing.Size(978, 136);
             this.dgrFactura.TabIndex = 3;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "IdCotizacion";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Paquete
-            // 
-            this.Paquete.DataPropertyName = "paquete";
-            this.Paquete.HeaderText = "Paquete";
-            this.Paquete.Name = "Paquete";
-            // 
-            // Servicio
-            // 
-            this.Servicio.DataPropertyName = "proveedores";
-            this.Servicio.HeaderText = "Servicio";
-            this.Servicio.Name = "Servicio";
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.DataPropertyName = "comentariosProveedores";
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
             // 
             // groupBox1
             // 
@@ -383,6 +351,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblNumero);
+            this.groupBox3.Controls.Add(this.txtNombreCliente);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.dgrFactura);
@@ -392,6 +362,40 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox3.Size = new System.Drawing.Size(1012, 612);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(13, 206);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(203, 20);
+            this.txtNombreCliente.TabIndex = 28;
+            // 
+            // Paquete
+            // 
+            this.Paquete.DataPropertyName = "paquete";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            // 
+            // Servicio
+            // 
+            this.Servicio.DataPropertyName = "proveedores";
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.DataPropertyName = "comentariosProveedores";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(251, 212);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(19, 13);
+            this.lblNumero.TabIndex = 29;
+            this.lblNumero.Text = "N°";
             // 
             // frmFacturacion
             // 
@@ -414,6 +418,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -443,10 +448,10 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtIVA;
         private System.Windows.Forms.MaskedTextBox txtSubTotal;
         private FontAwesome.Sharp.IconButton btnFacturar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private System.Windows.Forms.Label lblNumero;
     }
 }
