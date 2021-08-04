@@ -55,6 +55,13 @@ namespace UTN.Winform.Funeraria.UI
         private void frmValidarToken_Load(object sender, EventArgs e)
         {
             txtUsuario.Focus();
+            toolTUsuario.SetToolTip(txtUsuario, "Por favor ingrese el nombre del usuario");
+            toolTToken.SetToolTip(txtToken, "Por favor ingrese el código Token");
+            toolTContrasena.SetToolTip(txtContrasenna, "Por favor ingrese una nueva contraseña");
+            toolTConfirmar.SetToolTip(txtConfirmacion, "Por favor ingrese de nuevo la nueva contraseña");
+            toolTCambiar.SetToolTip(btnCambiar,"Cambiar la contraseña");
+            toolTCancelar.SetToolTip(btnCancelar,"Volver a la página anterior");
+            toolTCerrar.SetToolTip(btnCerrar,"Cerrar la ventana");
         }
 
         private void btnCambiar_Click(object sender, EventArgs e)

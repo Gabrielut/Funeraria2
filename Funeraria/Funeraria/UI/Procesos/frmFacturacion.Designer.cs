@@ -29,6 +29,9 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -52,11 +55,19 @@ namespace UTN.Winform.Funeraria.UI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblNumero = new System.Windows.Forms.Label();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.toolTNumCotiz = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTBuscar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTFacturar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTLista = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTSubtotal = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTIVA = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTDesc = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTTotal = new System.Windows.Forms.ToolTip(this.components);
             this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNumero = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -126,15 +137,38 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgrFactura
             // 
-            this.dgrFactura.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            this.dgrFactura.BackgroundColor = System.Drawing.Color.White;
+            this.dgrFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgrFactura.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgrFactura.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgrFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Paquete,
             this.Servicio,
             this.Comentarios});
-            this.dgrFactura.Location = new System.Drawing.Point(12, 271);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrFactura.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgrFactura.EnableHeadersVisualStyles = false;
+            this.dgrFactura.Location = new System.Drawing.Point(13, 299);
             this.dgrFactura.Name = "dgrFactura";
-            this.dgrFactura.Size = new System.Drawing.Size(978, 136);
+            this.dgrFactura.ReadOnly = true;
+            this.dgrFactura.RowHeadersVisible = false;
+            this.dgrFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgrFactura.Size = new System.Drawing.Size(545, 133);
             this.dgrFactura.TabIndex = 3;
             // 
             // groupBox1
@@ -169,7 +203,7 @@ namespace UTN.Winform.Funeraria.UI
             this.btnFacturar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFacturar.IconSize = 35;
             this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFacturar.Location = new System.Drawing.Point(503, 24);
+            this.btnFacturar.Location = new System.Drawing.Point(852, 23);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnFacturar.Size = new System.Drawing.Size(116, 38);
@@ -195,10 +229,10 @@ namespace UTN.Winform.Funeraria.UI
             this.btnGuardar2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar2.IconSize = 35;
             this.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar2.Location = new System.Drawing.Point(345, 24);
+            this.btnGuardar2.Location = new System.Drawing.Point(345, 30);
             this.btnGuardar2.Name = "btnGuardar2";
             this.btnGuardar2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGuardar2.Size = new System.Drawing.Size(116, 38);
+            this.btnGuardar2.Size = new System.Drawing.Size(113, 38);
             this.btnGuardar2.TabIndex = 50;
             this.btnGuardar2.Text = "Buscar";
             this.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -281,7 +315,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.Controls.Add(this.lblCosto);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(625, 413);
+            this.groupBox2.Location = new System.Drawing.Point(635, 289);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(365, 187);
             this.groupBox2.TabIndex = 27;
@@ -290,6 +324,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(177, 150);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -306,6 +341,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtIVA
             // 
+            this.txtIVA.Enabled = false;
             this.txtIVA.Location = new System.Drawing.Point(177, 67);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -314,6 +350,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtSubTotal
             // 
+            this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Location = new System.Drawing.Point(177, 27);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -363,39 +400,52 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(36, 206);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(36, 26);
+            this.lblNumero.TabIndex = 29;
+            this.lblNumero.Text = "N°";
+            // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(13, 206);
+            this.txtNombreCliente.Location = new System.Drawing.Point(117, 212);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(203, 20);
             this.txtNombreCliente.TabIndex = 28;
             // 
             // Paquete
             // 
+            this.Paquete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Paquete.DataPropertyName = "paquete";
             this.Paquete.HeaderText = "Paquete";
             this.Paquete.Name = "Paquete";
+            this.Paquete.ReadOnly = true;
+            this.Paquete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Paquete.Width = 200;
             // 
             // Servicio
             // 
+            this.Servicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Servicio.DataPropertyName = "proveedores";
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.Name = "Servicio";
+            this.Servicio.ReadOnly = true;
+            this.Servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Servicio.Width = 200;
             // 
             // Comentarios
             // 
+            this.Comentarios.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Comentarios.DataPropertyName = "comentariosProveedores";
             this.Comentarios.HeaderText = "Comentarios";
             this.Comentarios.Name = "Comentarios";
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(251, 212);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(19, 13);
-            this.lblNumero.TabIndex = 29;
-            this.lblNumero.Text = "N°";
+            this.Comentarios.ReadOnly = true;
+            this.Comentarios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Comentarios.Width = 200;
             // 
             // frmFacturacion
             // 
@@ -449,9 +499,19 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtSubTotal;
         private FontAwesome.Sharp.IconButton btnFacturar;
         private System.Windows.Forms.TextBox txtNombreCliente;
+
+        private System.Windows.Forms.Label lblNumero;
+
+        private System.Windows.Forms.ToolTip toolTNumCotiz;
+        private System.Windows.Forms.ToolTip toolTBuscar;
+        private System.Windows.Forms.ToolTip toolTFacturar;
+        private System.Windows.Forms.ToolTip toolTLista;
+        private System.Windows.Forms.ToolTip toolTSubtotal;
+        private System.Windows.Forms.ToolTip toolTIVA;
+        private System.Windows.Forms.ToolTip toolTDesc;
+        private System.Windows.Forms.ToolTip toolTTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
-        private System.Windows.Forms.Label lblNumero;
     }
 }

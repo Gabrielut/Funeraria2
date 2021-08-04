@@ -30,6 +30,10 @@ namespace UTN.Winform.Funeraria.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -186,7 +190,22 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dtGVListado
             // 
-            this.dtGVListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtGVListado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtGVListado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGVListado.BackgroundColor = System.Drawing.Color.White;
+            this.dtGVListado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtGVListado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtGVListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(138)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVListado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtGVListado.ColumnHeadersHeight = 30;
             this.dtGVListado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.NomEmpresa,
@@ -198,8 +217,28 @@ namespace UTN.Winform.Funeraria.UI
             this.Descuento,
             this.Estado,
             this.Comentarios});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGVListado.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGVListado.EnableHeadersVisualStyles = false;
             this.dtGVListado.Location = new System.Drawing.Point(47, 309);
             this.dtGVListado.Name = "dtGVListado";
+            this.dtGVListado.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVListado.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtGVListado.RowHeadersVisible = false;
+            this.dtGVListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtGVListado.Size = new System.Drawing.Size(944, 276);
             this.dtGVListado.TabIndex = 23;
             // 
@@ -208,60 +247,70 @@ namespace UTN.Winform.Funeraria.UI
             this.Id.DataPropertyName = "IdConvenio";
             this.Id.HeaderText = "N°";
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
             // NomEmpresa
             // 
             this.NomEmpresa.DataPropertyName = "NomEmpresa";
             this.NomEmpresa.HeaderText = "Nombre Empresa";
             this.NomEmpresa.Name = "NomEmpresa";
+            this.NomEmpresa.ReadOnly = true;
             // 
             // Ubicacion
             // 
             this.Ubicacion.DataPropertyName = "Ubicacion";
             this.Ubicacion.HeaderText = "Ubicacion";
             this.Ubicacion.Name = "Ubicacion";
+            this.Ubicacion.ReadOnly = true;
             // 
             // TelCelular
             // 
             this.TelCelular.DataPropertyName = "TelCelular";
             this.TelCelular.HeaderText = "Celular";
             this.TelCelular.Name = "TelCelular";
+            this.TelCelular.ReadOnly = true;
             // 
             // TelEmpresa
             // 
             this.TelEmpresa.DataPropertyName = "TelEmpresa";
             this.TelEmpresa.HeaderText = "TelEmpresa";
             this.TelEmpresa.Name = "TelEmpresa";
+            this.TelEmpresa.ReadOnly = true;
             // 
             // TelFax
             // 
             this.TelFax.DataPropertyName = "TelFax";
             this.TelFax.HeaderText = "Fax";
             this.TelFax.Name = "TelFax";
+            this.TelFax.ReadOnly = true;
             // 
             // TipoServicio
             // 
             this.TipoServicio.DataPropertyName = "TipoServicio";
             this.TipoServicio.HeaderText = "Servicio";
             this.TipoServicio.Name = "TipoServicio";
+            this.TipoServicio.ReadOnly = true;
             // 
             // Descuento
             // 
             this.Descuento.DataPropertyName = "Descuento";
             this.Descuento.HeaderText = "Descuento";
             this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
             // 
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
             // Comentarios
             // 
             this.Comentarios.DataPropertyName = "Comentarios";
             this.Comentarios.HeaderText = "Comentarios";
             this.Comentarios.Name = "Comentarios";
+            this.Comentarios.ReadOnly = true;
             // 
             // panel1
             // 

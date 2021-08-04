@@ -29,6 +29,7 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarContrena));
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +41,10 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTCorreo = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTGenToken = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTCancel = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTVolver = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -180,12 +185,28 @@ namespace UTN.Winform.Funeraria.UI
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // toolTCorreo
+            // 
+            this.toolTCorreo.IsBalloon = true;
+            // 
+            // toolTGenToken
+            // 
+            this.toolTGenToken.IsBalloon = true;
+            // 
+            // toolTCancel
+            // 
+            this.toolTCancel.IsBalloon = true;
+            // 
+            // toolTVolver
+            // 
+            this.toolTVolver.IsBalloon = true;
+            // 
             // frmRecuperarContrena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(386, 487);
+            this.ClientSize = new System.Drawing.Size(386, 488);
             this.Controls.Add(this.btnToken);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtUsuario);
@@ -198,6 +219,7 @@ namespace UTN.Winform.Funeraria.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecuperarContrena";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmRecuperarContrena_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -218,5 +240,9 @@ namespace UTN.Winform.Funeraria.UI
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.ToolTip toolTCorreo;
+        private System.Windows.Forms.ToolTip toolTGenToken;
+        private System.Windows.Forms.ToolTip toolTCancel;
+        private System.Windows.Forms.ToolTip toolTVolver;
     }
 }

@@ -11,6 +11,7 @@ using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.BLL;
 using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Layers.Entities.DTO;
+using UTN.Winform.Funeraria.UI.Procesos;
 
 namespace UTN.Winform.Funeraria.UI
 {
@@ -174,10 +175,25 @@ namespace UTN.Winform.Funeraria.UI
                 }
             }
             //Aqui va mensaje de Success
+            MessageBox.Show("Factura creada con éxito");
             //Limpiar Info
+            Limpiar();
             //Abrir Frame del reporte
+            //frmFactura ofrmFactura = new frmFactura();
+            //ofrmFactura.Show();
 
+        }
 
+        public void Limpiar()
+        {
+            txtIdCotizacion.Text = "";
+            txtNombreCliente.Text = "";
+            txtSubTotal.Text = "";
+            txtIVA.Text = "";
+            txtDescuento.Text = "";
+            txtTotal.Text = "";
+            dgrFactura.DataSource = null;
+            lblNumero.Text = "N°";
         }
     }
 }

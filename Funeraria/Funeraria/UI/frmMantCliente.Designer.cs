@@ -30,6 +30,10 @@ namespace UTN.Winform.Funeraria.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -419,10 +423,24 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dtGVListadoClientes
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtGVListadoClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtGVListadoClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtGVListadoClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGVListadoClientes.BackgroundColor = System.Drawing.Color.White;
             this.dtGVListadoClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtGVListadoClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVListadoClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtGVListadoClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(138)))), ((int)(((byte)(148)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVListadoClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtGVListadoClientes.ColumnHeadersHeight = 30;
             this.dtGVListadoClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cedula,
             this.Nombre,
@@ -432,8 +450,29 @@ namespace UTN.Winform.Funeraria.UI
             this.Telefono,
             this.Sexo,
             this.Direccion});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGVListadoClientes.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGVListadoClientes.EnableHeadersVisualStyles = false;
             this.dtGVListadoClientes.Location = new System.Drawing.Point(28, 415);
             this.dtGVListadoClientes.Name = "dtGVListadoClientes";
+            this.dtGVListadoClientes.ReadOnly = true;
+            this.dtGVListadoClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVListadoClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtGVListadoClientes.RowHeadersVisible = false;
+            this.dtGVListadoClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtGVListadoClientes.Size = new System.Drawing.Size(879, 177);
             this.dtGVListadoClientes.TabIndex = 0;
             // 
@@ -442,49 +481,56 @@ namespace UTN.Winform.Funeraria.UI
             this.Cedula.DataPropertyName = "IdCliente";
             this.Cedula.HeaderText = "Cédula";
             this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Apellido1
             // 
             this.Apellido1.DataPropertyName = "PrimerApellido";
             this.Apellido1.HeaderText = "Primer Apellido";
             this.Apellido1.Name = "Apellido1";
+            this.Apellido1.ReadOnly = true;
             // 
             // Apellido2
             // 
             this.Apellido2.DataPropertyName = "SegundoApellido";
             this.Apellido2.HeaderText = "Segundo Apellido";
             this.Apellido2.Name = "Apellido2";
+            this.Apellido2.ReadOnly = true;
             // 
             // Correo
             // 
             this.Correo.DataPropertyName = "Correo";
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
             // 
             // Telefono
             // 
             this.Telefono.DataPropertyName = "Telefono";
             this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             // 
             // Sexo
             // 
             this.Sexo.DataPropertyName = "Sexo";
             this.Sexo.HeaderText = "Sexo";
             this.Sexo.Name = "Sexo";
+            this.Sexo.ReadOnly = true;
             // 
             // Direccion
             // 
             this.Direccion.DataPropertyName = "Direccion";
             this.Direccion.HeaderText = "Dirección";
             this.Direccion.Name = "Direccion";
-            this.Direccion.Width = 250;
+            this.Direccion.ReadOnly = true;
             // 
             // errPro
             // 

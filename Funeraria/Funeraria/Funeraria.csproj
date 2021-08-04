@@ -231,6 +231,12 @@
     <Compile Include="UI\frmValidarToken.Designer.cs">
       <DependentUpon>frmValidarToken.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Procesos\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Procesos\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Procesos\frmFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,9 +390,14 @@
     <EmbeddedResource Include="UI\frmValidarToken.resx">
       <DependentUpon>frmValidarToken.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Procesos\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Procesos\frmFacturacion.resx">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Procesos\rptReporteFacturaFinal.rdlc" />
+    <EmbeddedResource Include="UI\Procesos\rptReportFactura.rdlc" />
     <EmbeddedResource Include="UI\Reportes\frmReporteActivo.resx">
       <DependentUpon>frmReporteActivo.cs</DependentUpon>
     </EmbeddedResource>
