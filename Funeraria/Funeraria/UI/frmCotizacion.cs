@@ -25,7 +25,17 @@ namespace UTN.Winform.Funeraria.UI
 
         private void pnlContenido_Paint(object sender, PaintEventArgs e)
         {
-
+            //toolTNombreConvenio.SetToolTip(txtUsuario, "Por favor ingrese el nombre del usuario");
+            toolTBuscar.SetToolTip(btnBuscarCliente, "Buscar Clientes");
+            toolTListadoCli.SetToolTip(dgrvCliente, "Listado de clientes seleccionados");
+            toolTGenerar.SetToolTip(btnGuardar2, "Generar cotización");
+            toolTBuscar2.SetToolTip(btnBuscarProoveedor, "Buscar proveedores disponibles");
+            toolTListaServ.SetToolTip(dgrvConvenio, "Listado de convenios seleccionados");
+            toolTBuscar3.SetToolTip(btnBuscarPaquete, "Buscar paquetes disponibles");
+            toolTListaPaquet.SetToolTip(dgrvPaquete, "Listado de paquetes seleccionados");
+            toolTBuscar4.SetToolTip(btnBuscarConvenio, "Buscar convenios disponibles");
+            toolTListaConvenio.SetToolTip(dgrvConvenio, "Listado de convenios seleccionados");
+            toolTCerrar.SetToolTip(btnCerrar, "Cerrar la ventana actual");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

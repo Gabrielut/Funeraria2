@@ -30,6 +30,10 @@ namespace UTN.Winform.Funeraria.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -533,10 +537,24 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgvDatos
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDatos.BackgroundColor = System.Drawing.Color.White;
             this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDatos.ColumnHeadersHeight = 30;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProveedor,
             this.NomProveedor,
@@ -554,9 +572,30 @@ namespace UTN.Winform.Funeraria.UI
             this.Distrito,
             this.Barrio,
             this.OtrasSennas});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDatos.EnableHeadersVisualStyles = false;
             this.dgvDatos.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDatos.Location = new System.Drawing.Point(41, 362);
             this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.ReadOnly = true;
+            this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDatos.RowHeadersVisible = false;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(797, 211);
             this.dgvDatos.TabIndex = 24;
             // 
@@ -565,42 +604,42 @@ namespace UTN.Winform.Funeraria.UI
             this.IdProveedor.DataPropertyName = "IdProveedor";
             this.IdProveedor.HeaderText = "Id";
             this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.Width = 45;
+            this.IdProveedor.ReadOnly = true;
             // 
             // NomProveedor
             // 
             this.NomProveedor.DataPropertyName = "NomProveedor";
             this.NomProveedor.HeaderText = "Nombre";
             this.NomProveedor.Name = "NomProveedor";
-            this.NomProveedor.Width = 90;
+            this.NomProveedor.ReadOnly = true;
             // 
             // Propietario
             // 
             this.Propietario.DataPropertyName = "Propietario";
             this.Propietario.HeaderText = "Propietario";
             this.Propietario.Name = "Propietario";
-            this.Propietario.Width = 90;
+            this.Propietario.ReadOnly = true;
             // 
             // TelCelular
             // 
             this.TelCelular.DataPropertyName = "TelCelular";
             this.TelCelular.HeaderText = "Celular";
             this.TelCelular.Name = "TelCelular";
-            this.TelCelular.Width = 75;
+            this.TelCelular.ReadOnly = true;
             // 
             // TelProveedor
             // 
             this.TelProveedor.DataPropertyName = "TelProveedor";
             this.TelProveedor.HeaderText = "Telefono";
             this.TelProveedor.Name = "TelProveedor";
-            this.TelProveedor.Width = 75;
+            this.TelProveedor.ReadOnly = true;
             // 
             // TelFax
             // 
             this.TelFax.DataPropertyName = "TelFax";
             this.TelFax.HeaderText = "Fax";
             this.TelFax.Name = "TelFax";
-            this.TelFax.Width = 75;
+            this.TelFax.ReadOnly = true;
             // 
             // Correo
             // 
@@ -608,65 +647,70 @@ namespace UTN.Winform.Funeraria.UI
             this.Correo.FillWeight = 50F;
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
-            this.Correo.Width = 50;
+            this.Correo.ReadOnly = true;
             // 
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
-            this.Precio.Width = 50;
+            this.Precio.ReadOnly = true;
             // 
             // CantUni
             // 
             this.CantUni.DataPropertyName = "CantUni";
             this.CantUni.HeaderText = "Cantidad";
             this.CantUni.Name = "CantUni";
-            this.CantUni.Width = 20;
+            this.CantUni.ReadOnly = true;
             // 
             // Servicio
             // 
             this.Servicio.DataPropertyName = "IdTipoServicio";
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.Name = "Servicio";
-            this.Servicio.Width = 75;
+            this.Servicio.ReadOnly = true;
             // 
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
-            this.Estado.Width = 50;
+            this.Estado.ReadOnly = true;
             // 
             // Provincia
             // 
             this.Provincia.DataPropertyName = "Provincia";
             this.Provincia.HeaderText = "Provincia";
             this.Provincia.Name = "Provincia";
+            this.Provincia.ReadOnly = true;
             // 
             // Canton
             // 
             this.Canton.DataPropertyName = "Canton";
             this.Canton.HeaderText = "Canton";
             this.Canton.Name = "Canton";
+            this.Canton.ReadOnly = true;
             // 
             // Distrito
             // 
             this.Distrito.DataPropertyName = "Distrito";
             this.Distrito.HeaderText = "Distrito";
             this.Distrito.Name = "Distrito";
+            this.Distrito.ReadOnly = true;
             // 
             // Barrio
             // 
             this.Barrio.DataPropertyName = "Barrio";
             this.Barrio.HeaderText = "Barrio";
             this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
             // 
             // OtrasSennas
             // 
             this.OtrasSennas.DataPropertyName = "otrasSennas";
             this.OtrasSennas.HeaderText = "Otras Señas";
             this.OtrasSennas.Name = "OtrasSennas";
+            this.OtrasSennas.ReadOnly = true;
             // 
             // panel1
             // 

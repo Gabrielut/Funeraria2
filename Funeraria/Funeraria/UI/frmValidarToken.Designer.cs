@@ -29,6 +29,7 @@ namespace UTN.Winform.Funeraria.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmValidarToken));
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,6 +50,13 @@ namespace UTN.Winform.Funeraria.UI
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.toolTUsuario = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTToken = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTContrasena = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTConfirmar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTCambiar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTCancelar = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTCerrar = new System.Windows.Forms.ToolTip(this.components);
             this.pnlLogin.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -338,5 +346,12 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnCancelar;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.ToolTip toolTUsuario;
+        private System.Windows.Forms.ToolTip toolTToken;
+        private System.Windows.Forms.ToolTip toolTContrasena;
+        private System.Windows.Forms.ToolTip toolTConfirmar;
+        private System.Windows.Forms.ToolTip toolTCambiar;
+        private System.Windows.Forms.ToolTip toolTCancelar;
+        private System.Windows.Forms.ToolTip toolTCerrar;
     }
 }
