@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UTN.Winform.Funeraria.Layers.Entities
 {
-    class Activo
+    public class Activo
     {
         public int IdActivo { get; set; }
         public string Nombre { get; set; }

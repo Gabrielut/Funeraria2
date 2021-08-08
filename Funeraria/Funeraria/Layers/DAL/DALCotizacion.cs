@@ -51,6 +51,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                         oCotizacion.IdPaquete = int.Parse(dr["IdPaquete"].ToString());
                         oCotizacion.IdConvenio = int.Parse(dr["IdConvenio"].ToString());
                         oCotizacion.IdProveedores = int.Parse(dr["IdProveedores"].ToString());
+                        oCotizacion.IdActivo = int.Parse(dr["IdActivo"].ToString());
                         oCotizacion.Comentarios = dr["Comentarios"].ToString();
 
                         lista.Add(oCotizacion);
@@ -138,6 +139,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                             ,[IdPaquete]
                             ,[IdConvenio]
                             ,[IdProveedores]
+                            ,[IdActivo]
                             ,[Comentarios])
                             VALUES
                             (@IdCotizacion,
@@ -145,6 +147,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                              @IdPaquete,
                              @IdConvenio,
                              @IdProveedores,
+                             @IdActivo,
                              @Comentarios)";
 
             SqlCommand cmd = new SqlCommand();
@@ -155,6 +158,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 cmd.Parameters.AddWithValue("@IdPaquete", pCotizacion.IdPaquete);
                 cmd.Parameters.AddWithValue("@IdConvenio", pCotizacion.IdConvenio);
                 cmd.Parameters.AddWithValue("@IdProveedores", pCotizacion.IdProveedores);
+                cmd.Parameters.AddWithValue("@IdActivo", pCotizacion.IdActivo);
                 cmd.Parameters.AddWithValue("@Comentarios", pCotizacion.Comentarios);   
 
                 cmd.CommandText = sql;

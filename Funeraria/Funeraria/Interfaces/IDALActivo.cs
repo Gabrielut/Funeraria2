@@ -13,7 +13,7 @@ namespace UTN.Winform.Funeraria.Interfaces
         List<Activo> GetAllActivos();
         Activo GetActivoById(int pActivo);
         Activo SaveActivo(Activo pActivo);
-        List<Activo> GetActivoByFilter(string pDescripcion);
+        List<ActivoDTO> GetActivoByFilter(string pDescripcion);
         bool DaleteActivo(int pId);
         Activo UpdateActivo(Activo pActivo);
         int GetNextNumeroActivo();

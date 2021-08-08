@@ -42,9 +42,52 @@ namespace UTN.Winform.Funeraria.Layers.DAL
                 return false;
             }
         }
-        public List<Activo> GetActivoByFilter(string pDescripcion)
+        public List<ActivoDTO> GetActivoByFilter(string pDescripcion)
         {
-            throw new NotImplementedException();
+            DataSet ds = null;
+            List<ActivoDTO> lista = new List<ActivoDTO>();
+            SqlCommand command = new SqlCommand();
+
+            try
+            {
+                string sql = @"SELECT Activo.IdActivo, Activo.Nombre, Activo.Descripcion, Activo.Cantidad, 
+                               Activo.Costo, Activo.Precio, Activo.InformacionAdicional, Activo.Estado, 
+                               TipoActivo.Descripcion AS TipoActivo FROM Activo INNER JOIN
+                               TipoActivo ON Activo.TipoActivo = TipoActivo.IdTipoActivo
+						       where Activo.Nombre+Activo.Descripcion+TipoActivo.Descripcion like @filtro ";
+
+                command.Parameters.AddWithValue("@filtro", pDescripcion);
+                command.CommandText = sql;
+                command.CommandType = CommandType.Text;
+                // esto se hace cuando se utiliza un store procedure en la base de datos
+                // command.CommandText = "usp_SELECT_Cliente_All";
+                // command.CommandType = CommandType.StoredProcedure;
+
+                using (IDataBase db = FactoryDatabase.CreateDataBase(FactoryConexion.CreateConnection(_Usuario.Correo, _Usuario.Contrasenna)))
+                {
+                    ds = db.ExecuteReader(command, "query");
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        ActivoDTO oActivo = new ActivoDTO();
+                        oActivo.IdActivo = int.Parse(dr["IdActivo"].ToString());
+                        oActivo.Nombre = dr["Nombre"].ToString();
+                        oActivo.Descripcion = dr["Descripcion"].ToString();
+                        oActivo.TipoActivo = dr["TipoActivo"].ToString();
+                        oActivo.Cantidad = int.Parse(dr["Cantidad"].ToString());
+                        oActivo.Costo = (dr["Costo"].ToString());
+                        oActivo.Precio = (dr["Precio"].ToString());
+                        oActivo.InformacionAdicional = dr["InformacionAdicional"].ToString();
+                        oActivo.Estado = (dr["Estado"].ToString());                       
+                        lista.Add(oActivo);
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                throw er;
+            }
+            return lista;
         }
         public Activo GetActivoById(int pActivo)
         {
