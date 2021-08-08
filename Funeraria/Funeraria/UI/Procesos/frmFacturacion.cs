@@ -58,11 +58,14 @@ namespace UTN.Winform.Funeraria.UI
             IBLLPaquete _BLLPaquete = new BLLPaquete();
             IBLLProveedores _BLLProveedores = new BLLProveedores();
             IBLLCliente _BLLCliente = new BLLCLiente();
+            IBLLConvenios _BLLConvenio = new BLLConvenios();
+            IBLLActivo _BLLActivo = new BLLActivo();
             foreach (Cotizacion item in pListCotizacion)
             {
                 CotizacionDTO oCotizacionDTO = new CotizacionDTO();
-                oCotizacionDTO.IdCotizacion = item.IdCotizacion;
-                oCotizacionDTO.cliente = _BLLCliente.GetClienteById(item.IdCliente).Nombre + " " +
+                lblNumero.Text = "N° " + item.IdCotizacion;
+                    
+                txtNombreCliente.Text = _BLLCliente.GetClienteById(item.IdCliente).Nombre + " " +
                                 _BLLCliente.GetClienteById(item.IdCliente).PrimerApellido + " " +
                                 _BLLCliente.GetClienteById(item.IdCliente).SegundoApellido;
                 if (item.IdPaquete != 0)
@@ -75,6 +78,16 @@ namespace UTN.Winform.Funeraria.UI
                     oCotizacionDTO.proveedores = _BLLProveedores.GetProveedorById(item.IdProveedores).NomProveedor;
                     oCotizacionDTO.comentariosProveedores = item.Comentarios;
                 }
+                if (item.IdConvenio != 0)
+                {
+                    oCotizacionDTO.convenio = _BLLConvenio.GetConvenioById(item.IdConvenio).NomEmpresa;
+                    //txtDescuento.Text = _BLLConvenio.GetConvenioById(item.IdConvenio).Descuento.ToString();
+                }
+                if (item.IdActivo != 0)
+                {
+                    oCotizacionDTO.activo = _BLLActivo.GetActivoById(item.IdActivo).Nombre;
+                    //txtDescuento.Text = _BLLConvenio.GetConvenioById(item.IdConvenio).Descuento.ToString();
+                }
                 list.Add(oCotizacionDTO);
             }
             return list;
@@ -83,7 +96,10 @@ namespace UTN.Winform.Funeraria.UI
         {
             IBLLPaquete _BLLPaquete = new BLLPaquete();
             IBLLProveedores _BLLProveedores = new BLLProveedores();
+            IBLLConvenios _BLLConvenio = new BLLConvenios();
+            IBLLActivo _BLLActivo = new BLLActivo();
             double total = 0;
+            double descuento = 0;
             foreach (Cotizacion item in pListCotizacion)
             {
                 
@@ -96,10 +112,36 @@ namespace UTN.Winform.Funeraria.UI
                     total += _BLLProveedores.GetProveedorById(item.IdProveedores).Precio;
 
                 }
+                if (item.IdActivo != 0)
+                {
+                    total += _BLLActivo.GetActivoById(item.IdActivo).Precio;
+
+                }
+                if (item.IdConvenio != 0)
+                {
+                    
+                    descuento = (_BLLConvenio.GetConvenioById(item.IdConvenio).Descuento);
+                    txtDescuento.Text = descuento + "%";
+                }
             }
-            txtSubTotal.Text = total.ToString();
-            txtIVA.Text = calcIVA(total).ToString();
-            txtTotal.Text = (total + calcIVA(total)).ToString();
+            txtSubTotal.Text = String.Format("{0:n}", total);
+                      
+            if (descuento > 0)
+            {
+                total = ((total * descuento) / 100) ;
+                txtIVA.Text = String.Format("{0:n}", calcIVA(total));
+                total += calcIVA(total);
+                txtTotal.Text = String.Format("{0:n}", total);
+
+            }
+            else
+            {
+                txtIVA.Text = String.Format("{0:n}", calcIVA(total));
+                txtTotal.Text = String.Format("{0:n}", (total + calcIVA(total)));
+                
+            }
+            
+
         }
         private double calcIVA(double pMonto)
         {
@@ -112,6 +154,7 @@ namespace UTN.Winform.Funeraria.UI
             IBLLDetFactura _BLLDetFactura = new BLLDetFactura();
             IBLLPaquete _BLLPaquete = new BLLPaquete();
             IBLLProveedores _BLLProveedores = new BLLProveedores();
+            IBLLActivo _BLLActivo = new BLLActivo();
             List<DetFactura> detalleList = new List<DetFactura>();
             if (dgrFactura.DataSource == null)
             {
@@ -130,7 +173,7 @@ namespace UTN.Winform.Funeraria.UI
             //txtIVA.Text.Replace(",", "").Replace(" ","");
             //txtTotal.Text.Replace(",", "").Replace("$", "").Replace(".", "").Replace(" ", "");
             //txtSubTotal.Text.Replace(",", "").Replace(" ", "");
-            factura.Subtotal = float.Parse(txtSubTotal.Text);
+            factura.Subtotal = float.Parse(txtSubTotal.Text.Replace("%",""));
             factura.IVA = float.Parse(txtIVA.Text);
             factura.Total = float.Parse(txtTotal.Text);
             factura.IdCotizacion = int.Parse(txtIdCotizacion.Text);
@@ -172,14 +215,37 @@ namespace UTN.Winform.Funeraria.UI
                     detalle.Cantidad = _BLLProveedores.GetProveedorById(item.IdProveedores).CantUni;
                     _BLLDetFactura.SaveDetFactura(detalle);
                 }
+                if (item.IdActivo != 0)
+                {
+                    detalle.IdFactura = _BLLDetFactura.GetNumeroFactura();
+                    detalle.IdPaquete = 0;
+                    detalle.IdConvenio = 0;
+                    detalle.IdActivo = item.IdActivo;
+                    detalle.IdProveedores = 0;
+                    detalle.Precio = _BLLActivo.GetActivoById(item.IdActivo).Precio;
+                    _BLLDetFactura.SaveDetFactura(detalle);
+                }
             }
             //Aqui va mensaje de Success
             MessageBox.Show("Factura creada con éxito");
             //Limpiar Info
+            Limpiar();
             //Abrir Frame del reporte
-            frmFactura ofrmFactura = new frmFactura();
-            ofrmFactura.Show();
+            //frmFactura ofrmFactura = new frmFactura();
+            //ofrmFactura.Show();
 
+        }
+
+        public void Limpiar()
+        {
+            txtIdCotizacion.Text = "";
+            txtNombreCliente.Text = "";
+            txtSubTotal.Text = "";
+            txtIVA.Text = "";
+            txtDescuento.Text = "";
+            txtTotal.Text = "";
+            dgrFactura.DataSource = null;
+            lblNumero.Text = "N°";
         }
     }
 }

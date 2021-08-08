@@ -95,6 +95,7 @@ namespace UTN.Winform.Funeraria.UI
             if (frmProveedor.DialogResult == DialogResult.OK)
             {
                 ProveedorDTO = frmProveedor.oProveedoresDTO;
+                dgrvProveedor.DataSource = null;
                 list.Add(ProveedorDTO);
                 //this.dgrvProveedor.Rows.Add(ProveedorDTO.IdProveedor, ProveedorDTO.NomProveedor, ProveedorDTO.IdTipoServicio,
                 //    ProveedorDTO.Propietario, ProveedorDTO.Correo, ProveedorDTO.TelCelular, ProveedorDTO.TelProveedor, ProveedorDTO.TelFax,
@@ -112,15 +113,17 @@ namespace UTN.Winform.Funeraria.UI
             List<PaqueteDTO> listPaqueteDTO = new List<PaqueteDTO>();
             List<Cliente> listCliente = new List<Cliente>();
             List<ConveniosDTO> listConveniosDTO = new List<ConveniosDTO>();
+            List<ActivoDTO> listActivoDTO = new List<ActivoDTO>();
             listProveedorDTO =  (List<ProveedorDTO>)dgrvProveedor.DataSource;
             listPaqueteDTO =  (List<PaqueteDTO>)dgrvPaquete.DataSource;
             listConveniosDTO = (List<ConveniosDTO>)dgrvConvenio.DataSource;
             listCliente = (List<Cliente>)dgrvCliente.DataSource;
+            listActivoDTO = (List<ActivoDTO>)dgrvActivo.DataSource;
             double total = 0;
             int numCoti = _BLLCotizacion.nextValue();
-            if (listProveedorDTO == null && listPaqueteDTO == null && listConveniosDTO == null)
+            if (listProveedorDTO == null && listPaqueteDTO == null && listConveniosDTO == null && listActivoDTO == null)
             {
-                MessageBox.Show("Debe de seleccionar almenos 1 Paquete ó Servicio", "Atencion",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Debe de seleccionar almenos 1 Paquete, Servicio, Convenio o Activo", "Atencion",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (listCliente == null)
@@ -152,26 +155,67 @@ namespace UTN.Winform.Funeraria.UI
                     total += double.Parse(item.Precio);
                 }
             }
-   
-            DialogResult dialogResult = MessageBox.Show("El total es de: ₡" + total.ToString("###,###"), "Cotización #" + numCoti, MessageBoxButtons.YesNo);
+            if (listActivoDTO != null)
+            {
+                foreach (ActivoDTO item in listActivoDTO)
+                {
+
+                    total += double.Parse(item.Precio);
+                }
+            }
+
+            DialogResult dialogResult = MessageBox.Show("El subtotal es de: ₡" + total.ToString("###,###"), "Cotización #" + numCoti, MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                foreach (ProveedorDTO item in listProveedorDTO)
+                if (listProveedorDTO != null)
                 {
-                    cotizacion.IdCotizacion = numCoti;
-                    cotizacion.IdProveedores = item.IdProveedor;
-                    cotizacion.IdPaquete = 0;
-                    cotizacion.Comentarios = txtComentarios.Text;
-                    _BLLCotizacion.SaveCotizacion(cotizacion);
+                    foreach (ProveedorDTO item in listProveedorDTO)
+                    {
+                        cotizacion.IdCotizacion = numCoti;
+                        cotizacion.IdProveedores = item.IdProveedor;
+                        cotizacion.IdPaquete = 0;
+                        cotizacion.Comentarios = txtComentarios.Text;
+                        _BLLCotizacion.SaveCotizacion(cotizacion);
+                    }
                 }
-                foreach (PaqueteDTO item in listPaqueteDTO)
+                if (listPaqueteDTO != null)
                 {
-                    cotizacion.IdCotizacion = numCoti;
-                    cotizacion.IdPaquete = item.IdPaquete;
-                    cotizacion.IdProveedores = 0;
-                    _BLLCotizacion.SaveCotizacion(cotizacion);
+                    foreach (PaqueteDTO item in listPaqueteDTO)
+                    {
+                        cotizacion.IdCotizacion = numCoti;
+                        cotizacion.IdPaquete = item.IdPaquete;
+                        cotizacion.IdProveedores = 0;
+                        cotizacion.Comentarios = "";
+                        _BLLCotizacion.SaveCotizacion(cotizacion);
+                    }
                 }
-                //Falta Bodega
+
+                if (listConveniosDTO != null)
+                {
+                    foreach (ConveniosDTO item in listConveniosDTO)
+                    {
+                        cotizacion.IdCotizacion = numCoti;
+                        cotizacion.IdPaquete = 0;
+                        cotizacion.IdProveedores = 0;
+                        cotizacion.IdConvenio = item.IdConvenio;
+                        cotizacion.Comentarios = "";
+                        _BLLCotizacion.SaveCotizacion(cotizacion);
+                    }
+                }
+                if (listActivoDTO != null)
+                {
+                    foreach (ActivoDTO item in listActivoDTO)
+                    {
+                        cotizacion.IdCotizacion = numCoti;
+                        cotizacion.IdPaquete = 0;
+                        cotizacion.IdProveedores = 0;
+                        cotizacion.IdConvenio = 0;
+                        cotizacion.Comentarios = "";
+                        cotizacion.IdActivo = item.IdActivo;
+                        _BLLCotizacion.SaveCotizacion(cotizacion);
+                    }
+                }
+
                 MessageBox.Show("Cotizacion guardada exitosamente!");
                 limpiar();
             }
@@ -190,19 +234,6 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.Close();
         }
-
-
-            //frmActivo frmActivo = new frmActivo();
-            //frmActivo.ShowDialog();
-            //Activo activo = new Activo();
-            //List<Activo> list = new List<Activo>();
-            //if (frmActivo.DialogResult == DialogResult.OK)
-            //{
-            //   // activo = frmActivo.oActivo;
-            //    list.Add(activo);         
-            //    dgrvActivo.DataSource = list;
-            //}
-     
 
         private void btnBuscarLocalizacion_Click(object sender, EventArgs e)
         {
@@ -230,6 +261,22 @@ namespace UTN.Winform.Funeraria.UI
             dgrvActivo.DataSource = null;
             dgrvConvenio.DataSource = null;
             dgrvProveedor.DataSource = null;
+        }
+
+        private void btnBuscarActivo_Click(object sender, EventArgs e)
+        {
+
+            frmActivo frmActivo = new frmActivo();
+            frmActivo.ShowDialog();
+            ActivoDTO activo = new ActivoDTO();
+            List<ActivoDTO> list = new List<ActivoDTO>();
+            if (frmActivo.DialogResult == DialogResult.OK)
+            {
+                activo = frmActivo.oActivo;
+                list.Add(activo);
+                dgrvActivo.AutoGenerateColumns = false;
+                dgrvActivo.DataSource = list;
+            }
         }
     }
 }

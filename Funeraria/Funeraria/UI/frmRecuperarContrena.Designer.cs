@@ -97,7 +97,6 @@ namespace UTN.Winform.Funeraria.UI
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(283, 26);
             this.txtUsuario.TabIndex = 6;
-            this.txtUsuario.Text = "gabrieltorrespruebas@gmail.com";
             // 
             // btnCancelar
             // 

@@ -37,11 +37,6 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.dgrFactura = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFacturar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
@@ -60,6 +55,8 @@ namespace UTN.Winform.Funeraria.UI
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.toolTNumCotiz = new System.Windows.Forms.ToolTip(this.components);
             this.toolTBuscar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTFacturar = new System.Windows.Forms.ToolTip(this.components);
@@ -68,6 +65,11 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTIVA = new System.Windows.Forms.ToolTip(this.components);
             this.toolTDesc = new System.Windows.Forms.ToolTip(this.components);
             this.toolTTotal = new System.Windows.Forms.ToolTip(this.components);
+            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Convenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -151,11 +153,11 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrFactura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgrFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Cliente,
             this.Paquete,
             this.Servicio,
-            this.Comentarios});
+            this.Comentarios,
+            this.Convenio,
+            this.Activo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,53 +167,13 @@ namespace UTN.Winform.Funeraria.UI
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgrFactura.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgrFactura.EnableHeadersVisualStyles = false;
-            this.dgrFactura.Location = new System.Drawing.Point(84, 198);
+            this.dgrFactura.Location = new System.Drawing.Point(13, 299);
             this.dgrFactura.Name = "dgrFactura";
             this.dgrFactura.ReadOnly = true;
             this.dgrFactura.RowHeadersVisible = false;
             this.dgrFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgrFactura.Size = new System.Drawing.Size(864, 209);
+            this.dgrFactura.Size = new System.Drawing.Size(545, 133);
             this.dgrFactura.TabIndex = 3;
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "IdCotizacion";
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 150;
-            // 
-            // Cliente
-            // 
-            this.Cliente.DataPropertyName = "cliente";
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 150;
-            // 
-            // Paquete
-            // 
-            this.Paquete.DataPropertyName = "paquete";
-            this.Paquete.HeaderText = "Paquete";
-            this.Paquete.Name = "Paquete";
-            this.Paquete.ReadOnly = true;
-            this.Paquete.Width = 170;
-            // 
-            // Servicio
-            // 
-            this.Servicio.DataPropertyName = "proveedores";
-            this.Servicio.HeaderText = "Servicio";
-            this.Servicio.Name = "Servicio";
-            this.Servicio.ReadOnly = true;
-            this.Servicio.Width = 150;
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.DataPropertyName = "comentariosProveedores";
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
-            this.Comentarios.ReadOnly = true;
-            this.Comentarios.Width = 200;
             // 
             // groupBox1
             // 
@@ -357,7 +319,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.Controls.Add(this.lblCosto);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(625, 413);
+            this.groupBox2.Location = new System.Drawing.Point(635, 289);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(365, 187);
             this.groupBox2.TabIndex = 27;
@@ -366,6 +328,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtTotal
             // 
+            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(177, 150);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -374,6 +337,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtDescuento
             // 
+            this.txtDescuento.Enabled = false;
             this.txtDescuento.Location = new System.Drawing.Point(177, 109);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -382,6 +346,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtIVA
             // 
+            this.txtIVA.Enabled = false;
             this.txtIVA.Location = new System.Drawing.Point(177, 67);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -390,6 +355,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtSubTotal
             // 
+            this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Location = new System.Drawing.Point(177, 27);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -427,6 +393,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblNumero);
+            this.groupBox3.Controls.Add(this.txtNombreCliente);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.dgrFactura);
@@ -436,6 +404,67 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox3.Size = new System.Drawing.Size(1012, 612);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(36, 206);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(36, 26);
+            this.lblNumero.TabIndex = 29;
+            this.lblNumero.Text = "N°";
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.Location = new System.Drawing.Point(117, 212);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(203, 20);
+            this.txtNombreCliente.TabIndex = 28;
+            // 
+            // Paquete
+            // 
+            this.Paquete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Paquete.DataPropertyName = "paquete";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            this.Paquete.ReadOnly = true;
+            this.Paquete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Paquete.Width = 200;
+            // 
+            // Servicio
+            // 
+            this.Servicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Servicio.DataPropertyName = "proveedores";
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            this.Servicio.ReadOnly = true;
+            this.Servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Servicio.Width = 200;
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Comentarios.DataPropertyName = "comentariosProveedores";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
+            this.Comentarios.ReadOnly = true;
+            this.Comentarios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Comentarios.Width = 200;
+            // 
+            // Convenio
+            // 
+            this.Convenio.DataPropertyName = "convenio";
+            this.Convenio.HeaderText = "Convenio";
+            this.Convenio.Name = "Convenio";
+            this.Convenio.ReadOnly = true;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
             // 
             // frmFacturacion
             // 
@@ -458,6 +487,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,11 +517,10 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.MaskedTextBox txtIVA;
         private System.Windows.Forms.MaskedTextBox txtSubTotal;
         private FontAwesome.Sharp.IconButton btnFacturar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+
+        private System.Windows.Forms.Label lblNumero;
+
         private System.Windows.Forms.ToolTip toolTNumCotiz;
         private System.Windows.Forms.ToolTip toolTBuscar;
         private System.Windows.Forms.ToolTip toolTFacturar;
@@ -500,5 +529,10 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.ToolTip toolTIVA;
         private System.Windows.Forms.ToolTip toolTDesc;
         private System.Windows.Forms.ToolTip toolTTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Paquete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Convenio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
     }
 }

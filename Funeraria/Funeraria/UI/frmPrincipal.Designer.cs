@@ -36,6 +36,7 @@
             this.btnMaximizar = new FontAwesome.Sharp.IconButton();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnlReportes = new System.Windows.Forms.Panel();
             this.btnRptEmpleados = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlFormularios = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlReportes.SuspendLayout();
@@ -188,8 +188,24 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 52);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(256, 848);
+            this.pnlMenu.Size = new System.Drawing.Size(256, 729);
             this.pnlMenu.TabIndex = 3;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton3.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 40;
+            this.iconButton3.Location = new System.Drawing.Point(207, 799);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(43, 46);
+            this.iconButton3.TabIndex = 8;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
             // 
             // iconButton1
             // 
@@ -592,7 +608,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1100, 900);
+            this.pnlContenedor.Size = new System.Drawing.Size(1100, 781);
             this.pnlContenedor.TabIndex = 5;
             // 
             // pnlFormularios
@@ -602,7 +618,7 @@
             this.pnlFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFormularios.Location = new System.Drawing.Point(256, 52);
             this.pnlFormularios.Name = "pnlFormularios";
-            this.pnlFormularios.Size = new System.Drawing.Size(844, 848);
+            this.pnlFormularios.Size = new System.Drawing.Size(844, 729);
             this.pnlFormularios.TabIndex = 4;
             // 
             // pbLogo
@@ -617,29 +633,13 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
-            // iconButton3
-            // 
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.iconButton3.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.Location = new System.Drawing.Point(207, 799);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(43, 46);
-            this.iconButton3.TabIndex = 8;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click_1);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1100, 900);
+            this.ClientSize = new System.Drawing.Size(1100, 781);
             this.Controls.Add(this.pnlContenedor);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
