@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using UTN.Winform.Funeraria.Interfaces;
 using UTN.Winform.Funeraria.Layers.Entities;
 using UTN.Winform.Funeraria.Layers.Entities.DTO;
@@ -61,6 +62,7 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             catch (Exception er)
             {
                 throw er;
+                MessageBox.Show("error");
             }
             return lista;
         }
