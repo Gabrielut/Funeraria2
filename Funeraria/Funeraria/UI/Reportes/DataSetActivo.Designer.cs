@@ -2868,15 +2868,17 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             
             private global::System.Data.DataColumn columnCantidad;
             
-            private global::System.Data.DataColumn columnDescripcion;
-            
-            private global::System.Data.DataColumn columnExpr1;
-            
             private global::System.Data.DataColumn columnSubtotal;
             
             private global::System.Data.DataColumn columnIVA;
             
             private global::System.Data.DataColumn columnTotal;
+            
+            private global::System.Data.DataColumn columnIdFactura;
+            
+            private global::System.Data.DataColumn columnPaquete;
+            
+            private global::System.Data.DataColumn columnServicio;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2969,22 +2971,6 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DescripcionColumn {
-                get {
-                    return this.columnDescripcion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Expr1Column {
-                get {
-                    return this.columnExpr1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn SubtotalColumn {
                 get {
                     return this.columnSubtotal;
@@ -3004,6 +2990,30 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             public global::System.Data.DataColumn TotalColumn {
                 get {
                     return this.columnTotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IdFacturaColumn {
+                get {
+                    return this.columnIdFactura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PaqueteColumn {
+                get {
+                    return this.columnPaquete;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ServicioColumn {
+                get {
+                    return this.columnServicio;
                 }
             }
             
@@ -3044,7 +3054,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FacturaFinalRow AddFacturaFinalRow(string Nombre, string PrimerApellido, string SegundoApellido, string Correo, string Telefono, double Precio, int Cantidad, string Descripcion, string Expr1, double Subtotal, double IVA, double Total) {
+            public FacturaFinalRow AddFacturaFinalRow(string Nombre, string PrimerApellido, string SegundoApellido, string Correo, string Telefono, double Precio, int Cantidad, double Subtotal, double IVA, double Total, string Paquete, string Servicio) {
                 FacturaFinalRow rowFacturaFinalRow = ((FacturaFinalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
@@ -3054,11 +3064,12 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                         Telefono,
                         Precio,
                         Cantidad,
-                        Descripcion,
-                        Expr1,
                         Subtotal,
                         IVA,
-                        Total};
+                        Total,
+                        null,
+                        Paquete,
+                        Servicio};
                 rowFacturaFinalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFacturaFinalRow);
                 return rowFacturaFinalRow;
@@ -3088,11 +3099,12 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                 this.columnTelefono = base.Columns["Telefono"];
                 this.columnPrecio = base.Columns["Precio"];
                 this.columnCantidad = base.Columns["Cantidad"];
-                this.columnDescripcion = base.Columns["Descripcion"];
-                this.columnExpr1 = base.Columns["Expr1"];
                 this.columnSubtotal = base.Columns["Subtotal"];
                 this.columnIVA = base.Columns["IVA"];
                 this.columnTotal = base.Columns["Total"];
+                this.columnIdFactura = base.Columns["IdFactura"];
+                this.columnPaquete = base.Columns["Paquete"];
+                this.columnServicio = base.Columns["Servicio"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3112,16 +3124,18 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                 base.Columns.Add(this.columnPrecio);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
-                this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescripcion);
-                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnExpr1);
                 this.columnSubtotal = new global::System.Data.DataColumn("Subtotal", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSubtotal);
                 this.columnIVA = new global::System.Data.DataColumn("IVA", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIVA);
                 this.columnTotal = new global::System.Data.DataColumn("Total", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotal);
+                this.columnIdFactura = new global::System.Data.DataColumn("IdFactura", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdFactura);
+                this.columnPaquete = new global::System.Data.DataColumn("Paquete", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaquete);
+                this.columnServicio = new global::System.Data.DataColumn("Servicio", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnServicio);
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 50;
                 this.columnPrimerApellido.AllowDBNull = false;
@@ -3134,13 +3148,18 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                 this.columnTelefono.MaxLength = 10;
                 this.columnPrecio.AllowDBNull = false;
                 this.columnCantidad.AllowDBNull = false;
-                this.columnDescripcion.AllowDBNull = false;
-                this.columnDescripcion.MaxLength = 50;
-                this.columnExpr1.AllowDBNull = false;
-                this.columnExpr1.MaxLength = 50;
                 this.columnSubtotal.AllowDBNull = false;
                 this.columnIVA.AllowDBNull = false;
                 this.columnTotal.AllowDBNull = false;
+                this.columnIdFactura.AutoIncrement = true;
+                this.columnIdFactura.AutoIncrementSeed = -1;
+                this.columnIdFactura.AutoIncrementStep = -1;
+                this.columnIdFactura.AllowDBNull = false;
+                this.columnIdFactura.ReadOnly = true;
+                this.columnPaquete.AllowDBNull = false;
+                this.columnPaquete.MaxLength = 50;
+                this.columnServicio.AllowDBNull = false;
+                this.columnServicio.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4172,28 +4191,6 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Descripcion {
-                get {
-                    return ((string)(this[this.tableFacturaFinal.DescripcionColumn]));
-                }
-                set {
-                    this[this.tableFacturaFinal.DescripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Expr1 {
-                get {
-                    return ((string)(this[this.tableFacturaFinal.Expr1Column]));
-                }
-                set {
-                    this[this.tableFacturaFinal.Expr1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public double Subtotal {
                 get {
                     return ((double)(this[this.tableFacturaFinal.SubtotalColumn]));
@@ -4222,6 +4219,39 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                 }
                 set {
                     this[this.tableFacturaFinal.TotalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int IdFactura {
+                get {
+                    return ((int)(this[this.tableFacturaFinal.IdFacturaColumn]));
+                }
+                set {
+                    this[this.tableFacturaFinal.IdFacturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Paquete {
+                get {
+                    return ((string)(this[this.tableFacturaFinal.PaqueteColumn]));
+                }
+                set {
+                    this[this.tableFacturaFinal.PaqueteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Servicio {
+                get {
+                    return ((string)(this[this.tableFacturaFinal.ServicioColumn]));
+                }
+                set {
+                    this[this.tableFacturaFinal.ServicioColumn] = value;
                 }
             }
         }
@@ -6093,11 +6123,12 @@ FROM            DetFactura INNER JOIN
             tableMapping.ColumnMappings.Add("Telefono", "Telefono");
             tableMapping.ColumnMappings.Add("Precio", "Precio");
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
-            tableMapping.ColumnMappings.Add("Descripcion", "Descripcion");
-            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
             tableMapping.ColumnMappings.Add("Subtotal", "Subtotal");
             tableMapping.ColumnMappings.Add("IVA", "IVA");
             tableMapping.ColumnMappings.Add("Total", "Total");
+            tableMapping.ColumnMappings.Add("IdFactura", "IdFactura");
+            tableMapping.ColumnMappings.Add("Paquete", "Paquete");
+            tableMapping.ColumnMappings.Add("Servicio", "Servicio");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6111,19 +6142,49 @@ FROM            DetFactura INNER JOIN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Cliente.Nombre, Cliente.PrimerApellido, Cliente.SegundoApellido, Cliente.Correo, Cliente.Telefono, DetFactura.Precio, DetFactura.Cantidad, Paquete.Descripcion, TipoServicio.Descripcion AS Expr1, EncFactura.Subtotal, 
-                         EncFactura.IVA, EncFactura.Total
-FROM            TipoServicio INNER JOIN
-                         Proveedores ON TipoServicio.IdTipoServicio = Proveedores.IdTipoServicio CROSS JOIN
-                         Cliente CROSS JOIN
-                         EncFactura INNER JOIN
-                         DetFactura ON EncFactura.IdFactura = DetFactura.IdFactura INNER JOIN
-                         Paquete ON DetFactura.IdPaquete = Paquete.IdPaquete INNER JOIN
-                         TipoPaquete ON Paquete.IdTipoPaquete = TipoPaquete.IdTipoPaquete";
+            this._commandCollection[0].CommandText = @"  select EncFactura.Subtotal, 
+       EncFactura.IVA, EncFactura.Total, EncFactura.IdFactura,
+	   Cliente.Nombre, Cliente.PrimerApellido, Cliente.SegundoApellido, Cliente.Correo, Cliente.Telefono,
+	   DetFactura.Precio, DetFactura.Cantidad,
+	   Paquete.Descripcion as ""Paquete"",
+	   TipoServicio.Descripcion as ""Servicio""
+from EncFactura 
+INNER JOIN DetFactura
+	ON DetFactura.IdFactura = EncFactura.IdFactura
+INNER JOIN Cliente
+	on Cliente.IdCliente = EncFactura.IdCliente
+inner join Paquete
+	on Paquete.IdPaquete = DetFactura.IdPaquete
+inner join Proveedores
+	on Proveedores.IdProveedor = DetFactura.IdProveedores
+	inner join TipoServicio
+		on TipoServicio.IdTipoServicio = Proveedores.IdTipoServicio";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"select EncFactura.Subtotal, 
+       EncFactura.IVA, EncFactura.Total, EncFactura.IdFactura,
+	   Cliente.Nombre, Cliente.PrimerApellido, Cliente.SegundoApellido, Cliente.Correo, Cliente.Telefono,
+	   DetFactura.Precio, DetFactura.Cantidad,
+	   Paquete.Descripcion as ""Paquete"",
+	   TipoServicio.Descripcion as ""Servicio""
+from EncFactura 
+INNER JOIN DetFactura
+	ON DetFactura.IdFactura = EncFactura.IdFactura
+	and DetFactura.IdFactura = @IdFactura
+INNER JOIN Cliente
+	on Cliente.IdCliente = EncFactura.IdCliente
+inner join Paquete
+	on Paquete.IdPaquete = DetFactura.IdPaquete
+inner join Proveedores
+	on Proveedores.IdProveedor = DetFactura.IdProveedores
+	inner join TipoServicio
+		on TipoServicio.IdTipoServicio = Proveedores.IdTipoServicio";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdFactura", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdFactura", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6145,6 +6206,32 @@ FROM            TipoServicio INNER JOIN
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetActivo.FacturaFinalDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetActivo.FacturaFinalDataTable dataTable = new DataSetActivo.FacturaFinalDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(DataSetActivo.FacturaFinalDataTable dataTable, int IdFactura) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdFactura));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetActivo.FacturaFinalDataTable GetDataBy(int IdFactura) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(IdFactura));
             DataSetActivo.FacturaFinalDataTable dataTable = new DataSetActivo.FacturaFinalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
