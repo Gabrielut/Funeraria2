@@ -32,36 +32,41 @@ namespace UTN.Winform.Funeraria.UI
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -369,14 +374,14 @@ namespace UTN.Winform.Funeraria.UI
             this.CorreoCliente,
             this.Telefono,
             this.Direccion});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvCliente.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvCliente.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgrvCliente.EnableHeadersVisualStyles = false;
             this.dgrvCliente.Location = new System.Drawing.Point(6, 170);
             this.dgrvCliente.Name = "dgrvCliente";
@@ -389,7 +394,10 @@ namespace UTN.Winform.Funeraria.UI
             // IdCliente
             // 
             this.IdCliente.DataPropertyName = "IdCliente";
-            this.IdCliente.HeaderText = "Cedula";
+            dataGridViewCellStyle3.Format = "0-0000-0000";
+            dataGridViewCellStyle3.NullValue = null;
+            this.IdCliente.DefaultCellStyle = dataGridViewCellStyle3;
+            this.IdCliente.HeaderText = "Cédula";
             this.IdCliente.Name = "IdCliente";
             this.IdCliente.ReadOnly = true;
             this.IdCliente.Width = 150;
@@ -429,7 +437,10 @@ namespace UTN.Winform.Funeraria.UI
             // Telefono
             // 
             this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
+            dataGridViewCellStyle4.Format = "0000-0000";
+            dataGridViewCellStyle4.NullValue = "N/A";
+            this.Telefono.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Width = 150;
@@ -592,20 +603,20 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgrvProveedor
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgrvProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrvProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgrvProveedor.BackgroundColor = System.Drawing.Color.White;
             this.dgrvProveedor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrvProveedor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgrvProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgrvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProveedor,
@@ -623,14 +634,14 @@ namespace UTN.Winform.Funeraria.UI
             this.Distrito,
             this.Barrio,
             this.OtrasSennas});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvProveedor.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvProveedor.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgrvProveedor.EnableHeadersVisualStyles = false;
             this.dgrvProveedor.Location = new System.Drawing.Point(6, 170);
             this.dgrvProveedor.Name = "dgrvProveedor";
@@ -678,6 +689,9 @@ namespace UTN.Winform.Funeraria.UI
             // Celular
             // 
             this.Celular.DataPropertyName = "TelCelular";
+            dataGridViewCellStyle8.Format = "0000-0000";
+            dataGridViewCellStyle8.NullValue = "N/A";
+            this.Celular.DefaultCellStyle = dataGridViewCellStyle8;
             this.Celular.HeaderText = "Celular";
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
@@ -685,6 +699,9 @@ namespace UTN.Winform.Funeraria.UI
             // TelProveedor
             // 
             this.TelProveedor.DataPropertyName = "TelProveedor";
+            dataGridViewCellStyle9.Format = "0000-0000";
+            dataGridViewCellStyle9.NullValue = "N/A";
+            this.TelProveedor.DefaultCellStyle = dataGridViewCellStyle9;
             this.TelProveedor.HeaderText = "Teléfono";
             this.TelProveedor.Name = "TelProveedor";
             this.TelProveedor.ReadOnly = true;
@@ -692,6 +709,9 @@ namespace UTN.Winform.Funeraria.UI
             // Fax
             // 
             this.Fax.DataPropertyName = "TelFax";
+            dataGridViewCellStyle10.Format = "0000-0000";
+            dataGridViewCellStyle10.NullValue = "N/A";
+            this.Fax.DefaultCellStyle = dataGridViewCellStyle10;
             this.Fax.HeaderText = "Fax";
             this.Fax.Name = "Fax";
             this.Fax.ReadOnly = true;
@@ -699,21 +719,21 @@ namespace UTN.Winform.Funeraria.UI
             // Monto
             // 
             this.Monto.DataPropertyName = "Precio";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Monto.HeaderText = "Monto";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Monto.HeaderText = "Montó";
             this.Monto.MaxInputLength = 3500000;
             this.Monto.Name = "Monto";
             this.Monto.ReadOnly = true;
-            this.Monto.ToolTipText = "Monto";
+            this.Monto.ToolTipText = "Montó";
             // 
             // CantidadUni
             // 
             this.CantidadUni.DataPropertyName = "CantUni";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.NullValue = null;
-            this.CantidadUni.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.NullValue = null;
+            this.CantidadUni.DefaultCellStyle = dataGridViewCellStyle12;
             this.CantidadUni.HeaderText = "Cantidad";
             this.CantidadUni.Name = "CantidadUni";
             this.CantidadUni.ReadOnly = true;
@@ -768,20 +788,20 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgrvPaquete
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgrvPaquete.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrvPaquete.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dgrvPaquete.BackgroundColor = System.Drawing.Color.White;
             this.dgrvPaquete.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrvPaquete.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgrvPaquete.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrvPaquete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvPaquete.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgrvPaquete.ColumnHeadersHeight = 37;
             this.dgrvPaquete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdPaquete,
@@ -790,14 +810,14 @@ namespace UTN.Winform.Funeraria.UI
             this.Descripcion,
             this.Cantidad,
             this.Precio});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvPaquete.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvPaquete.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgrvPaquete.EnableHeadersVisualStyles = false;
             this.dgrvPaquete.Location = new System.Drawing.Point(6, 170);
             this.dgrvPaquete.Name = "dgrvPaquete";
@@ -810,8 +830,8 @@ namespace UTN.Winform.Funeraria.UI
             // IdPaquete
             // 
             this.IdPaquete.DataPropertyName = "IdPaquete";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.IdPaquete.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.IdPaquete.DefaultCellStyle = dataGridViewCellStyle16;
             this.IdPaquete.HeaderText = "Código";
             this.IdPaquete.Name = "IdPaquete";
             this.IdPaquete.ReadOnly = true;
@@ -819,8 +839,8 @@ namespace UTN.Winform.Funeraria.UI
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle17;
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
@@ -829,8 +849,8 @@ namespace UTN.Winform.Funeraria.UI
             // TipoServicio
             // 
             this.TipoServicio.DataPropertyName = "TipoServicio";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.TipoServicio.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.TipoServicio.DefaultCellStyle = dataGridViewCellStyle18;
             this.TipoServicio.HeaderText = "Tipo Servicio";
             this.TipoServicio.Name = "TipoServicio";
             this.TipoServicio.ReadOnly = true;
@@ -839,8 +859,8 @@ namespace UTN.Winform.Funeraria.UI
             // Descripcion
             // 
             this.Descripcion.DataPropertyName = "Descripcion";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle19;
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
@@ -849,8 +869,8 @@ namespace UTN.Winform.Funeraria.UI
             // Cantidad
             // 
             this.Cantidad.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle20;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
@@ -859,8 +879,8 @@ namespace UTN.Winform.Funeraria.UI
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle21;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -954,20 +974,20 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgrvConvenio
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgrvConvenio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgrvConvenio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
             this.dgrvConvenio.BackgroundColor = System.Drawing.Color.White;
             this.dgrvConvenio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgrvConvenio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgrvConvenio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrvConvenio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvConvenio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgrvConvenio.ColumnHeadersHeight = 37;
             this.dgrvConvenio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -980,14 +1000,14 @@ namespace UTN.Winform.Funeraria.UI
             this.Estado,
             this.Comentarios,
             this.Descuento});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvConvenio.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvConvenio.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgrvConvenio.EnableHeadersVisualStyles = false;
             this.dgrvConvenio.Location = new System.Drawing.Point(6, 170);
             this.dgrvConvenio.Name = "dgrvConvenio";
@@ -1000,8 +1020,8 @@ namespace UTN.Winform.Funeraria.UI
             // ID
             // 
             this.ID.DataPropertyName = "IdConvenio";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle25;
             this.ID.HeaderText = "Código";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
@@ -1009,8 +1029,8 @@ namespace UTN.Winform.Funeraria.UI
             // NomEmpresa
             // 
             this.NomEmpresa.DataPropertyName = "NomEmpresa";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.NomEmpresa.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.NomEmpresa.DefaultCellStyle = dataGridViewCellStyle26;
             this.NomEmpresa.HeaderText = "Empresa";
             this.NomEmpresa.Name = "NomEmpresa";
             this.NomEmpresa.ReadOnly = true;
@@ -1018,8 +1038,8 @@ namespace UTN.Winform.Funeraria.UI
             // Servicio
             // 
             this.Servicio.DataPropertyName = "TipoServicio";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Servicio.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Servicio.DefaultCellStyle = dataGridViewCellStyle27;
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.Name = "Servicio";
             this.Servicio.ReadOnly = true;
@@ -1027,8 +1047,8 @@ namespace UTN.Winform.Funeraria.UI
             // Ubicacion
             // 
             this.Ubicacion.DataPropertyName = "Ubicacion";
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Ubicacion.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Ubicacion.DefaultCellStyle = dataGridViewCellStyle28;
             this.Ubicacion.HeaderText = "Ubicación";
             this.Ubicacion.Name = "Ubicacion";
             this.Ubicacion.ReadOnly = true;
@@ -1036,8 +1056,8 @@ namespace UTN.Winform.Funeraria.UI
             // TelCelular
             // 
             this.TelCelular.DataPropertyName = "TelCelular";
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.TelCelular.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.TelCelular.DefaultCellStyle = dataGridViewCellStyle29;
             this.TelCelular.HeaderText = "Celular";
             this.TelCelular.Name = "TelCelular";
             this.TelCelular.ReadOnly = true;
@@ -1045,8 +1065,8 @@ namespace UTN.Winform.Funeraria.UI
             // TelEmpresa
             // 
             this.TelEmpresa.DataPropertyName = "TelEmpresa";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TelEmpresa.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TelEmpresa.DefaultCellStyle = dataGridViewCellStyle30;
             this.TelEmpresa.HeaderText = "Teléfono";
             this.TelEmpresa.Name = "TelEmpresa";
             this.TelEmpresa.ReadOnly = true;
@@ -1054,8 +1074,8 @@ namespace UTN.Winform.Funeraria.UI
             // TelFax
             // 
             this.TelFax.DataPropertyName = "TelFax";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TelFax.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TelFax.DefaultCellStyle = dataGridViewCellStyle31;
             this.TelFax.HeaderText = "Fax";
             this.TelFax.Name = "TelFax";
             this.TelFax.ReadOnly = true;
@@ -1063,8 +1083,8 @@ namespace UTN.Winform.Funeraria.UI
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle32;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
@@ -1072,8 +1092,8 @@ namespace UTN.Winform.Funeraria.UI
             // Comentarios
             // 
             this.Comentarios.DataPropertyName = "Comentarios";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Comentarios.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Comentarios.DefaultCellStyle = dataGridViewCellStyle33;
             this.Comentarios.HeaderText = "Comentarios";
             this.Comentarios.Name = "Comentarios";
             this.Comentarios.ReadOnly = true;
@@ -1081,8 +1101,8 @@ namespace UTN.Winform.Funeraria.UI
             // Descuento
             // 
             this.Descuento.DataPropertyName = "Descuento";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.Descuento.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.Descuento.DefaultCellStyle = dataGridViewCellStyle34;
             this.Descuento.HeaderText = "Descuento";
             this.Descuento.Name = "Descuento";
             this.Descuento.ReadOnly = true;
@@ -1307,7 +1327,7 @@ namespace UTN.Winform.Funeraria.UI
             // Codigo
             // 
             this.Codigo.DataPropertyName = "IdActivo";
-            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
             // 
             // Activo
@@ -1331,25 +1351,25 @@ namespace UTN.Winform.Funeraria.UI
             // Costo
             // 
             this.Costo.DataPropertyName = "Costo";
-            dataGridViewCellStyle31.Format = "N0";
-            dataGridViewCellStyle31.NullValue = null;
-            this.Costo.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle36.Format = "N0";
+            dataGridViewCellStyle36.NullValue = null;
+            this.Costo.DefaultCellStyle = dataGridViewCellStyle36;
             this.Costo.HeaderText = "Costo";
             this.Costo.Name = "Costo";
             // 
             // PrecioActivo
             // 
             this.PrecioActivo.DataPropertyName = "Precio";
-            dataGridViewCellStyle32.Format = "N0";
-            dataGridViewCellStyle32.NullValue = null;
-            this.PrecioActivo.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle37.Format = "N0";
+            dataGridViewCellStyle37.NullValue = null;
+            this.PrecioActivo.DefaultCellStyle = dataGridViewCellStyle37;
             this.PrecioActivo.HeaderText = "Precio";
             this.PrecioActivo.Name = "PrecioActivo";
             // 
             // InfoAdicional
             // 
             this.InfoAdicional.DataPropertyName = "InformacionAdicional";
-            this.InfoAdicional.HeaderText = "InfoAdicional";
+            this.InfoAdicional.HeaderText = "Informacion Adicional";
             this.InfoAdicional.Name = "InfoAdicional";
             // 
             // EstadoActivo
@@ -1472,6 +1492,24 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private FontAwesome.Sharp.IconButton btnCerrar;
+        private System.Windows.Forms.ToolTip toolTBuscar;
+        private System.Windows.Forms.ToolTip toolTListadoCli;
+        private System.Windows.Forms.ToolTip toolTGenerar;
+        private System.Windows.Forms.ToolTip toolTBuscar2;
+        private System.Windows.Forms.ToolTip toolTListaServ;
+        private System.Windows.Forms.ToolTip toolTNotas;
+        private System.Windows.Forms.ToolTip toolTBuscar3;
+        private System.Windows.Forms.ToolTip toolTListaPaquet;
+        private System.Windows.Forms.ToolTip toolTBuscar4;
+        private System.Windows.Forms.ToolTip toolTListaConvenio;
+        private System.Windows.Forms.ToolTip toolTCerrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrimerApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SegundoApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoServicio;
@@ -1487,24 +1525,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasSennas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrimerApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SegundoApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.ToolTip toolTBuscar;
-        private System.Windows.Forms.ToolTip toolTListadoCli;
-        private System.Windows.Forms.ToolTip toolTGenerar;
-        private System.Windows.Forms.ToolTip toolTBuscar2;
-        private System.Windows.Forms.ToolTip toolTListaServ;
-        private System.Windows.Forms.ToolTip toolTNotas;
-        private System.Windows.Forms.ToolTip toolTBuscar3;
-        private System.Windows.Forms.ToolTip toolTListaPaquet;
-        private System.Windows.Forms.ToolTip toolTBuscar4;
-        private System.Windows.Forms.ToolTip toolTListaConvenio;
-        private System.Windows.Forms.ToolTip toolTCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionActivo;

@@ -40,6 +40,9 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.dgrvActivo = new System.Windows.Forms.DataGridView();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +52,6 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             this.InformacionAdicional = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvActivo)).BeginInit();
@@ -198,10 +198,41 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             this.dgrvActivo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvActivo_CellClick);
             this.dgrvActivo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvActivo_CellContentClick);
             // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(113, 49);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(259, 20);
+            this.txtFiltro.TabIndex = 4;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(733, 36);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(109, 43);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Location = new System.Drawing.Point(0, 57);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(964, 378);
+            this.groupBox2.TabIndex = 54;
+            this.groupBox2.TabStop = false;
+            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "IdActivo";
-            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
             // 
             // Nombre
@@ -237,7 +268,7 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             // InformacionAdicional
             // 
             this.InformacionAdicional.DataPropertyName = "InformacionAdicional";
-            this.InformacionAdicional.HeaderText = "InformacionAdicional";
+            this.InformacionAdicional.HeaderText = "Informacion Adicional";
             this.InformacionAdicional.Name = "InformacionAdicional";
             // 
             // Estado
@@ -251,37 +282,6 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             this.TipoActivo.DataPropertyName = "TipoActivo";
             this.TipoActivo.HeaderText = "TipoActivo";
             this.TipoActivo.Name = "TipoActivo";
-            // 
-            // txtFiltro
-            // 
-            this.txtFiltro.Location = new System.Drawing.Point(113, 49);
-            this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(259, 20);
-            this.txtFiltro.TabIndex = 4;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(733, 36);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(109, 43);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Location = new System.Drawing.Point(0, 57);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(964, 378);
-            this.groupBox2.TabIndex = 54;
-            this.groupBox2.TabStop = false;
             // 
             // frmActivo
             // 
