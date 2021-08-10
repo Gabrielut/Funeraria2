@@ -27,7 +27,7 @@ namespace UTN.Winform.Funeraria.UI.Filtro
             String filtro = txtFiltro.Text;
             filtro.Replace(" ", "%");
             filtro = "%" + filtro + "%";
-            dgrvDatos.AutoGenerateColumns = false;
+            dgrvDatos.AutoGenerateColumns = false;           
             dgrvDatos.DataSource = _BLLProveedores.GetProveedorByFilter(filtro);
         }
         private void dgrvDatos_CellClick(object sender, DataGridViewCellEventArgs e)

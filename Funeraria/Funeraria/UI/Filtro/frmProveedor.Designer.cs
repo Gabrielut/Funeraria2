@@ -30,10 +30,23 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgrvDatos = new System.Windows.Forms.DataGridView();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
+            this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.label23 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,15 +62,6 @@
             this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFiltro = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.label23 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -112,121 +116,31 @@
             this.Distrito,
             this.Barrio,
             this.otrasSennas});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvDatos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvDatos.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgrvDatos.EnableHeadersVisualStyles = false;
             this.dgrvDatos.Location = new System.Drawing.Point(46, 147);
             this.dgrvDatos.Name = "dgrvDatos";
             this.dgrvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgrvDatos.RowHeadersVisible = false;
             this.dgrvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrvDatos.Size = new System.Drawing.Size(818, 205);
             this.dgrvDatos.TabIndex = 1;
             this.dgrvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrvDatos_CellClick);
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.DataPropertyName = "IdProveedor";
-            this.IdProveedor.HeaderText = "IdProveedor";
-            this.IdProveedor.Name = "IdProveedor";
-            // 
-            // NomProveedor
-            // 
-            this.NomProveedor.DataPropertyName = "NomProveedor";
-            this.NomProveedor.HeaderText = "NomProveedor";
-            this.NomProveedor.Name = "NomProveedor";
-            // 
-            // Propietario
-            // 
-            this.Propietario.DataPropertyName = "Propietario";
-            this.Propietario.HeaderText = "Propietario";
-            this.Propietario.Name = "Propietario";
-            // 
-            // TelCelular
-            // 
-            this.TelCelular.DataPropertyName = "TelCelular";
-            this.TelCelular.HeaderText = "TelCelular";
-            this.TelCelular.Name = "TelCelular";
-            // 
-            // TelProveedor
-            // 
-            this.TelProveedor.DataPropertyName = "TelProveedor";
-            this.TelProveedor.HeaderText = "TelProveedor";
-            this.TelProveedor.Name = "TelProveedor";
-            // 
-            // TelFax
-            // 
-            this.TelFax.DataPropertyName = "TelFax";
-            this.TelFax.HeaderText = "TelFax";
-            this.TelFax.Name = "TelFax";
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // CantUni
-            // 
-            this.CantUni.DataPropertyName = "CantUni";
-            this.CantUni.HeaderText = "CantUni";
-            this.CantUni.Name = "CantUni";
-            // 
-            // IdTipoServicio
-            // 
-            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
-            this.IdTipoServicio.HeaderText = "Servicio";
-            this.IdTipoServicio.Name = "IdTipoServicio";
-            // 
-            // Provincia
-            // 
-            this.Provincia.DataPropertyName = "Provincia";
-            this.Provincia.HeaderText = "Provincia";
-            this.Provincia.Name = "Provincia";
-            // 
-            // Cantón
-            // 
-            this.Cantón.DataPropertyName = "Canton";
-            this.Cantón.HeaderText = "Cantón";
-            this.Cantón.Name = "Cantón";
-            // 
-            // Distrito
-            // 
-            this.Distrito.DataPropertyName = "Distrito";
-            this.Distrito.HeaderText = "Distrito";
-            this.Distrito.Name = "Distrito";
-            // 
-            // Barrio
-            // 
-            this.Barrio.DataPropertyName = "Barrio";
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            // 
-            // otrasSennas
-            // 
-            this.otrasSennas.DataPropertyName = "otrasSennas";
-            this.otrasSennas.HeaderText = "Otras Señas";
-            this.otrasSennas.Name = "otrasSennas";
             // 
             // txtFiltro
             // 
@@ -339,6 +253,108 @@
             this.groupBox2.Size = new System.Drawing.Size(980, 478);
             this.groupBox2.TabIndex = 54;
             this.groupBox2.TabStop = false;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.DataPropertyName = "IdProveedor";
+            this.IdProveedor.HeaderText = "Codigó";
+            this.IdProveedor.Name = "IdProveedor";
+            // 
+            // NomProveedor
+            // 
+            this.NomProveedor.DataPropertyName = "NomProveedor";
+            this.NomProveedor.HeaderText = "Nombre";
+            this.NomProveedor.Name = "NomProveedor";
+            // 
+            // Propietario
+            // 
+            this.Propietario.DataPropertyName = "Propietario";
+            this.Propietario.HeaderText = "Propietario";
+            this.Propietario.Name = "Propietario";
+            // 
+            // TelCelular
+            // 
+            this.TelCelular.DataPropertyName = "TelCelular";
+            dataGridViewCellStyle3.Format = "0000-0000";
+            dataGridViewCellStyle3.NullValue = "N/A";
+            this.TelCelular.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TelCelular.HeaderText = "Celular";
+            this.TelCelular.Name = "TelCelular";
+            // 
+            // TelProveedor
+            // 
+            this.TelProveedor.DataPropertyName = "TelProveedor";
+            dataGridViewCellStyle4.Format = "0000-0000";
+            dataGridViewCellStyle4.NullValue = "N/A";
+            this.TelProveedor.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TelProveedor.HeaderText = "Teléfono";
+            this.TelProveedor.Name = "TelProveedor";
+            // 
+            // TelFax
+            // 
+            this.TelFax.DataPropertyName = "TelFax";
+            dataGridViewCellStyle5.Format = "0000-0000";
+            dataGridViewCellStyle5.NullValue = "N/A";
+            this.TelFax.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TelFax.HeaderText = "Fax";
+            this.TelFax.Name = "TelFax";
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            dataGridViewCellStyle6.Format = "n";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // CantUni
+            // 
+            this.CantUni.DataPropertyName = "CantUni";
+            this.CantUni.HeaderText = "Cantidad";
+            this.CantUni.Name = "CantUni";
+            // 
+            // IdTipoServicio
+            // 
+            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
+            this.IdTipoServicio.HeaderText = "Servicio";
+            this.IdTipoServicio.Name = "IdTipoServicio";
+            // 
+            // Provincia
+            // 
+            this.Provincia.DataPropertyName = "Provincia";
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            // 
+            // Cantón
+            // 
+            this.Cantón.DataPropertyName = "Canton";
+            this.Cantón.HeaderText = "Cantón";
+            this.Cantón.Name = "Cantón";
+            // 
+            // Distrito
+            // 
+            this.Distrito.DataPropertyName = "Distrito";
+            this.Distrito.HeaderText = "Distrito";
+            this.Distrito.Name = "Distrito";
+            // 
+            // Barrio
+            // 
+            this.Barrio.DataPropertyName = "Barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            // 
+            // otrasSennas
+            // 
+            this.otrasSennas.DataPropertyName = "otrasSennas";
+            this.otrasSennas.HeaderText = "Otras Señas";
+            this.otrasSennas.Name = "otrasSennas";
             // 
             // frmProveedor
             // 
