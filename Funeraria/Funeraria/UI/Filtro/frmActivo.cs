@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace UTN.Winform.Funeraria.UI.Filtro
 {
     public partial class frmActivo : Form
     {
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
         public ActivoDTO oActivo { get; private set; } = null;
         public frmActivo()
         {

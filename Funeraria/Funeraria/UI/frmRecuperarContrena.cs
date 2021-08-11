@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,9 @@ using UTN.Winform.Funeraria.Layers.Entities;
 
 namespace UTN.Winform.Funeraria.UI
 {
-    public partial class frmRecuperarContrena : Form
-
-    {
+    public partial class frmRecuperarContrena : Form{
+        
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
         String token = "";
         
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -92,9 +93,16 @@ namespace UTN.Winform.Funeraria.UI
                 sent = true;
                 return sent;
             }
-            catch (Exception ex)
+            catch (Exception er)
             {
-                MessageBox.Show("err: " + ex.Message);
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return sent;
         }

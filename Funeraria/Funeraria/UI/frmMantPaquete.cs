@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace UTN.Winform.Funeraria.UI
 {
     public partial class frmMantPaquete : Form
     {
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
         public frmMantPaquete()
         {
             InitializeComponent();
@@ -185,10 +187,17 @@ namespace UTN.Winform.Funeraria.UI
                     CambiarEstado(MantenimientoEnum.Ninguno);
                 }
             }
-            catch (Exception)
+            catch (Exception er)
             {
 
-                throw;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }       
         private void btnEditar_Click(object sender, EventArgs e)
@@ -218,7 +227,14 @@ namespace UTN.Winform.Funeraria.UI
             }
             catch (Exception er)
             {
-
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -253,6 +269,14 @@ namespace UTN.Winform.Funeraria.UI
             }
             catch (Exception er)
             {
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
@@ -262,10 +286,17 @@ namespace UTN.Winform.Funeraria.UI
             {
                 CambiarEstado(MantenimientoEnum.Nuevo);
             }
-            catch (Exception)
+            catch (Exception er)
             {
 
-                throw;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         #endregion
