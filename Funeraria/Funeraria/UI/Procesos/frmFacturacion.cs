@@ -167,9 +167,10 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
+            
             try
             {
-
+            int numFac = 0;
             IBLLEncFactura _BLLFactura = new BLLEncFactura();
             IBLLDetFactura _BLLDetFactura = new BLLDetFactura();
             IBLLPaquete _BLLPaquete = new BLLPaquete();
@@ -190,9 +191,6 @@ namespace UTN.Winform.Funeraria.UI
             }
             factura.IdConvenio = 0;
             factura.Estado = true;
-            //txtIVA.Text.Replace(",", "").Replace(" ","");
-            //txtTotal.Text.Replace(",", "").Replace("$", "").Replace(".", "").Replace(" ", "");
-            //txtSubTotal.Text.Replace(",", "").Replace(" ", "");
             factura.Subtotal = float.Parse(txtSubTotal.Text.Replace("%",""));
             factura.IVA = float.Parse(txtIVA.Text);
             factura.Total = float.Parse(txtTotal.Text);
@@ -245,14 +243,15 @@ namespace UTN.Winform.Funeraria.UI
                     detalle.Precio = _BLLActivo.GetActivoById(item.IdActivo).Precio;
                     _BLLDetFactura.SaveDetFactura(detalle);
                 }
+
+                numFac = detalle.IdFactura;
             }
             //Aqui va mensaje de Success
             MessageBox.Show("Factura creada con éxito");
             //Limpiar Info
             Limpiar();
-                //Abrir Frame del reporte
-                //frmFactura ofrmFactura = new frmFactura();
-                //ofrmFactura.Show();
+            frmFactura ofrmFactura = new frmFactura(numFac);
+            ofrmFactura.Show();
             }
             catch (Exception er)
             {
@@ -266,7 +265,7 @@ namespace UTN.Winform.Funeraria.UI
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            
         }
 
         public void Limpiar()
