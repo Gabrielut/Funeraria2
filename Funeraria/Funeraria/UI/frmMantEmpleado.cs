@@ -289,9 +289,17 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtContrasenna.Text = oUsuarios.Contrasenna;
                     this.txtTelefono.Text = oUsuarios.Telefono;
                     cboSexo.SelectedIndex  = cboSexo.FindString(oUsuarios.Sexo.ToString());
-                    cboRol.SelectedIndex = cboSexo.FindString(oUsuarios.IdRol.ToString());
+                    cboRol.SelectedIndex = cboRol.FindString(oUsuarios.IdRol.ToString());
                     dtpFechaNac.Value = DateTime.Parse(oUsuarios.FechaNacimiento.ToString());
                     this.txtDireccion.Text = oUsuarios.Direccion.ToString();
+                    if (oUsuarios.Estado.Equals("Activo"))
+                    {
+                        rdbHabilitar.Checked = true;
+                    }
+                    else
+                    {
+                        rdbDesabilitar.Checked = true;
+                    }
                 }
                 else
                 {
