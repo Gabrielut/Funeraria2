@@ -436,5 +436,11 @@ namespace UTN.Winform.Funeraria.UI
         {
             this.Close();
         }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            esconderSubMenu();
+            abrirForumalario<frmAyuda>();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,9 @@ namespace UTN.Winform.Funeraria.UI
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            //dgvDatos.Columns[7].DefaultCellStyle.Format = "'₡'00,00,00";
+           
+
         }
         #region Mantenimientos
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -77,9 +81,19 @@ namespace UTN.Winform.Funeraria.UI
         {
             IBLLProveedores _BLLProveedores = new BLLProveedores();
             List<ProveedorDTO> lista = _BLLProveedores.GetAllProveedor();
+
+            ProveedorDTO listaProveedor = new ProveedorDTO();
             dgvDatos.AutoGenerateColumns = false;
             dgvDatos.RowTemplate.Height = 50;
             dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            //dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "c";
+            //string prec = "";
+            //foreach(ProveedorDTO x in lista)
+            //{
+               
+            //    listaProveedor.IdProveedor = x.IdProveedor;
+            //    listaProveedor.Precio = ;
+            //}
             dgvDatos.DataSource = lista;
 
         }
@@ -405,6 +419,19 @@ namespace UTN.Winform.Funeraria.UI
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvDatos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "₡00,00,00";
+        }
+
+        private void dgvDatos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           // dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "₡" + "#,##0";
+            dgvDatos.Columns["Precio"].DefaultCellStyle.BackColor = Color.Red;
+            dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "c2";
+            dgvDatos.Columns["Precio"].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("en-GB");
         }
     }
 }

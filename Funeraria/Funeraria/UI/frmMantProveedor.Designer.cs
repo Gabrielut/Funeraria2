@@ -30,10 +30,12 @@ namespace UTN.Winform.Funeraria.UI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -75,6 +77,12 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblListado = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
+            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,12 +99,6 @@ namespace UTN.Winform.Funeraria.UI
             this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OtrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.toolNombre = new System.Windows.Forms.ToolTip(this.components);
-            this.errPro = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
@@ -236,7 +238,7 @@ namespace UTN.Winform.Funeraria.UI
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(818, 279);
+            this.groupBox1.Size = new System.Drawing.Size(862, 318);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle";
@@ -244,7 +246,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboBarrio
             // 
             this.cboBarrio.FormattingEnabled = true;
-            this.cboBarrio.Location = new System.Drawing.Point(642, 164);
+            this.cboBarrio.Location = new System.Drawing.Point(673, 165);
             this.cboBarrio.Name = "cboBarrio";
             this.cboBarrio.Size = new System.Drawing.Size(139, 24);
             this.cboBarrio.TabIndex = 37;
@@ -253,7 +255,7 @@ namespace UTN.Winform.Funeraria.UI
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(528, 164);
+            this.label13.Location = new System.Drawing.Point(592, 168);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 16);
             this.label13.TabIndex = 36;
@@ -261,7 +263,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtOtrasSennas
             // 
-            this.txtOtrasSennas.Location = new System.Drawing.Point(642, 203);
+            this.txtOtrasSennas.Location = new System.Drawing.Point(673, 208);
             this.txtOtrasSennas.Multiline = true;
             this.txtOtrasSennas.Name = "txtOtrasSennas";
             this.txtOtrasSennas.Size = new System.Drawing.Size(155, 70);
@@ -270,7 +272,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboDistrito
             // 
             this.cboDistrito.FormattingEnabled = true;
-            this.cboDistrito.Location = new System.Drawing.Point(642, 125);
+            this.cboDistrito.Location = new System.Drawing.Point(673, 126);
             this.cboDistrito.Name = "cboDistrito";
             this.cboDistrito.Size = new System.Drawing.Size(139, 24);
             this.cboDistrito.TabIndex = 34;
@@ -279,7 +281,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboCanton
             // 
             this.cboCanton.FormattingEnabled = true;
-            this.cboCanton.Location = new System.Drawing.Point(642, 76);
+            this.cboCanton.Location = new System.Drawing.Point(673, 77);
             this.cboCanton.Name = "cboCanton";
             this.cboCanton.Size = new System.Drawing.Size(139, 24);
             this.cboCanton.TabIndex = 33;
@@ -288,7 +290,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboProvincia
             // 
             this.cboProvincia.FormattingEnabled = true;
-            this.cboProvincia.Location = new System.Drawing.Point(642, 27);
+            this.cboProvincia.Location = new System.Drawing.Point(673, 28);
             this.cboProvincia.Name = "cboProvincia";
             this.cboProvincia.Size = new System.Drawing.Size(139, 24);
             this.cboProvincia.TabIndex = 32;
@@ -297,7 +299,7 @@ namespace UTN.Winform.Funeraria.UI
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(525, 222);
+            this.label12.Location = new System.Drawing.Point(588, 211);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 16);
             this.label12.TabIndex = 31;
@@ -306,7 +308,7 @@ namespace UTN.Winform.Funeraria.UI
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(525, 125);
+            this.label11.Location = new System.Drawing.Point(592, 130);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(55, 16);
             this.label11.TabIndex = 30;
@@ -315,7 +317,7 @@ namespace UTN.Winform.Funeraria.UI
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(525, 73);
+            this.label10.Location = new System.Drawing.Point(592, 78);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 16);
             this.label10.TabIndex = 29;
@@ -324,7 +326,7 @@ namespace UTN.Winform.Funeraria.UI
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(525, 28);
+            this.label7.Location = new System.Drawing.Point(592, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 16);
             this.label7.TabIndex = 28;
@@ -332,7 +334,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(101, 195);
+            this.txtPrecio.Location = new System.Drawing.Point(132, 193);
             this.txtPrecio.Mask = "₡000,000,000";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(136, 24);
@@ -340,7 +342,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(331, 73);
+            this.txtTelefono.Location = new System.Drawing.Point(405, 23);
             this.txtTelefono.Mask = "0000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(139, 24);
@@ -348,7 +350,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtFax
             // 
-            this.txtFax.Location = new System.Drawing.Point(331, 105);
+            this.txtFax.Location = new System.Drawing.Point(405, 55);
             this.txtFax.Mask = "0000-0000";
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(139, 24);
@@ -356,7 +358,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(331, 148);
+            this.txtCelular.Location = new System.Drawing.Point(405, 98);
             this.txtCelular.Mask = "0000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(139, 24);
@@ -373,7 +375,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(101, 149);
+            this.txtCantidad.Location = new System.Drawing.Point(132, 150);
             this.txtCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -400,7 +402,7 @@ namespace UTN.Winform.Funeraria.UI
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(103, 23);
+            this.txtId.Location = new System.Drawing.Point(132, 25);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(134, 24);
             this.txtId.TabIndex = 17;
@@ -408,7 +410,7 @@ namespace UTN.Winform.Funeraria.UI
             // cboEstado
             // 
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(331, 195);
+            this.cboEstado.Location = new System.Drawing.Point(405, 145);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(136, 24);
             this.cboEstado.TabIndex = 15;
@@ -416,7 +418,7 @@ namespace UTN.Winform.Funeraria.UI
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(246, 200);
+            this.label5.Location = new System.Drawing.Point(321, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 16);
             this.label5.TabIndex = 14;
@@ -427,14 +429,14 @@ namespace UTN.Winform.Funeraria.UI
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(21, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 16);
+            this.label6.Size = new System.Drawing.Size(23, 16);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Id";
+            this.label6.Text = "N°";
             // 
             // cboTipoServicio
             // 
             this.cboTipoServicio.FormattingEnabled = true;
-            this.cboTipoServicio.Location = new System.Drawing.Point(138, 236);
+            this.cboTipoServicio.Location = new System.Drawing.Point(132, 231);
             this.cboTipoServicio.Name = "cboTipoServicio";
             this.cboTipoServicio.Size = new System.Drawing.Size(139, 24);
             this.cboTipoServicio.TabIndex = 13;
@@ -451,7 +453,7 @@ namespace UTN.Winform.Funeraria.UI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 108);
+            this.label1.Location = new System.Drawing.Point(321, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 9;
@@ -460,7 +462,7 @@ namespace UTN.Winform.Funeraria.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 25);
+            this.label2.Location = new System.Drawing.Point(6, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 16);
             this.label2.TabIndex = 11;
@@ -469,7 +471,7 @@ namespace UTN.Winform.Funeraria.UI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(244, 76);
+            this.label4.Location = new System.Drawing.Point(319, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 7;
@@ -477,7 +479,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(368, 20);
+            this.txtCorreo.Location = new System.Drawing.Point(132, 280);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(139, 24);
             this.txtCorreo.TabIndex = 10;
@@ -485,7 +487,7 @@ namespace UTN.Winform.Funeraria.UI
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(244, 148);
+            this.lblCelular.Location = new System.Drawing.Point(321, 102);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(51, 16);
             this.lblCelular.TabIndex = 5;
@@ -502,7 +504,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtPropietario
             // 
-            this.txtPropietario.Location = new System.Drawing.Point(103, 105);
+            this.txtPropietario.Location = new System.Drawing.Point(132, 107);
             this.txtPropietario.Name = "txtPropietario";
             this.txtPropietario.Size = new System.Drawing.Size(134, 24);
             this.txtPropietario.TabIndex = 2;
@@ -518,7 +520,7 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(103, 68);
+            this.txtNombre.Location = new System.Drawing.Point(132, 70);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(134, 24);
             this.txtNombre.TabIndex = 0;
@@ -529,7 +531,7 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado.AutoSize = true;
             this.lblListado.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListado.ForeColor = System.Drawing.Color.Goldenrod;
-            this.lblListado.Location = new System.Drawing.Point(37, 307);
+            this.lblListado.Location = new System.Drawing.Point(37, 332);
             this.lblListado.Name = "lblListado";
             this.lblListado.Size = new System.Drawing.Size(255, 19);
             this.lblListado.TabIndex = 23;
@@ -537,8 +539,8 @@ namespace UTN.Winform.Funeraria.UI
             // 
             // dgvDatos
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -546,14 +548,14 @@ namespace UTN.Winform.Funeraria.UI
             this.dgvDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.ColumnHeadersHeight = 30;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProveedor,
@@ -572,37 +574,108 @@ namespace UTN.Winform.Funeraria.UI
             this.Distrito,
             this.Barrio,
             this.OtrasSennas});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDatos.EnableHeadersVisualStyles = false;
             this.dgvDatos.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDatos.Location = new System.Drawing.Point(41, 362);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(797, 211);
+            this.dgvDatos.Size = new System.Drawing.Size(833, 211);
             this.dgvDatos.TabIndex = 24;
+            this.dgvDatos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDatos_CellFormatting);
+            this.dgvDatos.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDatos_DataBindingComplete);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(41, 355);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 1);
+            this.panel1.TabIndex = 25;
+            // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.White;
+            this.pnlContenedor.Controls.Add(this.groupBox1);
+            this.pnlContenedor.Controls.Add(this.iconButton2);
+            this.pnlContenedor.Controls.Add(this.lblListado);
+            this.pnlContenedor.Controls.Add(this.btnGuardar);
+            this.pnlContenedor.Controls.Add(this.dgvDatos);
+            this.pnlContenedor.Controls.Add(this.panel1);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1064, 629);
+            this.pnlContenedor.TabIndex = 28;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton2.Location = new System.Drawing.Point(894, 190);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(150, 46);
+            this.iconButton2.TabIndex = 27;
+            this.iconButton2.Text = "Cancelar";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
+            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(894, 111);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(150, 46);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // toolNombre
+            // 
+            this.toolNombre.IsBalloon = true;
+            // 
+            // errPro
+            // 
+            this.errPro.ContainerControl = this;
             // 
             // IdProveedor
             // 
             this.IdProveedor.DataPropertyName = "IdProveedor";
-            this.IdProveedor.HeaderText = "Id";
+            this.IdProveedor.HeaderText = "N°";
             this.IdProveedor.Name = "IdProveedor";
             this.IdProveedor.ReadOnly = true;
             // 
@@ -630,7 +703,7 @@ namespace UTN.Winform.Funeraria.UI
             // TelProveedor
             // 
             this.TelProveedor.DataPropertyName = "TelProveedor";
-            this.TelProveedor.HeaderText = "Telefono";
+            this.TelProveedor.HeaderText = "Teléfono";
             this.TelProveedor.Name = "TelProveedor";
             this.TelProveedor.ReadOnly = true;
             // 
@@ -652,6 +725,9 @@ namespace UTN.Winform.Funeraria.UI
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "\"₡\"";
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle3;
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -659,6 +735,8 @@ namespace UTN.Winform.Funeraria.UI
             // CantUni
             // 
             this.CantUni.DataPropertyName = "CantUni";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CantUni.DefaultCellStyle = dataGridViewCellStyle4;
             this.CantUni.HeaderText = "Cantidad";
             this.CantUni.Name = "CantUni";
             this.CantUni.ReadOnly = true;
@@ -687,7 +765,7 @@ namespace UTN.Winform.Funeraria.UI
             // Canton
             // 
             this.Canton.DataPropertyName = "Canton";
-            this.Canton.HeaderText = "Canton";
+            this.Canton.HeaderText = "Cantón";
             this.Canton.Name = "Canton";
             this.Canton.ReadOnly = true;
             // 
@@ -711,75 +789,6 @@ namespace UTN.Winform.Funeraria.UI
             this.OtrasSennas.HeaderText = "Otras Señas";
             this.OtrasSennas.Name = "OtrasSennas";
             this.OtrasSennas.ReadOnly = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(41, 330);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 1);
-            this.panel1.TabIndex = 25;
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.White;
-            this.pnlContenedor.Controls.Add(this.groupBox1);
-            this.pnlContenedor.Controls.Add(this.iconButton2);
-            this.pnlContenedor.Controls.Add(this.lblListado);
-            this.pnlContenedor.Controls.Add(this.btnGuardar);
-            this.pnlContenedor.Controls.Add(this.dgvDatos);
-            this.pnlContenedor.Controls.Add(this.panel1);
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 51);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1052, 681);
-            this.pnlContenedor.TabIndex = 28;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.iconButton2.IconColor = System.Drawing.Color.Goldenrod;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.Location = new System.Drawing.Point(848, 190);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(170, 46);
-            this.iconButton2.TabIndex = 27;
-            this.iconButton2.Text = "Cancelar";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(848, 111);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(170, 46);
-            this.btnGuardar.TabIndex = 26;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // toolNombre
-            // 
-            this.toolNombre.IsBalloon = true;
-            // 
-            // errPro
-            // 
-            this.errPro.ContainerControl = this;
             // 
             // frmMantProveedor
             // 
@@ -853,6 +862,7 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.TextBox txtOtrasSennas;
         private System.Windows.Forms.ComboBox cboBarrio;
         private System.Windows.Forms.Label label13;
+        private FontAwesome.Sharp.IconButton btnCerrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Propietario;
@@ -869,6 +879,5 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasSennas;
-        private FontAwesome.Sharp.IconButton btnCerrar;
     }
 }

@@ -57,6 +57,7 @@ namespace UTN.Winform.Funeraria.UI.Filtro
                 oActivoDto.Descripcion = item.Descripcion;
                 oActivoDto.TipoActivo = item.TipoActivo;
                 oActivoDto.Cantidad = item.Cantidad;
+                //oActivoDto.Costo = String.Format("{0}", item.Costo);
                 oActivoDto.Costo = String.Format("{0}", item.Costo);
                 oActivoDto.Precio = String.Format("{0}", item.Precio);
                 oActivoDto.InformacionAdicional = item.InformacionAdicional;

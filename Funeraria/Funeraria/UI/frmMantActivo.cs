@@ -41,7 +41,7 @@ namespace UTN.Winform.Funeraria.UI
         private void pnlContenido_Paint(object sender, PaintEventArgs e)
         {
             toolTNombre.SetToolTip(txtNombre, "Por favor digite el nombre del activo a insertar");
-            toolTGuardar.SetToolTip(btnEliminar, "Guardar");
+            toolTGuardar.SetToolTip(btnEliminar, "Eliminar");
             toolTEditar.SetToolTip(btnEditar, "Editar el activo");
             toolTNuevo.SetToolTip(btnNuevo, "Insertar Nuevo Activo");
             toolTDescripcion.SetToolTip(txtDescripcion, "Por favor digite una Descripción para el activo");

@@ -105,6 +105,7 @@ namespace UTN.Winform.Funeraria.UI
                 //    ProveedorDTO.Precio, ProveedorDTO.CantUni, ProveedorDTO.Provincia, ProveedorDTO.Canton, ProveedorDTO.Distrito,
                 //    ProveedorDTO.Barrio, ProveedorDTO.otrasSennas, ProveedorDTO.Estado);
                 dgrvProveedor.DataSource = list;
+                
             }
         }
 

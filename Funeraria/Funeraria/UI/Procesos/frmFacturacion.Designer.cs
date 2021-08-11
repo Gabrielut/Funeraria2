@@ -37,6 +37,11 @@ namespace UTN.Winform.Funeraria.UI
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.dgrFactura = new System.Windows.Forms.DataGridView();
+            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Convenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFacturar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar2 = new FontAwesome.Sharp.IconButton();
@@ -65,11 +70,6 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTIVA = new System.Windows.Forms.ToolTip(this.components);
             this.toolTDesc = new System.Windows.Forms.ToolTip(this.components);
             this.toolTTotal = new System.Windows.Forms.ToolTip(this.components);
-            this.Paquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Convenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrFactura)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -174,6 +174,50 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrFactura.Size = new System.Drawing.Size(545, 133);
             this.dgrFactura.TabIndex = 3;
+            // 
+            // Paquete
+            // 
+            this.Paquete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Paquete.DataPropertyName = "paquete";
+            this.Paquete.HeaderText = "Paquete";
+            this.Paquete.Name = "Paquete";
+            this.Paquete.ReadOnly = true;
+            this.Paquete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Paquete.Width = 200;
+            // 
+            // Servicio
+            // 
+            this.Servicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Servicio.DataPropertyName = "proveedores";
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            this.Servicio.ReadOnly = true;
+            this.Servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Servicio.Width = 200;
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Comentarios.DataPropertyName = "comentariosProveedores";
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
+            this.Comentarios.ReadOnly = true;
+            this.Comentarios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Comentarios.Width = 200;
+            // 
+            // Convenio
+            // 
+            this.Convenio.DataPropertyName = "convenio";
+            this.Convenio.HeaderText = "Convenio";
+            this.Convenio.Name = "Convenio";
+            this.Convenio.ReadOnly = true;
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "activo";
+            this.Activo.HeaderText = "Activo";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -421,50 +465,6 @@ namespace UTN.Winform.Funeraria.UI
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(203, 20);
             this.txtNombreCliente.TabIndex = 28;
-            // 
-            // Paquete
-            // 
-            this.Paquete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Paquete.DataPropertyName = "paquete";
-            this.Paquete.HeaderText = "Paquete";
-            this.Paquete.Name = "Paquete";
-            this.Paquete.ReadOnly = true;
-            this.Paquete.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Paquete.Width = 200;
-            // 
-            // Servicio
-            // 
-            this.Servicio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Servicio.DataPropertyName = "proveedores";
-            this.Servicio.HeaderText = "Servicio";
-            this.Servicio.Name = "Servicio";
-            this.Servicio.ReadOnly = true;
-            this.Servicio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Servicio.Width = 200;
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Comentarios.DataPropertyName = "comentariosProveedores";
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
-            this.Comentarios.ReadOnly = true;
-            this.Comentarios.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Comentarios.Width = 200;
-            // 
-            // Convenio
-            // 
-            this.Convenio.DataPropertyName = "convenio";
-            this.Convenio.HeaderText = "Convenio";
-            this.Convenio.Name = "Convenio";
-            this.Convenio.ReadOnly = true;
-            // 
-            // Activo
-            // 
-            this.Activo.DataPropertyName = "activo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
             // 
             // frmFacturacion
             // 
