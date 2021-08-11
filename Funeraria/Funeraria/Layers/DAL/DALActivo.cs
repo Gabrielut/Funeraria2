@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,6 +15,8 @@ namespace UTN.Winform.Funeraria.Layers.DAL
 {
     class DALActivo : IDALActivo
     {
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
+
         Usuarios _Usuario = new Usuarios();
         public DALActivo()
         {
@@ -85,7 +88,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
-                throw er;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                msg.AppendFormat("SQL            {0}\n", command.CommandText);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                throw;
             }
             return lista;
         }
@@ -133,6 +144,14 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                msg.AppendFormat("SQL            {0}\n", command.CommandText);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 throw;
             }
         }
@@ -175,7 +194,15 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
-                throw er;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                msg.AppendFormat("SQL            {0}\n", command.CommandText);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                throw;
             }
             return lista;
         }
@@ -316,6 +343,14 @@ namespace UTN.Winform.Funeraria.Layers.DAL
             }
             catch (Exception er)
             {
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                msg.AppendFormat("SQL            {0}\n", command.CommandText);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 throw;
             }
         }

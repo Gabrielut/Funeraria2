@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace UTN.Winform.Funeraria.UI
 {
     public partial class frmFacturacion : Form
     {
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
         List<Cotizacion> list = new List<Cotizacion>();
         public frmFacturacion()
         {
@@ -55,6 +57,8 @@ namespace UTN.Winform.Funeraria.UI
         private List<CotizacionDTO> buscar(List<Cotizacion> pListCotizacion)
         {
             List<CotizacionDTO> list = new List<CotizacionDTO>();
+            try
+            {            
             IBLLPaquete _BLLPaquete = new BLLPaquete();
             IBLLProveedores _BLLProveedores = new BLLProveedores();
             IBLLCliente _BLLCliente = new BLLCLiente();
@@ -89,6 +93,19 @@ namespace UTN.Winform.Funeraria.UI
                     //txtDescuento.Text = _BLLConvenio.GetConvenioById(item.IdConvenio).Descuento.ToString();
                 }
                 list.Add(oCotizacionDTO);
+            }
+            }
+            catch (Exception er)
+            {
+
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return list;
         }
@@ -150,6 +167,9 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
             int numFac = 0;
             IBLLEncFactura _BLLFactura = new BLLEncFactura();
             IBLLDetFactura _BLLDetFactura = new BLLDetFactura();
@@ -171,9 +191,6 @@ namespace UTN.Winform.Funeraria.UI
             }
             factura.IdConvenio = 0;
             factura.Estado = true;
-            //txtIVA.Text.Replace(",", "").Replace(" ","");
-            //txtTotal.Text.Replace(",", "").Replace("$", "").Replace(".", "").Replace(" ", "");
-            //txtSubTotal.Text.Replace(",", "").Replace(" ", "");
             factura.Subtotal = float.Parse(txtSubTotal.Text.Replace("%",""));
             factura.IVA = float.Parse(txtIVA.Text);
             factura.Total = float.Parse(txtTotal.Text);
@@ -233,14 +250,22 @@ namespace UTN.Winform.Funeraria.UI
             MessageBox.Show("Factura creada con éxito");
             //Limpiar Info
             Limpiar();
-            //Abrir Frame del reporte
-
-            
-
-
             frmFactura ofrmFactura = new frmFactura(numFac);
             ofrmFactura.Show();
+            }
+            catch (Exception er)
+            {
 
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         public void Limpiar()

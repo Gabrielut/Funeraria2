@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace UTN.Winform.Funeraria.UI
 {
     public partial class frmMantEmpleado : Form
     {
+        private static readonly ILog _MyLogControlEventos = log4net.LogManager.GetLogger("MyControlEventos");
         public frmMantEmpleado()
         {
             InitializeComponent();
@@ -264,10 +266,17 @@ namespace UTN.Winform.Funeraria.UI
                     CambiarEstado(MantenimientoEnum.Ninguno);
                 }
             }
-            catch (Exception)
+            catch (Exception er)
             {
 
-                throw;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnEditar_Click(object sender, EventArgs e)
@@ -289,9 +298,17 @@ namespace UTN.Winform.Funeraria.UI
                     this.txtContrasenna.Text = oUsuarios.Contrasenna;
                     this.txtTelefono.Text = oUsuarios.Telefono;
                     cboSexo.SelectedIndex  = cboSexo.FindString(oUsuarios.Sexo.ToString());
-                    cboRol.SelectedIndex = cboSexo.FindString(oUsuarios.IdRol.ToString());
+                    cboRol.SelectedIndex = cboRol.FindString(oUsuarios.IdRol.ToString());
                     dtpFechaNac.Value = DateTime.Parse(oUsuarios.FechaNacimiento.ToString());
                     this.txtDireccion.Text = oUsuarios.Direccion.ToString();
+                    if (oUsuarios.Estado.Equals("Activo"))
+                    {
+                        rdbHabilitar.Checked = true;
+                    }
+                    else
+                    {
+                        rdbDesabilitar.Checked = true;
+                    }
                 }
                 else
                 {
@@ -301,7 +318,14 @@ namespace UTN.Winform.Funeraria.UI
             }
             catch (Exception er)
             {
-
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -331,7 +355,14 @@ namespace UTN.Winform.Funeraria.UI
             }
             catch (Exception er)
             {
-
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }       
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -340,10 +371,16 @@ namespace UTN.Winform.Funeraria.UI
             {
                 CambiarEstado(MantenimientoEnum.Nuevo);
             }
-            catch (Exception)
+            catch (Exception er)
             {
-
-                throw;
+                StringBuilder msg = new StringBuilder();
+                msg.AppendFormat("Message        {0}\n", er.Message);
+                msg.AppendFormat("Source         {0}\n", er.Source);
+                msg.AppendFormat("InnerException {0}\n", er.InnerException);
+                msg.AppendFormat("StackTrace     {0}\n", er.StackTrace);
+                msg.AppendFormat("TargetSite     {0}\n", er.TargetSite);
+                _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
+                MessageBox.Show(msg.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnSalir_Click(object sender, EventArgs e)
