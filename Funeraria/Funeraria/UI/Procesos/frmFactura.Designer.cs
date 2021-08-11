@@ -31,19 +31,21 @@ namespace UTN.Winform.Funeraria.UI.Procesos
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.btnCerrar = new FontAwesome.Sharp.IconButton();
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.toolTNumFactura = new System.Windows.Forms.ToolTip(this.components);
             this.toolTBuscar = new System.Windows.Forms.ToolTip(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.facturaFinalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetActivo = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivo();
             this.facturaFinalTableAdapter = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivoTableAdapters.FacturaFinalTableAdapter();
+            this.PaqueteFacturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaFinalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetActivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaqueteFacturaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -52,7 +54,6 @@ namespace UTN.Winform.Funeraria.UI.Procesos
             this.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMenu.Controls.Add(this.label23);
             this.pnlMenu.Controls.Add(this.btnCerrar);
-            this.pnlMenu.Controls.Add(this.btnNuevo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
@@ -70,6 +71,22 @@ namespace UTN.Winform.Funeraria.UI.Procesos
             this.label23.Size = new System.Drawing.Size(169, 23);
             this.label23.TabIndex = 75;
             this.label23.Text = "Detalle de Factura";
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.facturaFinalBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.PaqueteFacturaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "UTN.Winform.Funeraria.UI.Procesos.rptReporteFacturaFinal.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 57);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1089, 651);
+            this.reportViewer1.TabIndex = 3;
+            this.reportViewer1.ZoomPercent = 80;
             // 
             // btnCerrar
             // 
@@ -91,35 +108,6 @@ namespace UTN.Winform.Funeraria.UI.Procesos
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.ListAlt;
-            this.btnNuevo.IconColor = System.Drawing.Color.Goldenrod;
-            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.IconSize = 36;
-            this.btnNuevo.Location = new System.Drawing.Point(11, 1);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(62, 45);
-            this.btnNuevo.TabIndex = 5;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.facturaFinalBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "UTN.Winform.Funeraria.UI.Procesos.rptReporteFacturaFinal.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(27, 87);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1057, 517);
-            this.reportViewer1.TabIndex = 3;
-            this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
-            // 
             // facturaFinalBindingSource
             // 
             this.facturaFinalBindingSource.DataMember = "FacturaFinal";
@@ -134,11 +122,16 @@ namespace UTN.Winform.Funeraria.UI.Procesos
             // 
             this.facturaFinalTableAdapter.ClearBeforeFill = true;
             // 
+            // PaqueteFacturaBindingSource
+            // 
+            this.PaqueteFacturaBindingSource.DataMember = "PaqueteFactura";
+            this.PaqueteFacturaBindingSource.DataSource = this.dataSetActivo;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 619);
+            this.ClientSize = new System.Drawing.Size(1101, 713);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -150,6 +143,7 @@ namespace UTN.Winform.Funeraria.UI.Procesos
             this.pnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.facturaFinalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetActivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaqueteFacturaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,7 +152,6 @@ namespace UTN.Winform.Funeraria.UI.Procesos
 
         private System.Windows.Forms.Panel pnlMenu;
         private FontAwesome.Sharp.IconButton btnCerrar;
-        private FontAwesome.Sharp.IconButton btnNuevo;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ToolTip toolTNumFactura;
         private System.Windows.Forms.ToolTip toolTBuscar;
@@ -166,5 +159,6 @@ namespace UTN.Winform.Funeraria.UI.Procesos
         private Reportes.DataSetActivo dataSetActivo;
         private System.Windows.Forms.BindingSource facturaFinalBindingSource;
         private Reportes.DataSetActivoTableAdapters.FacturaFinalTableAdapter facturaFinalTableAdapter;
+        private System.Windows.Forms.BindingSource PaqueteFacturaBindingSource;
     }
 }

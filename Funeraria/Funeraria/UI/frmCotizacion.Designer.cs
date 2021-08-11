@@ -38,11 +38,6 @@ namespace UTN.Winform.Funeraria.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,6 +50,9 @@ namespace UTN.Winform.Funeraria.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -65,8 +63,11 @@ namespace UTN.Winform.Funeraria.UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
@@ -99,21 +100,6 @@ namespace UTN.Winform.Funeraria.UI
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.btnBuscarProoveedor = new System.Windows.Forms.Button();
             this.dgrvProveedor = new System.Windows.Forms.DataGridView();
-            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdTipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OtrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgrvPaquete = new System.Windows.Forms.DataGridView();
             this.IdPaquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,22 +116,21 @@ namespace UTN.Winform.Funeraria.UI
             this.lblListado = new System.Windows.Forms.Label();
             this.pnlLinea = new System.Windows.Forms.Panel();
             this.dgrvConvenio = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBuscarConvenio = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dgrvActivo = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripcionActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InfoAdicional = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarActivo = new System.Windows.Forms.Button();
@@ -164,15 +149,31 @@ namespace UTN.Winform.Funeraria.UI
             this.toolTBuscar4 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTListaConvenio = new System.Windows.Forms.ToolTip(this.components);
             this.toolTCerrar = new System.Windows.Forms.ToolTip(this.components);
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripcionActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InfoAdicional = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ubicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdTipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Propietario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TelProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OtrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.pnlContenido.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -651,129 +652,6 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrvProveedor.Size = new System.Drawing.Size(972, 231);
             this.dgrvProveedor.TabIndex = 55;
             // 
-            // IdProveedor
-            // 
-            this.IdProveedor.DataPropertyName = "IdProveedor";
-            this.IdProveedor.HeaderText = "Código";
-            this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
-            // 
-            // NomProveedor
-            // 
-            this.NomProveedor.DataPropertyName = "NomProveedor";
-            this.NomProveedor.HeaderText = "Nombre";
-            this.NomProveedor.Name = "NomProveedor";
-            this.NomProveedor.ReadOnly = true;
-            // 
-            // IdTipoServicio
-            // 
-            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
-            this.IdTipoServicio.HeaderText = "Servicio";
-            this.IdTipoServicio.Name = "IdTipoServicio";
-            this.IdTipoServicio.ReadOnly = true;
-            // 
-            // Propietario
-            // 
-            this.Propietario.DataPropertyName = "Propietario";
-            this.Propietario.HeaderText = "Propietario";
-            this.Propietario.Name = "Propietario";
-            this.Propietario.ReadOnly = true;
-            // 
-            // Correo
-            // 
-            this.Correo.DataPropertyName = "Correo";
-            this.Correo.HeaderText = "Correo";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            // 
-            // Celular
-            // 
-            this.Celular.DataPropertyName = "TelCelular";
-            dataGridViewCellStyle8.Format = "0000-0000";
-            dataGridViewCellStyle8.NullValue = "N/A";
-            this.Celular.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Celular.HeaderText = "Celular";
-            this.Celular.Name = "Celular";
-            this.Celular.ReadOnly = true;
-            // 
-            // TelProveedor
-            // 
-            this.TelProveedor.DataPropertyName = "TelProveedor";
-            dataGridViewCellStyle9.Format = "0000-0000";
-            dataGridViewCellStyle9.NullValue = "N/A";
-            this.TelProveedor.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TelProveedor.HeaderText = "Teléfono";
-            this.TelProveedor.Name = "TelProveedor";
-            this.TelProveedor.ReadOnly = true;
-            // 
-            // Fax
-            // 
-            this.Fax.DataPropertyName = "TelFax";
-            dataGridViewCellStyle10.Format = "0000-0000";
-            dataGridViewCellStyle10.NullValue = "N/A";
-            this.Fax.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Fax.HeaderText = "Fax";
-            this.Fax.Name = "Fax";
-            this.Fax.ReadOnly = true;
-            // 
-            // Monto
-            // 
-            this.Monto.DataPropertyName = "Precio";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Monto.DefaultCellStyle = dataGridViewCellStyle11;
-            this.Monto.HeaderText = "Montó";
-            this.Monto.MaxInputLength = 3500000;
-            this.Monto.Name = "Monto";
-            this.Monto.ReadOnly = true;
-            this.Monto.ToolTipText = "Montó";
-            // 
-            // CantidadUni
-            // 
-            this.CantidadUni.DataPropertyName = "CantUni";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle12.NullValue = null;
-            this.CantidadUni.DefaultCellStyle = dataGridViewCellStyle12;
-            this.CantidadUni.HeaderText = "Cantidad";
-            this.CantidadUni.Name = "CantidadUni";
-            this.CantidadUni.ReadOnly = true;
-            this.CantidadUni.ToolTipText = "Cantidad";
-            // 
-            // Provincia
-            // 
-            this.Provincia.DataPropertyName = "Provincia";
-            this.Provincia.HeaderText = "Provincia";
-            this.Provincia.Name = "Provincia";
-            this.Provincia.ReadOnly = true;
-            // 
-            // Canton
-            // 
-            this.Canton.DataPropertyName = "Canton";
-            this.Canton.HeaderText = "Cantón";
-            this.Canton.Name = "Canton";
-            this.Canton.ReadOnly = true;
-            // 
-            // Distrito
-            // 
-            this.Distrito.DataPropertyName = "Distrito";
-            this.Distrito.HeaderText = "Distrito";
-            this.Distrito.Name = "Distrito";
-            this.Distrito.ReadOnly = true;
-            // 
-            // Barrio
-            // 
-            this.Barrio.DataPropertyName = "Barrio";
-            this.Barrio.HeaderText = "Barrio";
-            this.Barrio.Name = "Barrio";
-            this.Barrio.ReadOnly = true;
-            // 
-            // OtrasSennas
-            // 
-            this.OtrasSennas.DataPropertyName = "OtrasSennas";
-            this.OtrasSennas.HeaderText = "Otras Señas";
-            this.OtrasSennas.Name = "OtrasSennas";
-            this.OtrasSennas.ReadOnly = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
@@ -1017,96 +895,6 @@ namespace UTN.Winform.Funeraria.UI
             this.dgrvConvenio.Size = new System.Drawing.Size(972, 355);
             this.dgrvConvenio.TabIndex = 50;
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "IdConvenio";
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle25;
-            this.ID.HeaderText = "Código";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            // 
-            // NomEmpresa
-            // 
-            this.NomEmpresa.DataPropertyName = "NomEmpresa";
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.NomEmpresa.DefaultCellStyle = dataGridViewCellStyle26;
-            this.NomEmpresa.HeaderText = "Empresa";
-            this.NomEmpresa.Name = "NomEmpresa";
-            this.NomEmpresa.ReadOnly = true;
-            // 
-            // Servicio
-            // 
-            this.Servicio.DataPropertyName = "TipoServicio";
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Servicio.DefaultCellStyle = dataGridViewCellStyle27;
-            this.Servicio.HeaderText = "Servicio";
-            this.Servicio.Name = "Servicio";
-            this.Servicio.ReadOnly = true;
-            // 
-            // Ubicacion
-            // 
-            this.Ubicacion.DataPropertyName = "Ubicacion";
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Ubicacion.DefaultCellStyle = dataGridViewCellStyle28;
-            this.Ubicacion.HeaderText = "Ubicación";
-            this.Ubicacion.Name = "Ubicacion";
-            this.Ubicacion.ReadOnly = true;
-            // 
-            // TelCelular
-            // 
-            this.TelCelular.DataPropertyName = "TelCelular";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.TelCelular.DefaultCellStyle = dataGridViewCellStyle29;
-            this.TelCelular.HeaderText = "Celular";
-            this.TelCelular.Name = "TelCelular";
-            this.TelCelular.ReadOnly = true;
-            // 
-            // TelEmpresa
-            // 
-            this.TelEmpresa.DataPropertyName = "TelEmpresa";
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TelEmpresa.DefaultCellStyle = dataGridViewCellStyle30;
-            this.TelEmpresa.HeaderText = "Teléfono";
-            this.TelEmpresa.Name = "TelEmpresa";
-            this.TelEmpresa.ReadOnly = true;
-            // 
-            // TelFax
-            // 
-            this.TelFax.DataPropertyName = "TelFax";
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.TelFax.DefaultCellStyle = dataGridViewCellStyle31;
-            this.TelFax.HeaderText = "Fax";
-            this.TelFax.Name = "TelFax";
-            this.TelFax.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle32;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.DataPropertyName = "Comentarios";
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.Comentarios.DefaultCellStyle = dataGridViewCellStyle33;
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
-            this.Comentarios.ReadOnly = true;
-            // 
-            // Descuento
-            // 
-            this.Descuento.DataPropertyName = "Descuento";
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.Descuento.DefaultCellStyle = dataGridViewCellStyle34;
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnBuscarConvenio);
@@ -1173,6 +961,16 @@ namespace UTN.Winform.Funeraria.UI
             // dgrvActivo
             // 
             this.dgrvActivo.BackgroundColor = System.Drawing.Color.White;
+            this.dgrvActivo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgrvActivo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvActivo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.dgrvActivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrvActivo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -1184,10 +982,73 @@ namespace UTN.Winform.Funeraria.UI
             this.InfoAdicional,
             this.EstadoActivo,
             this.TipoActivo});
+            this.dgrvActivo.EnableHeadersVisualStyles = false;
             this.dgrvActivo.Location = new System.Drawing.Point(6, 170);
             this.dgrvActivo.Name = "dgrvActivo";
             this.dgrvActivo.Size = new System.Drawing.Size(954, 346);
             this.dgrvActivo.TabIndex = 61;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "IdActivo";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.Name = "Codigo";
+            // 
+            // Activo
+            // 
+            this.Activo.DataPropertyName = "Nombre";
+            this.Activo.HeaderText = "Nombre";
+            this.Activo.Name = "Activo";
+            // 
+            // DescripcionActivo
+            // 
+            this.DescripcionActivo.DataPropertyName = "Descripcion";
+            this.DescripcionActivo.HeaderText = "Descripcion";
+            this.DescripcionActivo.Name = "DescripcionActivo";
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "Cantidad";
+            this.Stock.HeaderText = "Cantidad";
+            this.Stock.Name = "Stock";
+            // 
+            // Costo
+            // 
+            this.Costo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Costo.DataPropertyName = "Costo";
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle37.Format = "\"0,0\"";
+            dataGridViewCellStyle37.NullValue = null;
+            this.Costo.DefaultCellStyle = dataGridViewCellStyle37;
+            this.Costo.HeaderText = "Costo";
+            this.Costo.Name = "Costo";
+            // 
+            // PrecioActivo
+            // 
+            this.PrecioActivo.DataPropertyName = "Precio";
+            dataGridViewCellStyle38.Format = "N0";
+            dataGridViewCellStyle38.NullValue = null;
+            this.PrecioActivo.DefaultCellStyle = dataGridViewCellStyle38;
+            this.PrecioActivo.HeaderText = "Precio";
+            this.PrecioActivo.Name = "PrecioActivo";
+            // 
+            // InfoAdicional
+            // 
+            this.InfoAdicional.DataPropertyName = "InformacionAdicional";
+            this.InfoAdicional.HeaderText = "Informacion Adicional";
+            this.InfoAdicional.Name = "InfoAdicional";
+            // 
+            // EstadoActivo
+            // 
+            this.EstadoActivo.DataPropertyName = "Estado";
+            this.EstadoActivo.HeaderText = "Estado";
+            this.EstadoActivo.Name = "EstadoActivo";
+            // 
+            // TipoActivo
+            // 
+            this.TipoActivo.DataPropertyName = "TipoActivo";
+            this.TipoActivo.HeaderText = "TipoActivo";
+            this.TipoActivo.Name = "TipoActivo";
             // 
             // groupBox5
             // 
@@ -1324,65 +1185,221 @@ namespace UTN.Winform.Funeraria.UI
             // 
             this.toolTCerrar.IsBalloon = true;
             // 
-            // Codigo
+            // ID
             // 
-            this.Codigo.DataPropertyName = "IdActivo";
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
+            this.ID.DataPropertyName = "IdConvenio";
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle25;
+            this.ID.HeaderText = "Código";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
-            // Activo
+            // NomEmpresa
             // 
-            this.Activo.DataPropertyName = "Nombre";
-            this.Activo.HeaderText = "Nombre";
-            this.Activo.Name = "Activo";
+            this.NomEmpresa.DataPropertyName = "NomEmpresa";
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.NomEmpresa.DefaultCellStyle = dataGridViewCellStyle26;
+            this.NomEmpresa.HeaderText = "Empresa";
+            this.NomEmpresa.Name = "NomEmpresa";
+            this.NomEmpresa.ReadOnly = true;
             // 
-            // DescripcionActivo
+            // Servicio
             // 
-            this.DescripcionActivo.DataPropertyName = "Descripcion";
-            this.DescripcionActivo.HeaderText = "Descripcion";
-            this.DescripcionActivo.Name = "DescripcionActivo";
+            this.Servicio.DataPropertyName = "TipoServicio";
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Servicio.DefaultCellStyle = dataGridViewCellStyle27;
+            this.Servicio.HeaderText = "Servicio";
+            this.Servicio.Name = "Servicio";
+            this.Servicio.ReadOnly = true;
             // 
-            // Stock
+            // Ubicacion
             // 
-            this.Stock.DataPropertyName = "Cantidad";
-            this.Stock.HeaderText = "Cantidad";
-            this.Stock.Name = "Stock";
+            this.Ubicacion.DataPropertyName = "Ubicacion";
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Ubicacion.DefaultCellStyle = dataGridViewCellStyle28;
+            this.Ubicacion.HeaderText = "Ubicación";
+            this.Ubicacion.Name = "Ubicacion";
+            this.Ubicacion.ReadOnly = true;
             // 
-            // Costo
+            // TelCelular
             // 
-            this.Costo.DataPropertyName = "Costo";
-            dataGridViewCellStyle36.Format = "N0";
-            dataGridViewCellStyle36.NullValue = null;
-            this.Costo.DefaultCellStyle = dataGridViewCellStyle36;
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
+            this.TelCelular.DataPropertyName = "TelCelular";
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.TelCelular.DefaultCellStyle = dataGridViewCellStyle29;
+            this.TelCelular.HeaderText = "Celular";
+            this.TelCelular.Name = "TelCelular";
+            this.TelCelular.ReadOnly = true;
             // 
-            // PrecioActivo
+            // TelEmpresa
             // 
-            this.PrecioActivo.DataPropertyName = "Precio";
-            dataGridViewCellStyle37.Format = "N0";
-            dataGridViewCellStyle37.NullValue = null;
-            this.PrecioActivo.DefaultCellStyle = dataGridViewCellStyle37;
-            this.PrecioActivo.HeaderText = "Precio";
-            this.PrecioActivo.Name = "PrecioActivo";
+            this.TelEmpresa.DataPropertyName = "TelEmpresa";
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TelEmpresa.DefaultCellStyle = dataGridViewCellStyle30;
+            this.TelEmpresa.HeaderText = "Teléfono";
+            this.TelEmpresa.Name = "TelEmpresa";
+            this.TelEmpresa.ReadOnly = true;
             // 
-            // InfoAdicional
+            // TelFax
             // 
-            this.InfoAdicional.DataPropertyName = "InformacionAdicional";
-            this.InfoAdicional.HeaderText = "Informacion Adicional";
-            this.InfoAdicional.Name = "InfoAdicional";
+            this.TelFax.DataPropertyName = "TelFax";
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.TelFax.DefaultCellStyle = dataGridViewCellStyle31;
+            this.TelFax.HeaderText = "Fax";
+            this.TelFax.Name = "TelFax";
+            this.TelFax.ReadOnly = true;
             // 
-            // EstadoActivo
+            // Estado
             // 
-            this.EstadoActivo.DataPropertyName = "Estado";
-            this.EstadoActivo.HeaderText = "Estado";
-            this.EstadoActivo.Name = "EstadoActivo";
+            this.Estado.DataPropertyName = "Estado";
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle32;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
             // 
-            // TipoActivo
+            // Comentarios
             // 
-            this.TipoActivo.DataPropertyName = "TipoActivo";
-            this.TipoActivo.HeaderText = "TipoActivo";
-            this.TipoActivo.Name = "TipoActivo";
+            this.Comentarios.DataPropertyName = "Comentarios";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.Comentarios.DefaultCellStyle = dataGridViewCellStyle33;
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
+            this.Comentarios.ReadOnly = true;
+            // 
+            // Descuento
+            // 
+            this.Descuento.DataPropertyName = "Descuento";
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle34.Format = "00\"%\"";
+            this.Descuento.DefaultCellStyle = dataGridViewCellStyle34;
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.DataPropertyName = "IdProveedor";
+            this.IdProveedor.HeaderText = "Código";
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            // 
+            // NomProveedor
+            // 
+            this.NomProveedor.DataPropertyName = "NomProveedor";
+            this.NomProveedor.HeaderText = "Nombre";
+            this.NomProveedor.Name = "NomProveedor";
+            this.NomProveedor.ReadOnly = true;
+            // 
+            // IdTipoServicio
+            // 
+            this.IdTipoServicio.DataPropertyName = "IdTipoServicio";
+            this.IdTipoServicio.HeaderText = "Servicio";
+            this.IdTipoServicio.Name = "IdTipoServicio";
+            this.IdTipoServicio.ReadOnly = true;
+            // 
+            // Propietario
+            // 
+            this.Propietario.DataPropertyName = "Propietario";
+            this.Propietario.HeaderText = "Propietario";
+            this.Propietario.Name = "Propietario";
+            this.Propietario.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.DataPropertyName = "Correo";
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            // 
+            // Celular
+            // 
+            this.Celular.DataPropertyName = "TelCelular";
+            dataGridViewCellStyle8.Format = "0000-0000";
+            dataGridViewCellStyle8.NullValue = "N/A";
+            this.Celular.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Celular.HeaderText = "Celular";
+            this.Celular.Name = "Celular";
+            this.Celular.ReadOnly = true;
+            // 
+            // TelProveedor
+            // 
+            this.TelProveedor.DataPropertyName = "TelProveedor";
+            dataGridViewCellStyle9.Format = "0000-0000";
+            dataGridViewCellStyle9.NullValue = "N/A";
+            this.TelProveedor.DefaultCellStyle = dataGridViewCellStyle9;
+            this.TelProveedor.HeaderText = "Teléfono";
+            this.TelProveedor.Name = "TelProveedor";
+            this.TelProveedor.ReadOnly = true;
+            // 
+            // Fax
+            // 
+            this.Fax.DataPropertyName = "TelFax";
+            dataGridViewCellStyle10.Format = "0000-0000";
+            dataGridViewCellStyle10.NullValue = "N/A";
+            this.Fax.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Fax.HeaderText = "Fax";
+            this.Fax.Name = "Fax";
+            this.Fax.ReadOnly = true;
+            // 
+            // Monto
+            // 
+            this.Monto.DataPropertyName = "Precio";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.Format = "₡ #,##0";
+            dataGridViewCellStyle11.NullValue = null;
+            this.Monto.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Monto.HeaderText = "Monto";
+            this.Monto.MaxInputLength = 3500000;
+            this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
+            this.Monto.ToolTipText = "Monto";
+            // 
+            // CantidadUni
+            // 
+            this.CantidadUni.DataPropertyName = "CantUni";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.NullValue = null;
+            this.CantidadUni.DefaultCellStyle = dataGridViewCellStyle12;
+            this.CantidadUni.HeaderText = "Cantidad";
+            this.CantidadUni.Name = "CantidadUni";
+            this.CantidadUni.ReadOnly = true;
+            this.CantidadUni.ToolTipText = "Cantidad";
+            // 
+            // Provincia
+            // 
+            this.Provincia.DataPropertyName = "Provincia";
+            this.Provincia.HeaderText = "Provincia";
+            this.Provincia.Name = "Provincia";
+            this.Provincia.ReadOnly = true;
+            // 
+            // Canton
+            // 
+            this.Canton.DataPropertyName = "Canton";
+            this.Canton.HeaderText = "Cantón";
+            this.Canton.Name = "Canton";
+            this.Canton.ReadOnly = true;
+            // 
+            // Distrito
+            // 
+            this.Distrito.DataPropertyName = "Distrito";
+            this.Distrito.HeaderText = "Distrito";
+            this.Distrito.Name = "Distrito";
+            this.Distrito.ReadOnly = true;
+            // 
+            // Barrio
+            // 
+            this.Barrio.DataPropertyName = "Barrio";
+            this.Barrio.HeaderText = "Barrio";
+            this.Barrio.Name = "Barrio";
+            this.Barrio.ReadOnly = true;
+            // 
+            // OtrasSennas
+            // 
+            this.OtrasSennas.DataPropertyName = "OtrasSennas";
+            this.OtrasSennas.HeaderText = "Otras Señas";
+            this.OtrasSennas.Name = "OtrasSennas";
+            this.OtrasSennas.ReadOnly = true;
             // 
             // frmCotizacion
             // 
@@ -1481,16 +1498,6 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NomEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ubicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelCelular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private FontAwesome.Sharp.IconButton btnCerrar;
         private System.Windows.Forms.ToolTip toolTBuscar;
         private System.Windows.Forms.ToolTip toolTListadoCli;
@@ -1510,6 +1517,25 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn CorreoCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InfoAdicional;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomEmpresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Servicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ubicacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelCelular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelEmpresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoServicio;
@@ -1525,14 +1551,5 @@ namespace UTN.Winform.Funeraria.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn OtrasSennas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescripcionActivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioActivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InfoAdicional;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoActivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoActivo;
     }
 }

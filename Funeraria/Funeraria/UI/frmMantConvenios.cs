@@ -19,6 +19,7 @@ namespace UTN.Winform.Funeraria.UI
         public frmMantConvenios()
         {
             InitializeComponent();
+          
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -276,6 +277,11 @@ namespace UTN.Winform.Funeraria.UI
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboServicio_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

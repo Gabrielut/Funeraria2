@@ -77,7 +77,7 @@
             this.btnRecuperarContrasena.Name = "btnRecuperarContrasena";
             this.btnRecuperarContrasena.Size = new System.Drawing.Size(153, 23);
             this.btnRecuperarContrasena.TabIndex = 12;
-            this.btnRecuperarContrasena.Text = "Olvido su contraseña?";
+            this.btnRecuperarContrasena.Text = "Recuperar contraseña";
             this.btnRecuperarContrasena.UseVisualStyleBackColor = false;
             this.btnRecuperarContrasena.Click += new System.EventHandler(this.btnRecuperarContrasena_Click);
             // 

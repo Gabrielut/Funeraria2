@@ -20,6 +20,7 @@ namespace UTN.Winform.Funeraria.UI
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
+            
         }
         #region Mantenimeintos
         private void frmMantPaquete_Load(object sender, EventArgs e)
