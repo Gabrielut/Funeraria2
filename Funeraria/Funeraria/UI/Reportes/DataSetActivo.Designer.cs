@@ -1761,13 +1761,6 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PaqueteRow FindByIdentificacion(int Identificacion) {
-                return ((PaqueteRow)(this.Rows.Find(new object[] {
-                            Identificacion})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 PaqueteDataTable cln = ((PaqueteDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1806,10 +1799,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes {
                 base.Columns.Add(this.columnTipo);
                 this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidad);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnIdentificacion}, true));
                 this.columnIdentificacion.AllowDBNull = false;
-                this.columnIdentificacion.Unique = true;
                 this.columnIdentificacion.Caption = "Expr1";
                 this.columnNombre.AllowDBNull = false;
                 this.columnNombre.MaxLength = 50;

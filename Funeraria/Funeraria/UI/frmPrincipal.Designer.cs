@@ -200,7 +200,7 @@
             this.iconButton3.IconColor = System.Drawing.Color.Goldenrod;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 40;
-            this.iconButton3.Location = new System.Drawing.Point(207, 799);
+            this.iconButton3.Location = new System.Drawing.Point(207, 650);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(43, 46);
             this.iconButton3.TabIndex = 8;

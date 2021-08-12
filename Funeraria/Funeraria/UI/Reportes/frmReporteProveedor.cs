@@ -52,7 +52,6 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         {
             this.ProveedorTableAdapter.Fill(this.DataSetActivo.Proveedor);
             this.reportViewer1.RefreshReport();
-            txtDescripcion.Text = "";
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -68,7 +67,9 @@ namespace UTN.Winform.Funeraria.UI.Reportes
 
         }
 
-       
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

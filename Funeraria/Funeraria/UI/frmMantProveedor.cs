@@ -429,7 +429,7 @@ namespace UTN.Winform.Funeraria.UI
         private void dgvDatos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
            // dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "₡" + "#,##0";
-            dgvDatos.Columns["Precio"].DefaultCellStyle.BackColor = Color.Red;
+           // dgvDatos.Columns["Precio"].DefaultCellStyle.BackColor = Color.Red;
             dgvDatos.Columns["Precio"].DefaultCellStyle.Format = "c2";
             dgvDatos.Columns["Precio"].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("en-GB");
         }

@@ -30,12 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgrvDatos = new System.Windows.Forms.DataGridView();
             this.txtFiltro = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.TelProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TelFax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantUni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdTipoServicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Provincia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +62,7 @@
             this.Distrito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Barrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otrasSennas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgrvDatos)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,34 +109,34 @@
             this.TelProveedor,
             this.TelFax,
             this.Correo,
-            this.Precio,
             this.CantUni,
             this.IdTipoServicio,
             this.Provincia,
             this.Cantón,
             this.Distrito,
             this.Barrio,
-            this.otrasSennas});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgrvDatos.DefaultCellStyle = dataGridViewCellStyle7;
+            this.otrasSennas,
+            this.Precio});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(82)))), ((int)(((byte)(89)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgrvDatos.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgrvDatos.EnableHeadersVisualStyles = false;
             this.dgrvDatos.Location = new System.Drawing.Point(46, 147);
             this.dgrvDatos.Name = "dgrvDatos";
             this.dgrvDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgrvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgrvDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgrvDatos.RowHeadersVisible = false;
             this.dgrvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgrvDatos.Size = new System.Drawing.Size(818, 205);
@@ -257,7 +258,7 @@
             // IdProveedor
             // 
             this.IdProveedor.DataPropertyName = "IdProveedor";
-            this.IdProveedor.HeaderText = "Codigó";
+            this.IdProveedor.HeaderText = "Código";
             this.IdProveedor.Name = "IdProveedor";
             // 
             // NomProveedor
@@ -305,18 +306,11 @@
             this.Correo.HeaderText = "Correo";
             this.Correo.Name = "Correo";
             // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "Precio";
-            dataGridViewCellStyle6.Format = "n";
-            dataGridViewCellStyle6.NullValue = null;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
             // CantUni
             // 
             this.CantUni.DataPropertyName = "CantUni";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CantUni.DefaultCellStyle = dataGridViewCellStyle6;
             this.CantUni.HeaderText = "Cantidad";
             this.CantUni.Name = "CantUni";
             // 
@@ -355,6 +349,15 @@
             this.otrasSennas.DataPropertyName = "otrasSennas";
             this.otrasSennas.HeaderText = "Otras Señas";
             this.otrasSennas.Name = "otrasSennas";
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            dataGridViewCellStyle7.Format = "n";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
             // 
             // frmProveedor
             // 
@@ -398,7 +401,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TelProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn TelFax;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantUni;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdTipoServicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Provincia;
@@ -406,5 +408,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Distrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Barrio;
         private System.Windows.Forms.DataGridViewTextBoxColumn otrasSennas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }
 }

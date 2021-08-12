@@ -426,7 +426,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
   <xs:element name="DataSetActivo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetActivo" msprop:Generator_UserDSName="DataSetActivo">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ActivoTipoActivo" msprop:Generator_TableClassName="ActivoTipoActivoDataTable" msprop:Generator_TableVarName="tableActivoTipoActivo" msprop:Generator_RowChangedName="ActivoTipoActivoRowChanged" msprop:Generator_TablePropName="ActivoTipoActivo" msprop:Generator_RowDeletingName="ActivoTipoActivoRowDeleting" msprop:Generator_RowChangingName="ActivoTipoActivoRowChanging" msprop:Generator_RowEvHandlerName="ActivoTipoActivoRowChangeEventHandler" msprop:Generator_RowDeletedName="ActivoTipoActivoRowDeleted" msprop:Generator_RowClassName="ActivoTipoActivoRow" msprop:Generator_UserTableName="ActivoTipoActivo" msprop:Generator_RowEvArgName="ActivoTipoActivoRowChangeEvent">
+        <xs:element name="ActivoTipoActivo" msprop:Generator_TableClassName="ActivoTipoActivoDataTable" msprop:Generator_TableVarName="tableActivoTipoActivo" msprop:Generator_TablePropName="ActivoTipoActivo" msprop:Generator_RowDeletingName="ActivoTipoActivoRowDeleting" msprop:Generator_RowChangingName="ActivoTipoActivoRowChanging" msprop:Generator_RowEvHandlerName="ActivoTipoActivoRowChangeEventHandler" msprop:Generator_RowDeletedName="ActivoTipoActivoRowDeleted" msprop:Generator_UserTableName="ActivoTipoActivo" msprop:Generator_RowChangedName="ActivoTipoActivoRowChanged" msprop:Generator_RowEvArgName="ActivoTipoActivoRowChangeEvent" msprop:Generator_RowClassName="ActivoTipoActivoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Identificacion" msprop:Generator_ColumnVarNameInTable="columnIdentificacion" msprop:Generator_ColumnPropNameInRow="Identificacion" msprop:Generator_ColumnPropNameInTable="IdentificacionColumn" msprop:Generator_UserColumnName="Identificacion" type="xs:int" />
@@ -458,7 +458,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="UsuarioTipoUsuario" msprop:Generator_TableClassName="UsuarioTipoUsuarioDataTable" msprop:Generator_TableVarName="tableUsuarioTipoUsuario" msprop:Generator_RowChangedName="UsuarioTipoUsuarioRowChanged" msprop:Generator_TablePropName="UsuarioTipoUsuario" msprop:Generator_RowDeletingName="UsuarioTipoUsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioTipoUsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioTipoUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioTipoUsuarioRowDeleted" msprop:Generator_RowClassName="UsuarioTipoUsuarioRow" msprop:Generator_UserTableName="UsuarioTipoUsuario" msprop:Generator_RowEvArgName="UsuarioTipoUsuarioRowChangeEvent">
+        <xs:element name="UsuarioTipoUsuario" msprop:Generator_TableClassName="UsuarioTipoUsuarioDataTable" msprop:Generator_TableVarName="tableUsuarioTipoUsuario" msprop:Generator_TablePropName="UsuarioTipoUsuario" msprop:Generator_RowDeletingName="UsuarioTipoUsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioTipoUsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioTipoUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioTipoUsuarioRowDeleted" msprop:Generator_UserTableName="UsuarioTipoUsuario" msprop:Generator_RowChangedName="UsuarioTipoUsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioTipoUsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioTipoUsuarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Correo" msprop:Generator_ColumnVarNameInTable="columnCorreo" msprop:Generator_ColumnPropNameInRow="Correo" msprop:Generator_ColumnPropNameInTable="CorreoColumn" msprop:Generator_UserColumnName="Correo">
@@ -521,7 +521,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_RowClassName="ClienteRow" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowEvArgName="ClienteRowChangeEvent">
+        <xs:element name="Cliente" msprop:Generator_TableClassName="ClienteDataTable" msprop:Generator_TableVarName="tableCliente" msprop:Generator_TablePropName="Cliente" msprop:Generator_RowDeletingName="ClienteRowDeleting" msprop:Generator_RowChangingName="ClienteRowChanging" msprop:Generator_RowEvHandlerName="ClienteRowChangeEventHandler" msprop:Generator_RowDeletedName="ClienteRowDeleted" msprop:Generator_UserTableName="Cliente" msprop:Generator_RowChangedName="ClienteRowChanged" msprop:Generator_RowEvArgName="ClienteRowChangeEvent" msprop:Generator_RowClassName="ClienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdCliente" msprop:Generator_ColumnVarNameInTable="columnIdCliente" msprop:Generator_ColumnPropNameInRow="IdCliente" msprop:Generator_ColumnPropNameInTable="IdClienteColumn" msprop:Generator_UserColumnName="IdCliente" type="xs:int" />
@@ -571,7 +571,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Paquete" msprop:Generator_TableClassName="PaqueteDataTable" msprop:Generator_TableVarName="tablePaquete" msprop:Generator_TablePropName="Paquete" msprop:Generator_RowDeletingName="PaqueteRowDeleting" msprop:Generator_RowChangingName="PaqueteRowChanging" msprop:Generator_RowEvHandlerName="PaqueteRowChangeEventHandler" msprop:Generator_RowDeletedName="PaqueteRowDeleted" msprop:Generator_UserTableName="Paquete" msprop:Generator_RowChangedName="PaqueteRowChanged" msprop:Generator_RowEvArgName="PaqueteRowChangeEvent" msprop:Generator_RowClassName="PaqueteRow">
+        <xs:element name="Paquete" msprop:Generator_TableClassName="PaqueteDataTable" msprop:Generator_TableVarName="tablePaquete" msprop:Generator_RowChangedName="PaqueteRowChanged" msprop:Generator_TablePropName="Paquete" msprop:Generator_RowDeletingName="PaqueteRowDeleting" msprop:Generator_RowChangingName="PaqueteRowChanging" msprop:Generator_RowEvHandlerName="PaqueteRowChangeEventHandler" msprop:Generator_RowDeletedName="PaqueteRowDeleted" msprop:Generator_RowClassName="PaqueteRow" msprop:Generator_UserTableName="Paquete" msprop:Generator_RowEvArgName="PaqueteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Identificacion" msdata:Caption="Expr1" msprop:Generator_ColumnVarNameInTable="columnIdentificacion" msprop:Generator_ColumnPropNameInRow="Identificacion" msprop:Generator_ColumnPropNameInTable="IdentificacionColumn" msprop:Generator_UserColumnName="Identificacion" type="xs:int" />
@@ -601,7 +601,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Proveedor" msprop:Generator_TableClassName="ProveedorDataTable" msprop:Generator_TableVarName="tableProveedor" msprop:Generator_TablePropName="Proveedor" msprop:Generator_RowDeletingName="ProveedorRowDeleting" msprop:Generator_RowChangingName="ProveedorRowChanging" msprop:Generator_RowEvHandlerName="ProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedorRowDeleted" msprop:Generator_UserTableName="Proveedor" msprop:Generator_RowChangedName="ProveedorRowChanged" msprop:Generator_RowEvArgName="ProveedorRowChangeEvent" msprop:Generator_RowClassName="ProveedorRow">
+        <xs:element name="Proveedor" msprop:Generator_TableClassName="ProveedorDataTable" msprop:Generator_TableVarName="tableProveedor" msprop:Generator_RowChangedName="ProveedorRowChanged" msprop:Generator_TablePropName="Proveedor" msprop:Generator_RowDeletingName="ProveedorRowDeleting" msprop:Generator_RowChangingName="ProveedorRowChanging" msprop:Generator_RowEvHandlerName="ProveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedorRowDeleted" msprop:Generator_RowClassName="ProveedorRow" msprop:Generator_UserTableName="Proveedor" msprop:Generator_RowEvArgName="ProveedorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="otrasSennas" msprop:Generator_ColumnVarNameInTable="columnotrasSennas" msprop:Generator_ColumnPropNameInRow="otrasSennas" msprop:Generator_ColumnPropNameInTable="otrasSennasColumn" msprop:Generator_UserColumnName="otrasSennas">
@@ -694,7 +694,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_RowClassName="FacturaRow" msprop:Generator_UserTableName="Factura" msprop:Generator_RowEvArgName="FacturaRowChangeEvent">
+        <xs:element name="Factura" msprop:Generator_TableClassName="FacturaDataTable" msprop:Generator_TableVarName="tableFactura" msprop:Generator_TablePropName="Factura" msprop:Generator_RowDeletingName="FacturaRowDeleting" msprop:Generator_RowChangingName="FacturaRowChanging" msprop:Generator_RowEvHandlerName="FacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaRowDeleted" msprop:Generator_UserTableName="Factura" msprop:Generator_RowChangedName="FacturaRowChanged" msprop:Generator_RowEvArgName="FacturaRowChangeEvent" msprop:Generator_RowClassName="FacturaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
@@ -757,7 +757,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="FacturaFinal" msprop:Generator_TableClassName="FacturaFinalDataTable" msprop:Generator_TableVarName="tableFacturaFinal" msprop:Generator_TablePropName="FacturaFinal" msprop:Generator_RowDeletingName="FacturaFinalRowDeleting" msprop:Generator_RowChangingName="FacturaFinalRowChanging" msprop:Generator_RowEvHandlerName="FacturaFinalRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaFinalRowDeleted" msprop:Generator_UserTableName="FacturaFinal" msprop:Generator_RowChangedName="FacturaFinalRowChanged" msprop:Generator_RowEvArgName="FacturaFinalRowChangeEvent" msprop:Generator_RowClassName="FacturaFinalRow">
+        <xs:element name="FacturaFinal" msprop:Generator_TableClassName="FacturaFinalDataTable" msprop:Generator_TableVarName="tableFacturaFinal" msprop:Generator_RowChangedName="FacturaFinalRowChanged" msprop:Generator_TablePropName="FacturaFinal" msprop:Generator_RowDeletingName="FacturaFinalRowDeleting" msprop:Generator_RowChangingName="FacturaFinalRowChanging" msprop:Generator_RowEvHandlerName="FacturaFinalRowChangeEventHandler" msprop:Generator_RowDeletedName="FacturaFinalRowDeleted" msprop:Generator_RowClassName="FacturaFinalRow" msprop:Generator_UserTableName="FacturaFinal" msprop:Generator_RowEvArgName="FacturaFinalRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
@@ -818,7 +818,7 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PaqueteFactura" msprop:Generator_TableClassName="PaqueteFacturaDataTable" msprop:Generator_TableVarName="tablePaqueteFactura" msprop:Generator_TablePropName="PaqueteFactura" msprop:Generator_RowDeletingName="PaqueteFacturaRowDeleting" msprop:Generator_RowChangingName="PaqueteFacturaRowChanging" msprop:Generator_RowEvHandlerName="PaqueteFacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="PaqueteFacturaRowDeleted" msprop:Generator_UserTableName="PaqueteFactura" msprop:Generator_RowChangedName="PaqueteFacturaRowChanged" msprop:Generator_RowEvArgName="PaqueteFacturaRowChangeEvent" msprop:Generator_RowClassName="PaqueteFacturaRow">
+        <xs:element name="PaqueteFactura" msprop:Generator_TableClassName="PaqueteFacturaDataTable" msprop:Generator_TableVarName="tablePaqueteFactura" msprop:Generator_RowChangedName="PaqueteFacturaRowChanged" msprop:Generator_TablePropName="PaqueteFactura" msprop:Generator_RowDeletingName="PaqueteFacturaRowDeleting" msprop:Generator_RowChangingName="PaqueteFacturaRowChanging" msprop:Generator_RowEvHandlerName="PaqueteFacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="PaqueteFacturaRowDeleted" msprop:Generator_RowClassName="PaqueteFacturaRow" msprop:Generator_UserTableName="PaqueteFactura" msprop:Generator_RowEvArgName="PaqueteFacturaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdFactura" msprop:Generator_ColumnVarNameInTable="columnIdFactura" msprop:Generator_ColumnPropNameInRow="IdFactura" msprop:Generator_ColumnPropNameInTable="IdFacturaColumn" msprop:Generator_UserColumnName="IdFactura" type="xs:int" />
@@ -849,9 +849,5 @@ WHERE Cotizacion.IdCotizacion = @IdCotizacion</CommandText>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Paquete" />
-      <xs:field xpath="mstns:Identificacion" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

@@ -26,7 +26,7 @@ namespace UTN.Winform.Funeraria.UI
 
         private void btnBuscarProoveedor_Click(object sender, EventArgs e)
         {
-            string pdfPath = Path.Combine(Application.StartupPath, "C:/Users/Tatooine/Documents/1. UTN/2021/Cuatri II/Practica/Entregables/manualUsuario.pdf");
+            string pdfPath = Path.Combine(Application.StartupPath, "C:/Manual/manualUsuario.pdf");
 
             Process.Start(pdfPath);
         }

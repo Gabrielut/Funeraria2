@@ -31,28 +31,18 @@ namespace UTN.Winform.Funeraria.UI.Reportes
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.PaqueteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetActivo = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivo();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.PaqueteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetActivo = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivo();
             this.PaqueteTableAdapter = new UTN.Winform.Funeraria.UI.Reportes.DataSetActivoTableAdapters.PaqueteTableAdapter();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PaqueteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetActivo)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PaqueteBindingSource
-            // 
-            this.PaqueteBindingSource.DataMember = "Paquete";
-            this.PaqueteBindingSource.DataSource = this.DataSetActivo;
-            // 
-            // DataSetActivo
-            // 
-            this.DataSetActivo.DataSetName = "DataSetActivo";
-            this.DataSetActivo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -114,7 +104,7 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "DataSet2";
             reportDataSource1.Value = this.PaqueteBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "UTN.Winform.Funeraria.UI.Reportes.rptReportPaquetes.rdlc";
@@ -123,6 +113,16 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(932, 553);
             this.reportViewer1.TabIndex = 5;
+            // 
+            // PaqueteBindingSource
+            // 
+            this.PaqueteBindingSource.DataMember = "Paquete";
+            this.PaqueteBindingSource.DataSource = this.DataSetActivo;
+            // 
+            // DataSetActivo
+            // 
+            this.DataSetActivo.DataSetName = "DataSetActivo";
+            this.DataSetActivo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // PaqueteTableAdapter
             // 
@@ -140,10 +140,10 @@ namespace UTN.Winform.Funeraria.UI.Reportes
             this.Name = "frmReportePaquete";
             this.Text = "frmReportePaquete";
             this.Load += new System.EventHandler(this.frmReportePaquete_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PaqueteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetActivo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PaqueteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetActivo)).EndInit();
             this.ResumeLayout(false);
 
         }

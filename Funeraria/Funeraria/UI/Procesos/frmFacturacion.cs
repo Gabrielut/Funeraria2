@@ -38,7 +38,16 @@ namespace UTN.Winform.Funeraria.UI
         private void btnGuardar2_Click(object sender, EventArgs e)
         {
             IBLLCotizacion _BLLCotizacion = new BLLCotizacion();
-            list = _BLLCotizacion.GetCotizacionById(int.Parse(txtIdCotizacion.Text));
+            if (txtIdCotizacion.Text == "")
+            {
+                MessageBox.Show("Debe ingresar el numero de cotizacion!");
+                return;
+            }
+            else
+            {
+                list = _BLLCotizacion.GetCotizacionById(int.Parse(txtIdCotizacion.Text));
+            }
+            
             dgrFactura.AutoGenerateColumns = false;
             dgrFactura.RowTemplate.Height = 50;
             dgrFactura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
